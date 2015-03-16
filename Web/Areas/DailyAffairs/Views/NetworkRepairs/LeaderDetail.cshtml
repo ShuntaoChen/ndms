@@ -1,0 +1,137 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<!--  内容  -->
+<form method="post" id="pageForm" action="@Url.Action("DoLeaderDetail", "NetworkRepairs", new { area = "DailyAffairs" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 领导审批维护申请 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        领导审批维护申请
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    使用单位：
+                </th>
+                <td colspan="3">
+                    信息委
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    联系人：
+                </th>
+                <td>
+                    王瑾
+                </td>
+                <th>
+                    单位电话：
+                </th>
+                <td>
+                    57921418
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    资产编号：
+                </th>
+                <td>
+                    4-1-第一排-机架4-1
+                </td>
+                <th>
+                    资产品牌：
+                </th>
+                <td>
+                    华依
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    维护单位：
+                </th>
+                <td>
+                    自行维护
+                </td>
+                <th>
+                    申请时间：
+                </th>
+                <td>
+                    2014/10/24 15:50:07
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    是否通过：
+                </th>
+                <td>
+                    未通过审批
+                </td>
+                <th>
+                    是否完成：
+                </th>
+                <td>
+                    维护未完成
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    维护内容：
+                </th>
+                <td colspan="3">
+                    <textarea rows="10" style="width: 98%;" name="Content">维护内容维护内容</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    指定人员：
+                </th>
+                <td colspan="3">
+                     <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">枫泾管理员</option>
+                    <option value="1" >ZY-001</option>
+                    <option value="2">维护员</option>
+                </select>    
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="submit">
+                        同意</button>
+                </div>
+            </div>
+        </li>
+       
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        拒绝</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+</form>

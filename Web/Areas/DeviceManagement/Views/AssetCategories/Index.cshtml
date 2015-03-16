@@ -1,0 +1,83 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 500)
+    @Html.DialogWithId("Edit", 800, 500, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="dialog" asc="asc" desc="desc">
+        <thead>
+            <tr style="width:100%">
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th>名称</th>
+                <th>编号</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementAssetCategoriesDetail',800,450) ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="交换机"  class="TipImp"  href="@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="450" style="color: blue" alt="交换机">交换机
+                        </a>
+                </td>
+                <td style="text-align: center">
+                    ZC-01
+                </td>
+                <td >
+                    数据交换设备
+                </td>
+            
+            </tr>
+            
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementAssetCategoriesDetail',800,450) ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="路由器"  class="TipImp"  href="@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="600" style="color: blue" alt="路由器">
+                        路由器</a>
+                </td>
+                <td style="text-align: center">
+                    ZC-02
+                </td>
+                <td >
+                    路由设备
+                </td>
+            
+            </tr>
+            
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementAssetCategoriesDetail',800,450) ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a  title="服务器"  class="TipImp"  href="@Url.Action("Detail", "AssetCategories", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="450" style="color: blue" alt="服务器">
+                        服务器</a>
+                </td>
+                 <td style="text-align: center">
+                 ZC-03
+                </td>
+                <td >
+                    主机服务器件
+                </td>
+
+            
+            </tr>
+        </tbody>
+    </table>
+
+}

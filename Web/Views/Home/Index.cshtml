@@ -1,0 +1,222 @@
+﻿@using System.Web.Optimization
+@using JiYun.Common.Utils
+@using JiYun.Web.Models
+@using JiYun.Web.Helpers
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>金山区科委网管中心管理平台</title>
+        <link href="@Url.Content("~/Content/Styles/ToolBarButton.css")" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="@Url.Content("~/Content/themes/default/style.css")" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="@Url.Content("~/Content/themes/css/core.css")" rel="stylesheet"  type="text/css" media="screen"/>
+        <link href="@Url.Content("~/Content/themes/css/print.css")" rel="stylesheet" type="text/css" media="print"/>
+        <!--[if IE]>
+            <link href="@Url.Content("~/Content/themes/css/ieHack.css")" rel="stylesheet" type="text/css" media="screen"/>
+        <![endif]-->
+        <!-- -->
+        <link href="@Url.Content("~/Content/ligerUI/skins/Aqua/css/ligerui-all.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/ligerUI/skins/Gray/css/all.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Scripts/zTree3.5/css/zTreeStyle.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/select2/select2.css")" rel="stylesheet" type="text/css" media="screen" />
+        <link href="@Url.Content("~/Content/Styles/LigeruiExtend.css")" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="@Url.Content("~/Content/Styles/Application.css")" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="@Url.Content("~/Scripts/poshytip-1.1/tip-yellowsimple/tip-yellowsimple.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/swfupload/swfupload.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/Content/star/starSelect.css")" rel="stylesheet" type="text/css"/>
+
+        <link href="@Url.Content("~/Content/fullCalendar/cupertino/jquery-ui.min.css")" rel="stylesheet" type="text/css" />@*Add by zy 2014-11-3*@
+        <link href="@Url.Content("~/Content/fullCalendar/fullcalendar.css")" rel="stylesheet" type="text/css" />@*Add by zy 2014-11-3*@
+        <link href="@Url.Content("~/Content/fullCalendar/CustomFullcalendar.css")" rel="stylesheet" type="text/css" />@*Add by zy 2014-11-3*@
+      
+        @* <script src="@Url.Content("~/Scripts/raty/js/jquery.js")" type="text/javascript"></script>*@
+        @*<script src="@Url.Content("~/Scripts/raty/js/jquery.raty.min.js")" type="text/javascript"></script>*@
+        @Scripts.Render("~/JYScripts")
+
+       
+        <script src="@Url.Content("~/Scripts/raty/js/jquery.raty.js")" type="text/javascript"></script>
+
+<script src="@Url.Content("~/Scripts/fullCalendar/lib/moment.min.js")" type="text/javascript"></script>@*Add by zy 2014-11-3*@
+<script src="@Url.Content("~/Scripts/fullCalendar/fullcalendar.min.js")" type="text/javascript"></script>@*Add by zy 2014-11-3*@
+<script src="@Url.Content("~/Scripts/fullCalendar/lang-all.js")" type="text/javascript"></script>@*Add by zy 2014-11-3*@
+
+        <script type="text/javascript">
+		
+            $(function () {
+                DWZ.init(
+                    '@Url.Content("~/dwz.frag.xml")',
+                    {
+                        debug: false,
+                        callback: function () {
+                            initEnv();
+                        }
+                    }
+                );
+
+                //高度自适应
+                $(".homeTable .panel").attr("defH", ($(window).height() - 190) / 2);
+                $(".homeTable .panel div").css("background-color", "#fff");
+
+                setInterval("getOnlineUsers()", 3000);
+            });
+
+            //页面局部加载（ownEvent方法可以重载）
+            function ownEvent() {
+                $("#HomeIndexLoadDiv").loadUrl("@Url.Action("Main", "Home")");
+            }
+
+            //实时刷新最新消息
+            function checkNewMessage(){
+                //判断是否提示最新信息，如果收件箱的页面打开着则不进行提示刷新收件箱页面
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("checkNewMessage", "MSGManage", new { area = "Mes" })",
+                    global: false, // 禁用全局Ajax事件.
+                    success: function (json) {
+                        $("#NoReadMesCount").html(json.Total); //未读信息
+                        if(json.Total>0){
+                            document.title="("+json.Total+"封未读)金山区科委网管中心管理平台";
+                        }
+                        else {
+                            document.title="金山区科委网管中心管理平台";
+                        }
+                        if(json.IsReflesh==1) { 
+                            //右下角通知
+                            var position = 'bottom-right';
+                            $.sticky("<h1>最新提醒</h1>您有一条新消息，请注意查收！您当前有<b style='color:blue;cursor:pointer;'><a href='@(Url.Action("CoreIndex", "Home", new { sign = 1 }))'> "+json.Total+" </a></b>条未读消息</font>");
+        
+                            if($("li[tabid='MSGManageMyMsg_Recive']").attr("url")=="/Mes/MSGManage/MyMsg_Recive") {
+                                navTab.openTab("MSGManageMyMsg_Recive",  "@Url.Action("MyMsg_Recive", "MSGManage", new { area = "Mes" })", {title:"收件箱"});
+                            }
+                        }
+                    }
+                });
+            }
+
+            //获得最新在线人数
+            function getOnlineUsers()
+            {
+                var count = 0;
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/OnlineCount",
+                    global: false, // 禁用全局Ajax事件.
+                    success:function (json) {
+                        count = json;
+                        $("#onlineCount").html(count);
+                    }
+                });
+            }
+
+            //在线人员列表
+            function onlineList()
+            {
+                $.pdialog.open("@Url.Action("OnlineList", "Home")", "HomeOnlineList", "在线人员列表", {width: 600, height: 500, mask: true});
+            }
+
+     
+        </script>
+    </head>
+    <body scroll="no">
+        <div id="layout">
+            <div id="header">
+                <div class="headerNav">
+                    <a class="logo" href="javascript:void(0);">金山区科委网管中心管理平台</a>
+                    <ul class="nav">
+                        <li><a href="javascript:void(0);" onclick="onlineList()">当前在线<strong style="color: Red"
+                                                                                             id="onlineCount">
+                                                                                         @(HttpRuntime.Cache["onlineUsers"] == null ? 0 : (HttpRuntime.Cache["onlineUsers"] as List<List<string>>).Count())
+                                                                                     </strong>人</a> </li>
+                        <li><a href="javascript:void(0);">@ViewBag.Name（@ViewBag.S_Role）</a></li>
+                        <li><a href="@Url.Action("Config", "Home")" rel="Config" target="dialog" mask="true" width="400" height="350">
+                                个人设置</a></li>
+                        <li><a href="javascript:void(0);" onclick="logout('@Url.Action("Logout", "Home")');">
+                                退出</a></li>
+                    </ul>
+                </div>
+                <!-- navMenu -->
+            </div>
+            <div id="leftside">
+                <div id="sidebar_s">
+                    <div class="collapse">
+                        <div class="toggleCollapse">
+                            <div>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar">
+                    <div class="toggleCollapse">
+                        <h2>
+                            主菜单</h2>
+                        <div>
+                            收缩</div>
+                    </div>
+                    <div class="accordion" fillspace="sidebar">
+                        @{
+                            var perms = (ViewBag.Permissions as List<Permission>) ?? new List<Permission>();
+                            foreach (var perm in perms.Where(p => p.Type == "Area").OrderBy(t => t.Order).ToList())
+                            {
+                                <div class="accordionHeader">
+                                    <h2>
+                                        <span class="@( perm.Area)" style="  background: url(/Content/Images/Menu/@(perm.ID).png) no-repeat scroll left center transparent;">
+                                            Folder</span>@perm.Name</h2>
+                                </div>
+                                <div class="accordionContent">
+                                    <ul class="tree treeFolder expand">
+                                        @Html.Partial("~/Views/Shared/_SideBarTree.cshtml", perms.Where(p => p.Parent_ID == perm.ID && (p.Type == "Controller" || p.Type == "Folder")).ToList())
+                                    </ul>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div id="container">
+                <div id="navTab" class="tabsPage">
+                    <div class="tabsPageHeader">
+                        <div class="tabsPageHeaderContent">
+                            <!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
+                            <ul class="navTab-tab">
+                                <li tabid="main" class="main"><a href="javascript:;"><span><span class="home_icon">我的控制台</span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="tabsLeft">
+                            left</div>
+                        <!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
+                        <div class="tabsRight">
+                            right</div>
+                        <!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
+                        <div class="tabsMore">
+                            more</div>
+                    </div>
+                    <ul class="tabsMoreList">
+                        <li><a href="javascript:;">我的控制台</a></li>
+                    </ul>
+                    <div class="navTab-panel tabsPageContent layoutBox">
+                        <div class="page unitBox" id="HomeIndexLoadDiv">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            Copyright &copy; 2014 金山区科委网管中心管理平台
+        </div>
+        <iframe id="gen_pdf" width="0" height="0" style="display: none;"></iframe>
+    </body>
+</html>
+
+ <script type="text/javascript">
+    
+    //加载综合考核得分最高的前10名
+//     var $exte1 = $("#indexExaminePerson", navTab.getCurrentPanel());
+//            $exte1.loadUrl("@(Url.Action("Index", "Home"))?years=2014", function() {
+//                $exte1.find("[layoutH]").layoutH();
+//            });
+</script>

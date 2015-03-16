@@ -1,0 +1,40 @@
+2014-10-20 09:08:29,042 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2014-10-20 09:08:29,444 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]

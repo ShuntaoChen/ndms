@@ -1,0 +1,54 @@
+
+/* 全局 */
+html,body {}
+body {font:12px Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif; color:#333;background:#60a8cb;}
+body,form,menu,dir,fieldset,blockquote,p,pre,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6 { padding:0; margin:0;}
+ul,ol,dl { list-style:none;}
+a {color: #333;text-decoration: none;}
+a:hover {color: #000;text-decoration: underline;}
+a img {border: none;}
+.clear {clear: both;line-height: 0px;height:0px;font-size:0px;}
+.content {width:265px;margin: 0 auto;}
+.left {float:left;}
+.right {float:right;}
+
+.head {margin:20px 0 0 20px;}
+.head h2 {font-size:32px;font-weight:normal;color:#fff;cursor:default;height:40px;line-height:40px;}
+.head p {font-size:18px;color:#caeeff;cursor:default;margin-top:5px;}
+
+
+.loginbox {width:265px;margin-top:60px;}
+.loginlogo {width:87px;height:87px;background:url(../images/login_logo.png) no-repeat;margin:0 auto;}
+.logindata {margin-top:50px;}
+.logindata li {height:40px;overflow:hidden;margin:0 0 15px 0;}
+.logindata li input {margin:0px;width:205px;border:none;padding:10px 50px 10px 10px;font:16px Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif; color:#2f8ab6;font-weight:bold;}
+.logindata li.user input {background:#e2eeff url(../images/ico01.gif) no-repeat 230px 8px;}
+.logindata li.pw input {background:#e2eeff url(../images/ico02.gif) no-repeat 230px 8px;}
+.logindata li.yz input {width:80px;background:#e2eeff;margin-right:10px;}
+.logindata li.yz img {float:right;height:40px;width:110px;vertical-align:middle;background:#333;}
+
+
+.logindata div {padding-top:15px;}
+.logindata div input {cursor:pointer;height:69px;width:265px;border:none;background:url(../images/data.gif) repeat-x;font:18px Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif; color:#fff;}
+
+.errmasg {color:#fff;text-align:center;}
+
+
+
+
+
+
+
+
+
+.cop {font-size:12px;color:#fff;cursor:default;position:absolute;bottom:20px;right:20px;}
+
+
+
+
+
+
+
+
+
+

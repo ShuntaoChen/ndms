@@ -1,0 +1,76 @@
+﻿@*页面模板引用*@
+@{
+    ViewData["Header"] = 2;
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 400)
+    @Html.DialogWithId("Edit", 800, 400, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th>组名</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail',800,450) ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="其他信息"  class="TipImp"  href="@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="450" style="color: blue" alt>
+                        其他信息</a>
+                </td>
+                <td style="text-align: center">
+                    无
+                </td>
+            
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail',800,450) ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="标准软件"  class="TipImp"  href="@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="450" style="color: blue" alt>
+                        标准软件</a>
+                </td>
+                <td style="text-align: center">
+                    预安装软件
+                </td>
+     
+            </tr>
+            
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail',800,450) ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a title="基本配置"  class="TipImp"  href="@Url.Action("Detail", "PropertyGroup", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="450" style="color: blue" alt>
+                        基本配置</a>
+                </td>
+                 <td style="text-align: center">
+                 设备基本配置
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+}

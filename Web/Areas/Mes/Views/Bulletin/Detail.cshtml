@@ -1,0 +1,82 @@
+﻿@model Web.Areas.Mes.Models.X_Notice
+@{
+    var attachmentID = (List<JiYun.Modules.Core.Models.S_Attachment>)ViewBag.AttachmentIDs ?? new List<JiYun.Modules.Core.Models.S_Attachment>();
+} 
+<style type="text/css">
+    .mesView p {
+    display: block;
+    float: left;
+    height: auto;
+    line-height:21px;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+}
+</style>  
+<script language="javascript">
+    $(function(){
+        if("@(ViewBag.Type)"=="1")
+        {
+            navTab.reloadFlag("MesBulletinNoticIndex");
+        }
+    });
+    function NoticSign(id) {
+        var contentstr=$("#content").val();
+         $.ajax({
+                type: "POST",url: "@Url.Action("Sign", "Bulletin", new { area = "Mes" })?id="+id+"&Content="+contentstr,
+                global: false, // 禁用全局Ajax事件.
+                success:function (json) {
+                    alertMsg.info("提交成功");
+                }
+            });  
+    }
+</script>
+<div class="page">
+<div class="pageContent">
+        <div class="pageFormContent mesView" style="padding:0" layouth="140">
+            <div style="border-bottom:1px solid #3A71A3;background:#F6F9FC">
+                <div style="font-size:20px;" class="title">@Model.Title</div>
+                <div>
+                    <span style="width:auto;">发送人：</span>
+                    <span style="color:gray;font-weight:700">@Model.Sender</span>
+                </div>
+
+                <div>
+                    <span style="width:auto;">接收人：</span>
+                    <span><b onclick="OpenSignStatus(@Model.ID)" title="@(Model.X_NoticeDetail.Where(u => u.IsRead == true).Count())已读" style=" color:Red; font-size:16px; color:Green; cursor:pointer;" >@(Model.X_NoticeDetail.Where(u => u.IsRead == true).Count())</b> /<b  onclick="OpenSignStatus(@Model.ID)"  style=" color:Red; font-size:14px; color:Blue;cursor:pointer;"> @(Model.X_NoticeDetail.Count)</b></span>
+                </div>
+
+                <div>
+                    <span style="width:auto;">时　间：</span>
+                    <span>@Model.CreateOn.Value.ToString("yyyy年MM月dd HH时mm分")</span>
+                </div>  
+                         
+                    <div>
+                    <span style="width:auto;height:100%;vertical-align:top">附　件：</span>
+                    <span style="display:inline-block">
+                     @foreach (var item in attachmentID)
+                        {
+                        <a style="margin-bottom:6px;display:block;color:Gray;" href="@(Url.Action("DoBasewnload", "UploadCommon", new { id = item.ID }))" title="点击下载附件">
+                            <img src="/Content/images/filetype/@(item.Path.Substring(item.Path.LastIndexOf(".") + 1)).gif" />@item.FileName</a>   
+                        }
+                    </span>
+                </div>
+                    
+            </div>
+            <div style="font-size:17px;" layouth="350">
+                @MvcHtmlString.Create(Model.Content)
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.Type == "1")
+    {
+        
+    <div class="replyBox">
+        <b class="title">快捷回复</b>
+        <div class="box">
+             <a class="send"  href="javascript:;" onclick="NoticSign(@Model.ID)">提交</a>
+            <div class="content"><textarea name="content"  id="content">@ViewBag.Content</textarea></div>
+        </div>
+    </div>
+    }
+</div>

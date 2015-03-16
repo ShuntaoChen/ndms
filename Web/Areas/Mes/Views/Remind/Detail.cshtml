@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+
+</script>
+@{var m = ViewData.Model as Web.Areas.Mes.Models.X_Schedules;}
+<div class="page">
+    <div class="pageContent">
+        <div class="pageFormContent" layouth="60">
+            <table class="formTable">
+                <tr>
+                    <th>
+                        <label>
+                            标题：</label>
+                    </th>
+                    <td colspan="3">
+                        @m.Title
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            内容：</label>
+                    </th>
+                    <td  colspan="3">
+                        @MvcHtmlString.Create(m.Contents)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            开始时间：</label>
+                    </th>
+                    <td>
+                        @m.StartTime.Value.ToString("yyyy-MM-dd hh:mm:ss")
+                    </td>
+                    <th>
+                        <label>
+                            结束时间：</label>
+                    </th>
+                    <td>
+                        @m.EndTime.Value.ToString("yyyy-MM-dd hh:mm:ss")
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            提醒间隔：</label>
+                    </th>
+                    <td>
+                        @m.RemindDays  @(m.RemindRecyle == 1 ? "分钟" : (m.RemindRecyle == 2?"小时":"天"))
+                    </td>
+                    <th>
+                        <label>
+                            提醒次数：</label>
+                    </th>
+                    <td>
+                        @(@m.RemainBl == 2?"1次":"重复")
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button class="close">
+                                关闭</button></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

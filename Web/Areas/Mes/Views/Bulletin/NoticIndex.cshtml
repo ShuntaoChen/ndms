@@ -1,0 +1,100 @@
+﻿<script language="javascript">
+    function OpenSignStatus(id) {
+         $.pdialog.open("@Url.Action("SignStatus", "Bulletin")/"+id, "MesBulletinSignStatus", "通知查看情况", {width: 800, height: 600, mask: true});
+    }   
+</script>
+<div class="pageHeader">
+    <form id="pagerForm" onsubmit="return navTabSearch(this);" action="@Url.Action("NoticIndex", "Bulletin", new { area = "Mes" })" method="post">
+        <input type="hidden" name="pageNum" value="@Model.PageNumber" />
+        <input type="hidden" name="numPerPage" value="@Model.PageSize" />
+        <input type="hidden" name="orderField" value="@ViewData["orderField"]" />
+        <input type="hidden" name="orderDir" value="@ViewData["orderDir"]" />
+    <div class="searchBar">
+        <table class="searchContent">
+            <tr>
+                <td>
+                    <label style=" width:auto;">关键字：</label>
+                    <input type="text" name="Keytext" value="@ViewBag.Keytext" placeholder="标题/内容" size="30"/>
+                </td>
+                <td>
+                    <label style="width:80px;">发布日期：</label>
+                    <input type="text" name="startDate" value="@ViewBag.startDate" readonly class="date dic ld" size="10" style="float:left;"/>
+                    <span style="float: left; line-height: 25px;">&nbsp;至&nbsp;</span>
+                    <input type="text" name="endDate" value="@ViewBag.endDate" readonly class="date dic ld" datefmt="yyyy-MM-dd" size="10" style="float:left;"/>
+                </td>
+            </tr>
+        </table>
+        <div class="subBar">
+            <span class="info_clear">符合条件的记录，共有 <strong>@Model.TotalItemCount </strong>条。</span>
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="reset">重置</button></div></div></li>
+            </ul>
+        </div>
+    </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            @Html.ConfirmMulti("DeleteDetail", "chkBox")
+        </ul>
+    </div>
+     <table class="table" width="100%" layouth="137" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th align="center" style="width: 30px;"><input type="checkbox" group="chkBox" class='checkboxCtrl' /></th>
+                <th style="width: 50px;">序号</th>
+                <th align="center" style="width: 100px;">状态</th>
+                <th align="center" style="width: 120px;">发布人</th>
+                <th align="center" style="width: 120px;">发布日期</th>
+                <th>标题</th>
+                <th align="center" style="width: 200px;">有效期</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 0;
+                int UserID=ViewBag.UserID;
+                foreach (var item in (PagedList.IPagedList<Web.Areas.Mes.Models.X_Notice>)ViewData.Model)
+                {
+                    var detail = item.X_NoticeDetail.Any(u => u.UserID == UserID) ? item.X_NoticeDetail.First(u => u.UserID == UserID) : null;
+                <tr rel="@(item.ID)" target="selectedId" ondblclick="OpenNavTab('公告查看','@Url.Action("Detail", "Bulletin", new { area = "Mes", id = item.ID,type="1" })','MesBulletinDetail')">
+                    <td>
+                        <input type="checkbox" name="chkBox" value="@(item.ID)" />
+                    </td>
+                    <td class="fixedcol">@(++i)</td>
+                    <td>@(MvcHtmlString.Create(detail!=null&&detail.IsRead == true ? "<img src='/Content/images/email_open.png' title='已读'  />" : "<img src='/Content/images/mailUnread.gif' title='未读'  />"))</td>
+                    <td>@item.Sender</td>
+                    
+                    <td>@(item.CreateOn == null ? "" : item.CreateOn.Value.ToString("yyyy-MM-dd"))</td>
+                    <td>@item.Title</td>
+                    <td>
+                        @{
+                            if (item.StartDate != null || item.EndDate != null)
+                            {
+                                var dt = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd"));
+                                if (dt > item.EndDate)
+                                {
+                                    <span style="line-height:21px; padding:5px; color:#ddd;" class="showTitle" title="已过期">@(item.StartDate == null ? "" : item.StartDate.Value.ToString("yyyy-MM-dd")) ~ @(item.EndDate == null ? "" : item.EndDate.Value.ToString("yyyy-MM-dd"))</span>
+                                }
+                                else
+                                { 
+                                    <span style="line-height:21px; padding:5px;">@(item.StartDate == null ? "" : item.StartDate.Value.ToString("yyyy-MM-dd")) ~ @(item.EndDate == null ? "" : item.EndDate.Value.ToString("yyyy-MM-dd"))</span>
+                                }
+                            }   
+                         }
+                        
+                    </td>
+                    
+                    
+                    
+                </tr>
+                }
+             }
+        </tbody>
+    </table>
+    @Html.Partial("~/Views/Shared/_Pager.cshtml")
+</div>

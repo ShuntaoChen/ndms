@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JY_NDMSModelStoreContainer" CdmEntityContainer="JY_NDMSEntities">
+    <EntitySetMapping Name="AccidentalMaintenances">
+      <EntityTypeMapping TypeName="JY_NDMSModel.AccidentalMaintenances">
+        <MappingFragment StoreEntitySet="AccidentalMaintenances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaintainTime" ColumnName="MaintainTime" />
+          <ScalarProperty Name="EventCategory" ColumnName="EventCategory" />
+          <ScalarProperty Name="EventProperty" ColumnName="EventProperty" />
+          <ScalarProperty Name="UserInvolvedList" ColumnName="UserInvolvedList" />
+          <ScalarProperty Name="MaintenanceContentDescription" ColumnName="MaintenanceContentDescription" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.AssetInfos">
+        <MappingFragment StoreEntitySet="AssetInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetName" ColumnName="AssetName" />
+          <ScalarProperty Name="AssetBrand" ColumnName="AssetBrand" />
+          <ScalarProperty Name="AssetCategoryNo" ColumnName="AssetCategoryNo" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="AllocatedIp" ColumnName="AllocatedIp" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+          <ScalarProperty Name="IsImportanAsset" ColumnName="IsImportanAsset" />
+          <ScalarProperty Name="AssetTypeNo" ColumnName="AssetTypeNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MaxServiceYear" ColumnName="MaxServiceYear" />
+          <ScalarProperty Name="BoughtTime" ColumnName="BoughtTime" />
+          <ScalarProperty Name="MaintainStarttime" ColumnName="MaintainStarttime" />
+          <ScalarProperty Name="MaintainEndtime" ColumnName="MaintainEndtime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="IsSelfOwned" ColumnName="IsSelfOwned" />
+          <ScalarProperty Name="OS" ColumnName="OS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetOptionalProperties">
+      <EntityTypeMapping TypeName="JY_NDMSModel.AssetOptionalProperties">
+        <MappingFragment StoreEntitySet="AssetOptionalProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeviceCategoryNo" ColumnName="DeviceCategoryNo" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CabinetInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.CabinetInfos">
+        <MappingFragment StoreEntitySet="CabinetInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CabinetName" ColumnName="CabinetName" />
+          <ScalarProperty Name="CabinetDes" ColumnName="CabinetDes" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriesAndStatus">
+      <EntityTypeMapping TypeName="JY_NDMSModel.CategoriesAndStatus">
+        <MappingFragment StoreEntitySet="CategoriesAndStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryNo" ColumnName="CategoryNo" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="AssetInfos_ID" ColumnName="AssetInfos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.EventInfos">
+        <MappingFragment StoreEntitySet="EventInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventCategory" ColumnName="EventCategory" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LaborInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.LaborInfos">
+        <MappingFragment StoreEntitySet="LaborInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LaborType" ColumnName="LaborType" />
+          <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="LaborContent" ColumnName="LaborContent" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="LaborPlace" ColumnName="LaborPlace" />
+          <ScalarProperty Name="IsWholeDay" ColumnName="IsWholeDay" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintainPlans">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MaintainPlans">
+        <MappingFragment StoreEntitySet="MaintainPlans">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ExecuteCycle" ColumnName="ExecuteCycle" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="AssetInfos_ID" ColumnName="AssetInfos_ID" />
+          <ScalarProperty Name="MerchantInfos_ID" ColumnName="MerchantInfos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintainRecords">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MaintainRecords">
+        <MappingFragment StoreEntitySet="MaintainRecords">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="OperateTime" ColumnName="OperateTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintainRequests">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MaintainRequests">
+        <MappingFragment StoreEntitySet="MaintainRequests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+          <ScalarProperty Name="HandleStatus" ColumnName="HandleStatus" />
+          <ScalarProperty Name="IsPassed" ColumnName="IsPassed" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="OfficialComment" ColumnName="OfficialComment" />
+          <ScalarProperty Name="Proposer" ColumnName="Proposer" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintenanceKnowledges">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MaintenanceKnowledges">
+        <MappingFragment StoreEntitySet="MaintenanceKnowledges">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KnowledgeTitle" ColumnName="KnowledgeTitle" />
+          <ScalarProperty Name="KnowledgeCategory" ColumnName="KnowledgeCategory" />
+          <ScalarProperty Name="KnowledgeDescription" ColumnName="KnowledgeDescription" />
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+          <ScalarProperty Name="IsTopmost" ColumnName="IsTopmost" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MerchantInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MerchantInfos">
+        <MappingFragment StoreEntitySet="MerchantInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+          <ScalarProperty Name="MerchantCategory" ColumnName="MerchantCategory" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Linkman" ColumnName="Linkman" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotorRoomInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.MotorRoomInfos">
+        <MappingFragment StoreEntitySet="MotorRoomInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Cabinet_IDs" ColumnName="Cabinet_IDs" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="AddressDescription" ColumnName="AddressDescription" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OnDuties">
+      <EntityTypeMapping TypeName="JY_NDMSModel.OnDuties">
+        <MappingFragment StoreEntitySet="OnDuties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserInfos_ID" ColumnName="UserInfos_ID" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SharedResources">
+      <EntityTypeMapping TypeName="JY_NDMSModel.SharedResources">
+        <MappingFragment StoreEntitySet="SharedResources">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="CategoryNo" ColumnName="CategoryNo" />
+          <ScalarProperty Name="FileDescription" ColumnName="FileDescription" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskDesignateInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.TaskDesignateInfos">
+        <MappingFragment StoreEntitySet="TaskDesignateInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TaskSubject" ColumnName="TaskSubject" />
+          <ScalarProperty Name="TaskContent" ColumnName="TaskContent" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="LoopCategory" ColumnName="LoopCategory" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="TaskPlace" ColumnName="TaskPlace" />
+          <ScalarProperty Name="Doer_ID" ColumnName="Doer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserCompanyInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.UserCompanyInfos">
+        <MappingFragment StoreEntitySet="UserCompanyInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CallForShort" ColumnName="CallForShort" />
+          <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+          <ScalarProperty Name="OrganCategory" ColumnName="OrganCategory" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Linkman" ColumnName="Linkman" />
+          <ScalarProperty Name="LinkmanMobile" ColumnName="LinkmanMobile" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserScheduleInfos">
+      <EntityTypeMapping TypeName="JY_NDMSModel.UserScheduleInfos">
+        <MappingFragment StoreEntitySet="UserScheduleInfos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserInfos_ID" ColumnName="UserInfos_ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_ACCIDENT_REFERENCE_ASSETINF" TypeName="JY_NDMSModel.FK_ACCIDENT_REFERENCE_ASSETINF" StoreEntitySet="AccidentalMaintenances">
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="AssetInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="AccidentalMaintenances">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="AssetInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ACCIDENT_REFERENCE_MERCHANT" TypeName="JY_NDMSModel.FK_ACCIDENT_REFERENCE_MERCHANT" StoreEntitySet="AccidentalMaintenances">
+      <EndProperty Name="MerchantInfos">
+        <ScalarProperty Name="ID" ColumnName="MerchantInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="AccidentalMaintenances">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="MerchantInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ASSETINF_REFERENCE_CABINETI" TypeName="JY_NDMSModel.FK_ASSETINF_REFERENCE_CABINETI" StoreEntitySet="AssetInfos">
+      <EndProperty Name="CabinetInfos">
+        <ScalarProperty Name="ID" ColumnName="CabinetId" />
+      </EndProperty>
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="CabinetId" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ASSETINF_REFERENCE_MERCHANT" TypeName="JY_NDMSModel.FK_ASSETINF_REFERENCE_MERCHANT" StoreEntitySet="AssetInfos">
+      <EndProperty Name="MerchantInfos">
+        <ScalarProperty Name="ID" ColumnName="MerchantInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="MerchantInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ASSETINF_REFERENCE_MOTORROO" TypeName="JY_NDMSModel.FK_ASSETINF_REFERENCE_MOTORROO" StoreEntitySet="AssetInfos">
+      <EndProperty Name="MotorRoomInfos">
+        <ScalarProperty Name="ID" ColumnName="MotorRoom_ID" />
+      </EndProperty>
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="MotorRoom_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ASSETINF_REFERENCE_USERCOMP" TypeName="JY_NDMSModel.FK_ASSETINF_REFERENCE_USERCOMP" StoreEntitySet="AssetInfos">
+      <EndProperty Name="UserCompanyInfos">
+        <ScalarProperty Name="ID" ColumnName="UserCompanyInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="UserCompanyInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ASSETOPT_REFERENCE_ASSETINF" TypeName="JY_NDMSModel.FK_ASSETOPT_REFERENCE_ASSETINF" StoreEntitySet="AssetOptionalProperties">
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="AssetInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="AssetOptionalProperties">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="AssetInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_MAINTAIN_REFERENCE_ASSETINF" TypeName="JY_NDMSModel.FK_MAINTAIN_REFERENCE_ASSETINF" StoreEntitySet="MaintainRequests">
+      <EndProperty Name="AssetInfos">
+        <ScalarProperty Name="ID" ColumnName="AssetInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="MaintainRequests">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="AssetInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ONDUTIES_REFERENCE_LABORINF" TypeName="JY_NDMSModel.FK_ONDUTIES_REFERENCE_LABORINF" StoreEntitySet="OnDuties">
+      <EndProperty Name="LaborInfos">
+        <ScalarProperty Name="ID" ColumnName="LaborInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="OnDuties">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="LaborInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_MAINTAIN_REFERENCE_MAINTAIN" TypeName="JY_NDMSModel.FK_MAINTAIN_REFERENCE_MAINTAIN" StoreEntitySet="MaintainRecords">
+      <EndProperty Name="MaintainPlans">
+        <ScalarProperty Name="ID" ColumnName="MaintainPlans_ID" />
+      </EndProperty>
+      <EndProperty Name="MaintainRecords">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="MaintainPlans_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_MAINTAINa_REFERENCE_MAINTAINp" TypeName="JY_NDMSModel.FK_MAINTAINa_REFERENCE_MAINTAINp" StoreEntitySet="MaintainRequests">
+      <EndProperty Name="MaintainPlans">
+        <ScalarProperty Name="ID" ColumnName="MaintainPlans_ID" />
+      </EndProperty>
+      <EndProperty Name="MaintainRequests">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="MaintainPlans_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_TASKDESI_REFERENCE_USERSCHE" TypeName="JY_NDMSModel.FK_TASKDESI_REFERENCE_USERSCHE" StoreEntitySet="TaskDesignateInfos">
+      <EndProperty Name="UserScheduleInfos">
+        <ScalarProperty Name="ID" ColumnName="UserScheduleInfos_ID" />
+      </EndProperty>
+      <EndProperty Name="TaskDesignateInfos">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="UserScheduleInfos_ID" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

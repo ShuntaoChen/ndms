@@ -1,0 +1,52 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<form method="post" id="pageForm" action="@Url.Action("DoTransfer", "MaintainKnowledgeLibry", new { area = "DailyAffairs",ids="1" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 转移 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+           
+          
+            <tr>
+                <th>
+                    移 动 到 ：
+                </th>
+                <td>
+                    <select style="width: 200px">
+                        <option selected="selected"> /通讯录</option>
+                        <option selected="selected"> /拓扑图</option>
+                        <option selected="selected"> /通讯录</option>
+                    </select>
+                </td>
+             
+            </tr>
+        
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="submit">
+                        移 动</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</form>

@@ -1,0 +1,70 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<form method="post" id="pageForm" action="@Url.Action("DoCreate", "NetworkRepairs", new { area = "DailyAffairs" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 网络维护 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        网络维护
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    客户单位与资产：
+                </th>
+                <td>
+                    <select name="" id="" class="required">
+                        <option value="" selected="selected">--请选择--</option>
+                        <option value="1">卫生局</option>
+                        <option value="2">审计局</option>
+                        <option value="3">档案局</option>
+                    </select>
+                    <select name="" id="" class="required">
+                        <option value="" selected="selected">--请选择--</option>
+                        <option value="1"> 5-1-第一排-机架15-1</option>
+                        <option value="2">2-ZY-JF-0001-ZY-JG-001-1</option>
+                        <option value="3"> 4-1-第一排-机架7-1 </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    维护内容：
+                </th>
+                <td>
+                    <textarea rows="10" style="width: 98%;" name="Content"></textarea>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        保存</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</form>

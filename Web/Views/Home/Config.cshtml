@@ -1,0 +1,86 @@
+﻿@model JiYun.Modules.Core.Models.S_User
+           
+
+<div class="pageContent">
+    <form method="post" action="@Url.Action("Config", "Home", new { area = ""})" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogDone);">
+    <div class="pageFormContent" layouth="63">
+
+    <table class="formTable">
+                <tr>
+                    <th width="20%">
+                        姓名：
+                    </th>
+                    <td width="80%">
+                       
+                        @Html.Label(Model.Name)
+                        @Html.Hidden("ID",Model.ID)
+                    </td>
+                </tr>
+      
+                <tr>
+                    <th>
+                        电话：
+                    </th>
+                    <td>
+                       @Html.TextBox("Tel", "", new { @class = "", size = "30" })
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        手机：
+                    </th>
+                    <td>
+                       @Html.TextBox("Mobile", "", new { @class = "", size = "30" })
+                    </td>
+                </tr>
+             
+                <tr>
+                    <th>
+                        原密码：
+                    </th>
+                    <td>
+                    
+                        @Html.Password("oldPassword", "", new { @class = "required", size = "20" })
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        新密码：
+                    </th>
+                    <td>
+                        @Html.Password("newPassword", "", new { @class = "required", size = "20" })
+             
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        密码确认：
+                    </th>
+                    <td>
+                        @Html.Password("rnewPassword", "", new { @class = "required", size = "20" })
+                       @*<input type="password" name="rnewPassword" size="20" equalTo="#newPassword" class="alphanumeric"/>*@
+                    </td>
+                </tr>
+            </table>
+
+    </div>
+    <div class="formBar">
+        <ul>
+            <li>
+                <div class="buttonActive">
+                    <div class="buttonContent">
+                        <button type="submit">
+                            保存数据</button></div>
+                </div>
+            </li>
+            <li>
+                <div class="button">
+                    <div class="buttonContent">
+                        <button type="button" class="close">
+                            关闭窗口</button></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </form>
+</div>

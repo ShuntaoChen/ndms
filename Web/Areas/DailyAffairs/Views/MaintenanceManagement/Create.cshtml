@@ -1,0 +1,127 @@
+﻿@using System.Collections
+@using System.Web.UI.WebControls
+<div class="page">
+    <div class="pageContent">
+        <form method="POST" action="@Url.Action("DoCrete","MaintenanceManagement",new {area="DailyAffairs"})">
+            <div  class="pageFormContent" layouth="60">
+                <table class="formTable" class="select_list_set" style="margin-bottom: 10px;">
+                    <tbody>
+                        <!-- 新增维护信息 -->
+                        <tr>
+                            <td colspan="4" class="tbtitle">使用单位信息</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                单位名称：
+                            </th>
+                            <td style="width: 30%">
+                                <input type="text" class="required" size="30"/>
+                                
+                                 <div id="divShowSelectCase">
+                                <a class="btnLook" href="javascript:void(0)" onclick="selectCompany()">选择单位</a>
+                            </div>
+                            </td>
+                            <th>单位电话:</th><td></td>
+                        </tr>
+                        
+                        <tr>
+                            <th>单位地址：</th><td colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th>联系人：</th><td></td>
+                            <th>联系人电话：</th><td></td>
+                        </tr>
+                        <!-- 资产信息-->
+                        <tr>
+                            <td colspan="4" class="tbtitle">资产信息</td>
+                        </tr>
+                        <tr>
+                            <th>维护资产：</th>
+                            <td>
+                                <select>
+                                    <option>-请选择-</option>
+                                    <option>5-1机架信息1-12</option>
+                                    <option>5-2机架信息1-13</option>
+                                    <option>5-3机架信息1-12</option>
+                                </select>
+                            </td>
+                            <th>资产类型：</th>
+                            <td>
+                                <input type="text" name="" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>资产编号：</th>
+                            <td>
+                                <input type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <!--基本信息-->
+                        <tr>
+                            <td class="tbtitle" colspan="4">基本信息</td>
+                        </tr>
+                        <tr>
+                            <th>维护时间：</th><td><input type="text" class="Wdate required textInput" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"></td>
+                            <th>维护人员：</th><td><input type="text" size="30"/>
+                            <div id="divShowSelectCase">
+                                <a class="btnLook" href="javascript:void(0)" onclick="selectDoer()">选择人员</a>
+                            </div>
+                         </td>
+                        </tr>
+                        <tr>
+                            <th>事件类型：</th>
+                            <td>
+                                <select>
+                                    <option>-请选择-</option>
+                                    <option>病毒入侵</option>
+                                    <option>突发灾害</option>
+                                </select>
+                              </td>
+                            <th>事件性质：</th>
+                            <td>
+                                <select>
+                                    <option>-请选择-</option>
+                                    <option>一般性质</option>
+                                    <option>周期维护</option>
+                                </select>
+                              </td>
+                        </tr>
+                        <tr>
+                            <th>维护内容描述：</th>
+                            <td colspan="3"><textarea rows="10" style="width:98%"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="formBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="sunmit">
+                                    保存</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="button">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    关闭</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function selectCompany() {
+
+        //        var personId = $("#personID", navTab.getCurrentPanel()).val();
+        $.pdialog.open('@Url.Action("SelectDoer", "PlanList", new { area = "DailyAffairs" })?type=0', 'barcodeDialog', '选择人员', { width: 640, height: 520, mask: true });
+
+    }
+</script>

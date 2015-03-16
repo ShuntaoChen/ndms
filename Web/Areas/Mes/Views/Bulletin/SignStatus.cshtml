@@ -1,0 +1,60 @@
+﻿@model Web.Areas.Mes.Models.X_Notice
+<div class="page">
+    <div class="pageContent">
+     <div class="ContentList" layouth="40" style="border-top: 1px solid #B8D0D6;">
+          <table class="list" width="100%"  style="table-layout:fixed;word-wrap:break-word;">
+                <thead>
+                    <tr>
+                        <th style="width: 30px">
+                            序号
+                        </th>
+                        <th style=" width:120px">
+                            姓名
+                        </th>
+                        <th style=" width:120px">
+                            所属部门
+                        </th>
+                        <th style=" width:10%">
+                            状态
+                        </th>
+                        <th style=" width:120px">查看时间</th>
+                        <th>相关反馈</th>
+                    </tr>
+                </thead>
+                <tbody id="VoiceTbody">
+                @{
+                 
+                    int i=0;
+                    foreach (var detail in Model.X_NoticeDetail.OrderBy(u=>u.IsRead))
+                    {
+                        i++;
+                       
+                        <tr>
+                            <td class="fixedcol">@(i)</td>
+                            <td style=" text-align:left">@detail.UName
+                            </td>
+                            <td style=" text-align:center">@detail.DeptName</td>
+                            <td style="text-align:center">@(MvcHtmlString.Create(detail.IsRead == true ?"<img src='/Content/images/email_open.png' title='已读'  />": "<img src='/Content/images/mailUnread.gif' title='未读'  />"))</td>
+                            
+                            <td style=" text-align:center">@(detail.ReadTime!=null?detail.ReadTime.Value.ToString("yyyy-MM-dd"):"")</td>
+                            <td style=" text-align:left">@(detail.ReadRemark != null ? detail.ReadRemark : "")</td>
+                          
+                        </tr>
+                    }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button class="close">
+                                关闭</button></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

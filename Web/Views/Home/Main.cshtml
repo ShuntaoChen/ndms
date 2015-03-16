@@ -1,0 +1,52 @@
+﻿@using NPOI.SS.Formula.Functions
+@using JiYun.Common.Utils
+<script language="javascript">
+    $(function () {
+        //高度自适应chartpanel
+        $(".homeTable .panel").attr("defh", ($(window).height() - 195) / 2);
+        $(".homeTable .panel .chartpanel").css("height", ($(window).height() - 200) / 2);
+        $(".homeTable .panel div").css("background-color", "#fff");
+    });
+</script>
+<table width="100%" cellpadding="0" class="homeTable">
+    <tr>
+        <!--代办任务 -->
+        <td valign="top" style="width: 50%;">
+            <div class="panel" defh="400" style="margin: 1px auto; width: 99%;">
+                <h1>
+                    <img src="@Url.Content("~/Content/images/folder2.png")" />最新工作安排</h1>
+                <div id="div1" style="padding: 0px; text-align: center; background: #fff;">
+                    <div style="width: 98%; height: 190px;">
+                        @{ Html.RenderAction("SelfJobList", "PersonalJobs", new { area = "JobArrangements" });}
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td valign="top" style="width: 50%;">
+            <div class="panel" defh="400" style="margin: 1px auto; width: 99%;">
+                <h1>
+                    <img src="@Url.Content("~/Content/images/folder7.png")" />本周值班安排
+                </h1>
+                <div id="div2" style="padding: 0px; text-align: center; background: #fff;">
+                    <div style="width: 98%; height: 190px;">
+                        @{ Html.RenderAction("MyOnDutyList", "MyOnDuty", new { area = "JobArrangements" });}
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" colspan="2">
+            <div class="panel" defh="400" style="margin: 1px auto; width: 99%;">
+                <h1>
+                    <img src="@Url.Content("~/Content/images/detail.png")" />
+                    工作安排</h1>
+                <div id="div3" style="padding: 0px; text-align: center; background: #fff; overflow-x: hidden;">
+                    <div style="width: 98%; height: 190px;">
+                        @{ Html.RenderAction("SelfJob", "PersonalJobs", new { area = "JobArrangements" });}
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

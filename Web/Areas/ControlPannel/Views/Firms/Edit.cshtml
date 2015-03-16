@@ -1,0 +1,130 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<form method="post" id="pageForm" action="@Url.Action("DoEdit", "Firms", new { area = "ControlPannel" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+  <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 厂商管理 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        厂商管理
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    厂商类型
+                </th>
+                <td>
+                    <select name="">
+                        <option value="0">--请选择--</option>
+                        <option value="1">供货商</option>
+                        <option value="2">维护商</option>
+                        <option value="3">使用单位</option>
+                    </select>
+                </td>
+                <th>
+                    单位名称：
+                </th>
+                <td colspan="2">
+                    <input type="text" name="Tiltle" class="required " size="60" value="**公司" />
+                </td>
+                
+            </tr>
+            <tr>
+                <th>
+                    单位电话：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="78963245" />
+                </td>
+                <th>
+                    单位传真：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="852478565" />
+                </td>
+            </tr>
+          
+            <tr>
+                <th>
+                    联系人：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="李明思" />
+                </td>
+                <th>
+                    联系人电话：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="15258954" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    即时通讯：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="852147852" />
+                </td>
+                <th>
+                    联系人Email：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="Job@125.com" />
+                </td>
+            </tr>
+              <tr>
+                <th>
+                    单位地址：
+                </th>
+                <td colspan="3">
+                    <input type="text" name="Tiltle" class="required " size="70" value="南京江宁区" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    单位首页：
+                </th>
+                <td colspan="3">
+                    <input type="text" name="Tiltle" class="required " size="70" value="www.Mtime.com" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    描述：
+                </th>
+                <td colspan="3">
+                    <textarea rows="10" style="width: 98%;" name="Content">描述信息</textarea>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="submit">
+                        保存</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</form>

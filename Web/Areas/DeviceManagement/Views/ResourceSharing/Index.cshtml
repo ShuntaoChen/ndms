@@ -1,0 +1,154 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@ @*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+}
+@*脚本区域*@
+@section ScriptArea {
+    <script type="text/javascript">
+        
+        //文件转移
+        function Transfer() {
+            var selected = [];
+            var $checkboxLi = $(":checkbox[name='chkBox']", navTab.getCurrentPanel());
+            var str = "";
+            $checkboxLi.each(function () {
+                if ($(this).attr("checked") == "checked") {
+                    selected.push($(this).attr("value"));
+                    
+                }
+            });
+
+            if (selected.length == 0) {
+                alertMsg.warn("至少勾选一条数据！");
+                return false;
+            }
+            var str_ids = selected.join(",");
+            $.pdialog.open('@Url.Action("Transfer", "MaintainKnowledgeLibry", new { area = "DailyAffairs" })?ids=' + str_ids, "DailyAffairsMaintainKnowledgeLibryTransfer", "转移", { width: 500, height: 150, mask: true });
+                
+            return false;
+        }
+
+    </script>
+}
+
+
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr style="width: 100%">
+            <th width="auto">
+                您的当前位置：
+            </th>
+            <td>
+                <select style="width: 400px">
+                    <option  selected>/</option>
+                </select>
+            </td>
+                
+        </tr>
+         <tr>
+            <th>
+                关键字：
+            </th>
+            <td colspan="3">
+                <input type="text" name="SearchKey" size="65" placeholder="文件夹/文件名" value="@SearchKey" />
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 250)
+    @Html.DialogWithId("Edit", 800, 250, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+    @Html.Custom("Transfer")@*转移*@
+    @Html.DownLoadFile("download")
+
+
+}
+@*列表区域*@
+@section Body
+{
+    <table class="table" width="100%" layouth="141" targettype="dialog" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    <input type="checkbox" group="chkBox" class='checkboxCtrl' />
+                </th>
+                <th>
+                    名称
+                </th>
+                <th style="width: 15%">
+                    最后修改时间
+                </th>
+                <th style="width: 10%">
+                    容量大小
+                </th>
+             <th style="width: 8%">
+                    容量大小
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "ResourceSharing", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail') ">
+                <td style="text-align: center">
+                    <input type="checkbox" name="chkBox" value="1" />
+                </td>
+                <td>
+                    <img src="@Url.Content("~/Content/images/folder.png")" />
+                    拓扑图
+                </td>
+                <td style="text-align: center">
+                    2014-11-4
+                </td>
+                <td style="text-align: center">
+                    0字节
+                </td>
+                <td style="text-align: center">
+                       @Html.UploadFile("AttachmentID", "", 80, true, true)
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "ResourceSharing", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail') ">
+                <td style="text-align: center">
+                    <input type="checkbox" name="chkBox" value="1" />
+                </td>
+                <td>
+                    <img src="@Url.Content("~/Content/images/folder.png")" />
+                    设备资料
+                </td>
+                <td style="text-align: center">
+                    2014-11-4
+                </td>
+                <td style="text-align: center">
+                    0字节
+                </td>
+                <td style="text-align: center">
+                    @Html.UploadFile("AttachmentID", "", 80, true, true)
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "ResourceSharing", new { area = "DeviceManagement", id = 1 })', 'DailyAffairsMaintainKnowledgeLibryDetail') ">
+                <td style="text-align: center">
+                    <input type="checkbox" name="chkBox" value="1" />
+                </td>
+                <td>
+                    <img src="@Url.Content("~/Content/images/folder.png")" />
+                    相关文档
+                </td>
+                <td style="text-align: center">
+                    2014-11-4
+                </td>
+                <td style="text-align: center">
+                    0字节
+                </td>
+                <td style="text-align: center">
+                       @Html.UploadFile("AttachmentID", "", 80, true, true)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+}

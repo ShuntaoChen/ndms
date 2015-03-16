@@ -1,0 +1,83 @@
+﻿@using System.Collections
+@using System.Web.UI.WebControls
+<div class="page">
+    <div class="pageContent">
+        <form method="POST" action="@Url.Action("","",new {area=""})">
+            <div  class="pageFormContent" layouth="60">
+                <table class="formTable" class="select_list_set" style="margin-bottom: 10px;">
+                <tbody>
+                    <tr class="tbtitle">
+                        <td colspan="2">新建属性</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            名称
+                        </th>
+                        <td>
+                            <input type="text" class="required" size="30"/>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            所属组
+                        </th>
+                        <td>
+                            <select><option>--请选择--</option>
+                                <option>基本软件</option>
+                                <option>测试分组</option>
+                                <option>其他信息</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            编号
+                        </th>
+                        <td>
+                            <input type="text" class="required" size="30" />
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>类型</th>
+                        <td>
+                            <input type="radio"/>文本
+                            <input type="radio"/>选择
+
+                        </td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+
+                </tbody>
+                </table>
+            </div>
+            <div class="formBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    保存</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="button">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    关闭</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+

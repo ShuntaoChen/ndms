@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MesContextStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="X_Messages">
+      <EntityTypeMapping TypeName="MesContext.X_Messages">
+        <MappingFragment StoreEntitySet="X_Messages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MessageTitle" ColumnName="MessageTitle" />
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="MessageKeyWord" ColumnName="MessageKeyWord" />
+          <ScalarProperty Name="MessageSend" ColumnName="MessageSend" />
+          <ScalarProperty Name="MessageReceive" ColumnName="MessageReceive" />
+          <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreaterUserID" ColumnName="CreaterUserID" />
+          <ScalarProperty Name="CreateUserReal" ColumnName="CreateUserReal" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="ModifyUserReal" ColumnName="ModifyUserReal" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="X_Schedules_ID" ColumnName="X_Schedules_ID" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_MsgAtts">
+      <EntityTypeMapping TypeName="MesContext.X_MsgAtts">
+        <MappingFragment StoreEntitySet="X_MsgAtts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="X_Messages_ID" ColumnName="X_Messages_ID" />
+          <ScalarProperty Name="AttID" ColumnName="AttID" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_Notice">
+      <EntityTypeMapping TypeName="MesContext.X_Notice">
+        <MappingFragment StoreEntitySet="X_Notice">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_NoticeDetail">
+      <EntityTypeMapping TypeName="MesContext.X_NoticeDetail">
+        <MappingFragment StoreEntitySet="X_NoticeDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="X_Notice_ID" ColumnName="X_Notice_ID" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UName" ColumnName="UName" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="ReadTime" ColumnName="ReadTime" />
+          <ScalarProperty Name="ReadRemark" ColumnName="ReadRemark" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_ScheduleDetails">
+      <EntityTypeMapping TypeName="MesContext.X_ScheduleDetails">
+        <MappingFragment StoreEntitySet="X_ScheduleDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="X_Schedules_ID" ColumnName="X_Schedules_ID" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_Schedules">
+      <EntityTypeMapping TypeName="MesContext.X_Schedules">
+        <MappingFragment StoreEntitySet="X_Schedules">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IsRemind" ColumnName="IsRemind" />
+          <ScalarProperty Name="RemindDays" ColumnName="RemindDays" />
+          <ScalarProperty Name="RemindType" ColumnName="RemindType" />
+          <ScalarProperty Name="RemindRecyle" ColumnName="RemindRecyle" />
+          <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+          <ScalarProperty Name="NviteUsers" ColumnName="NviteUsers" />
+          <ScalarProperty Name="ScType" ColumnName="ScType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="RemaindCode" ColumnName="RemaindCode" />
+          <ScalarProperty Name="RemainBl" ColumnName="RemainBl" />
+          <ScalarProperty Name="LastRemaindTime" ColumnName="LastRemaindTime" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_SMS">
+      <EntityTypeMapping TypeName="MesContext.X_SMS">
+        <MappingFragment StoreEntitySet="X_SMS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="S_User_ID" ColumnName="S_User_ID" />
+          <ScalarProperty Name="X_Schedules_ID" ColumnName="X_Schedules_ID" />
+          <ScalarProperty Name="T_SC_Task_ID" ColumnName="T_SC_Task_ID" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_UserMesCounts">
+      <EntityTypeMapping TypeName="MesContext.X_UserMesCounts">
+        <MappingFragment StoreEntitySet="X_UserMesCounts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OldCount" ColumnName="OldCount" />
+          <ScalarProperty Name="NewCount" ColumnName="NewCount" />
+          <ScalarProperty Name="IsMessage" ColumnName="IsMessage" />
+          <ScalarProperty Name="NoReadCount" ColumnName="NoReadCount" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="X_UserMessages">
+      <EntityTypeMapping TypeName="MesContext.X_UserMessages">
+        <MappingFragment StoreEntitySet="X_UserMessages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Bas_UserID" ColumnName="Bas_UserID" />
+          <ScalarProperty Name="X_Messages_ID" ColumnName="X_Messages_ID" />
+          <ScalarProperty Name="ReadStatus" ColumnName="ReadStatus" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="MessageStatus" ColumnName="MessageStatus" />
+          <ScalarProperty Name="MyMsg" ColumnName="MyMsg" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

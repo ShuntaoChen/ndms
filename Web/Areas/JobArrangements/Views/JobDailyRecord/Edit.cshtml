@@ -1,0 +1,76 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+
+<form method="post" id="pageForm" action="@Url.Action("DoEdit", "JobDailyRecord", new { area = "JobArrangements" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+           <input type="hidden" name="ID" value="1">
+            <!-- 值班日志 -->
+            <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+                width: 97%;">
+                <thead>
+                    <tr>
+                        <td class="tbtitle" colspan="5" style="text-align: left">
+                            值班日志
+                        </td>
+                    </tr>
+                </thead>
+                 <tr>
+                    <th>
+                        标题：
+                    </th>
+                    <td >
+                        <input type="text" name="Tiltle" class="required " size="70" value="维修2处服务器维护" />
+                    </td>
+                </tr>
+               <tr>
+                    <th>
+                        选择值班：
+                    </th>
+                    <td colspan="2">
+                     <select name="" id="" class="required">
+                    <option value="">--请选择--</option>
+                     <option value="1" selected>维修2处服务器维护</option>
+                    <option value="2">维修3处服务器维护</option>
+                    <option value="3">维修1处服务器维护</option>
+                </select>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <th>
+                        报告内容：
+                    </th>
+                    <td colspan="2">
+                        <textarea rows="10" style="width: 98%;" name="Content">维修1处服务器维护</textarea>
+                    </td>
+                </tr>
+            </table>
+            <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="submit">
+                        保存</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</form>

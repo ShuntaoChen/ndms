@@ -1,0 +1,87 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<form method="post" id="pageForm" action="@Url.Action("DoCreate", "MotorRooms", new { area = "ControlPannel" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 机房管理 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        机房管理
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    机房名称：
+                </th>
+                <td>
+                    <input type="text" name="Tiltle" class="required " size="30" value="" />
+                </td>
+                <th>
+                    机房编号：
+                </th>
+                <td>
+                    <input type="text" name="No" class="required " size="30" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    机房描述：
+                </th>
+                <td colspan="3">
+                    <textarea rows="10" style="width: 98%;" name="Content"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    类型：
+                </th>
+                <td >
+                    @Html.DropDownList("JfType", null, "--请选择--", new { @style = "width:120px" })
+                </td>
+                <th>
+                    电话：
+                </th>
+                <td >
+                    <input type="text" name="Phone" class="required " size="30" value="" />
+                </td>
+            </tr>
+             <tr>
+                <th>
+                    地址描述：
+                </th>
+                <td colspan="3">
+                    <textarea rows="10" style="width: 98%;" name="Content"></textarea>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        <li>
+            <div class="buttonActive">
+                <div class="buttonContent">
+                    <button type="submit">
+                        保存</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</form>

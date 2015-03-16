@@ -1,0 +1,58 @@
+﻿@using System.Collections
+@using System.Web.UI.WebControls
+<div class="page">
+    <div class="pageContent">
+        <form method="POST" action="@Url.Action("", "", new { area = "" })">
+        <div class="pageFormContent" layouth="60">
+            <table class="formTable" class="select_list_set" style="margin-bottom: 10px;">
+                <tbody>
+                    <tr class="title">
+                        <td colspan="5">
+                            网络硬盘文件夹
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            新建文件夹位置：
+                        </th>
+                        <td>
+                            <select style="width: 70%">
+                                <option>/</option>
+                                <option>/新建文件夹</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            文件夹名称：
+                        </th>
+                        <td>
+                            <input type="text" name="Tiltle" class="required " size="70" value="撒旦法士大夫" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" class="close">
+                                保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">
+                                关闭</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+﻿@using System.Web.UI.WebControls
+@using JiYun.Common.Utils
+@using JiYun.Modules.Core.Models
+<div class="page">
+    <div id="table-content">
+        <div class="pageHeader">
+            <form id="pagerForm" action="@Url.Action("SelectCompany", "DailyJob",new{area="DailyAffairs"})" method="POST" class="pageForm required-validate" onsubmit="return dialogSearch(this);">
+          
+            <input type="hidden" name="type" value="" />
+            <div class="searchBar">
+                <ul class="searchContent">
+                    <li>
+                        <label>
+                            单位名称：</label>
+                        <input type="text" name="goodsName" value="" style="width:200px"/>
+                    </li>
+                </ul>
+                <div class="subBar">
+                    <ul>
+                        <li style="margin-right: 348px;"><span class="info_clear">符合条件的记录，共有 <strong></strong>
+                            条。</span></li>
+                        <li>
+                            <div class="buttonActive">
+                                <div class="buttonContent">
+                                    <button type="submit">
+                                        检索</button></div>
+                            </div>
+                            <div class="buttonActive">
+                                <div class="buttonContent">
+                                    <button type="reset">
+                                        重置</button></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="pageContent">
+            <table class="table" layouth="147" width="100%">
+                <thead>
+                    <tr>
+                       
+                            <th style="width: 5%; text-align: center;">
+                                <input type="checkbox" group="ids" class="checkboxCtrl" style="margin: 3px 2px;" />
+                            </th>
+                        <th style="width: 100px">
+                           姓名
+                        </th>
+                       
+                        <th style="width: 100px;" align="center">
+                            出生时间
+                        </th>
+                        <th style="width: 150px;" align="center">
+                            第二联系人
+                        </th>
+                         <th style="width: 200px;">
+                            备注
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr rel="{'ID':'1'}" target="selectedId" reltitle="">
+
+
+                        <td style="text-align: center;">
+                            <input type="radio" name="ids" class="checkboxCtrl" style="margin-top: 3px" onclick="selectInput(this);"
+                                   value="{'ID':'','CName':'','CDate':''}" />
+                        </td>
+                     
+                        <td style="text-align: center;">
+                               王天宝
+                        </td>
+                      
+                        <td style="text-align: center;">
+                          
+                        </td>
+                        <td style="text-align: center;">
+                            王二
+                        </td>
+                        <td style="text-align: center">
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr rel="{'ID':'1'}" target="selectedId" reltitle="">
+                            <td style="text-align: center;">
+                                <input type="radio" name="ids" class="checkboxCtrl" style="margin-top: 3px" onclick="selectInput(this);"
+                                    value="{'ID':'','CName':'','CDate':''}" />
+                            </td>
+                     
+                        <td style="text-align: center;">
+                               刘德胜
+                        </td>
+                      
+                        <td style="text-align: center;">
+                          
+                        </td>
+                        <td style="text-align: center;">
+                            刘一
+                        </td>
+                         <td style="text-align: center">
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            @Html.Paging(PagingType.dialog)
+            <div class="formBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="button" onclick="barcodecaseChoose()" >
+                                    确认</button></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //选择一条（单选按钮的方法）
+    function barcodecaseChoose() {
+        var uid = $("input[name='ids']:checked", $.pdialog.getCurrent()).val();
+
+        if (!uid) {
+            alertMsg.error("请先选择一条数据！");
+            return false;
+        } else {
+
+            var json = eval('({"jycase":' + uid + '})');
+
+            $.pdialog.closeCurrent();
+            return BarChooseCallBackcase(json);
+        }
+    }
+    //选择多条（复选框按钮的方法）
+    function barcodecaseChooseMult() {
+        var selected = [];
+        var $checkboxLi = $(":checkbox[name=ids]", $.pdialog.getCurrent());
+        $checkboxLi.each(function () {
+            if ($(this).attr("checked") == "checked") {
+                selected.push($(this).attr("value"));
+            }
+        });
+
+        if (selected.length == 0) {
+            alertMsg.warn("至少选择一条数据");
+            return false;
+        } else {
+
+            var json = eval('({"jycases":[' + selected + ']})');
+            $.pdialog.closeCurrent();
+            return ProductChooseCallBackcase(json);
+        }
+    }
+
+    function selectInput(obj) {
+        if ($(obj).children().children().children('input').attr('checked') === 'checked') {
+            $(obj).children().children().children('input').removeAttr('checked');
+            return false;
+        } else {
+            $(obj).children().children().children('input').attr('checked', 'checked');
+            return false;
+        }
+    }
+</script>

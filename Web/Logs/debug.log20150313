@@ -1,0 +1,590 @@
+2015-03-13 09:04:16,839 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:04:17,013 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2015-03-13 09:04:43,391 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:05:15,129 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:12:05,143 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:12:05,249 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2015-03-13 09:12:21,263 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:12:35,759 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:12:45,426 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:12:57,241 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:12:57,287 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2015-03-13 09:13:43,962 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Value] AS [Value], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Master] AS [Extent1]
+2015-03-13 09:13:56,466 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:24:46,825 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:25:11,854 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:25:22,280 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+WHERE [Extent1].[Parent_ID] IS NULL
+2015-03-13 09:25:32,582 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 09:25:32,627 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2015-03-13 11:49:22,849 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 11:49:22,936 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2015-03-13 13:59:53,577 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Value] AS [Value], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Master] AS [Extent1]
+2015-03-13 14:32:38,497 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Bas_UserID] AS [Bas_UserID], 
+[Project1].[X_Messages_ID] AS [X_Messages_ID], 
+[Project1].[ReadStatus] AS [ReadStatus], 
+[Project1].[IsDelete] AS [IsDelete], 
+[Project1].[MessageStatus] AS [MessageStatus], 
+[Project1].[MyMsg] AS [MyMsg], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Bas_UserID] AS [Bas_UserID], 
+	[Extent1].[X_Messages_ID] AS [X_Messages_ID], 
+	[Extent1].[ReadStatus] AS [ReadStatus], 
+	[Extent1].[IsDelete] AS [IsDelete], 
+	[Extent1].[MessageStatus] AS [MessageStatus], 
+	[Extent1].[MyMsg] AS [MyMsg], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId], 
+	[Extent2].[CreateDate] AS [CreateDate]
+	FROM  [dbo].[X_UserMessages] AS [Extent1]
+	LEFT OUTER JOIN [dbo].[X_Messages] AS [Extent2] ON [Extent1].[X_Messages_ID] = [Extent2].[ID]
+	WHERE ([Extent1].[Bas_UserID] = @p__linq__0) AND ([Extent1].[MyMsg] = @p__linq__1) AND ([Extent1].[IsDelete] = @p__linq__2)
+)  AS [Project1]
+ORDER BY [Project1].[CreateDate] DESC
+2015-03-13 14:32:38,591 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[UserID] AS [UserID], 
+[Extent1].[OldCount] AS [OldCount], 
+[Extent1].[NewCount] AS [NewCount], 
+[Extent1].[IsMessage] AS [IsMessage], 
+[Extent1].[NoReadCount] AS [NoReadCount], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[X_UserMesCounts] AS [Extent1]
+2015-03-13 14:32:43,661 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Bas_UserID] AS [Bas_UserID], 
+[Project1].[X_Messages_ID] AS [X_Messages_ID], 
+[Project1].[ReadStatus] AS [ReadStatus], 
+[Project1].[IsDelete] AS [IsDelete], 
+[Project1].[MessageStatus] AS [MessageStatus], 
+[Project1].[MyMsg] AS [MyMsg], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Bas_UserID] AS [Bas_UserID], 
+	[Extent1].[X_Messages_ID] AS [X_Messages_ID], 
+	[Extent1].[ReadStatus] AS [ReadStatus], 
+	[Extent1].[IsDelete] AS [IsDelete], 
+	[Extent1].[MessageStatus] AS [MessageStatus], 
+	[Extent1].[MyMsg] AS [MyMsg], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId], 
+	[Extent2].[CreateDate] AS [CreateDate]
+	FROM  [dbo].[X_UserMessages] AS [Extent1]
+	LEFT OUTER JOIN [dbo].[X_Messages] AS [Extent2] ON [Extent1].[X_Messages_ID] = [Extent2].[ID]
+	WHERE ([Extent1].[Bas_UserID] = @p__linq__0) AND ([Extent1].[MyMsg] = @p__linq__1) AND ([Extent1].[IsDelete] = @p__linq__2)
+)  AS [Project1]
+ORDER BY [Project1].[CreateDate] DESC
+2015-03-13 14:32:47,519 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Bas_UserID] AS [Bas_UserID], 
+[Project1].[X_Messages_ID] AS [X_Messages_ID], 
+[Project1].[ReadStatus] AS [ReadStatus], 
+[Project1].[IsDelete] AS [IsDelete], 
+[Project1].[MessageStatus] AS [MessageStatus], 
+[Project1].[MyMsg] AS [MyMsg], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Bas_UserID] AS [Bas_UserID], 
+	[Extent1].[X_Messages_ID] AS [X_Messages_ID], 
+	[Extent1].[ReadStatus] AS [ReadStatus], 
+	[Extent1].[IsDelete] AS [IsDelete], 
+	[Extent1].[MessageStatus] AS [MessageStatus], 
+	[Extent1].[MyMsg] AS [MyMsg], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId], 
+	[Extent2].[CreateDate] AS [CreateDate]
+	FROM  [dbo].[X_UserMessages] AS [Extent1]
+	LEFT OUTER JOIN [dbo].[X_Messages] AS [Extent2] ON [Extent1].[X_Messages_ID] = [Extent2].[ID]
+	WHERE ([Extent1].[Bas_UserID] = @p__linq__0) AND ([Extent1].[MyMsg] = @p__linq__1) AND ([Extent1].[IsDelete] = @p__linq__2)
+)  AS [Project1]
+ORDER BY [Project1].[CreateDate] DESC
+2015-03-13 14:32:49,635 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Bas_UserID] AS [Bas_UserID], 
+[Project1].[X_Messages_ID] AS [X_Messages_ID], 
+[Project1].[ReadStatus] AS [ReadStatus], 
+[Project1].[IsDelete] AS [IsDelete], 
+[Project1].[MessageStatus] AS [MessageStatus], 
+[Project1].[MyMsg] AS [MyMsg], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Bas_UserID] AS [Bas_UserID], 
+	[Extent1].[X_Messages_ID] AS [X_Messages_ID], 
+	[Extent1].[ReadStatus] AS [ReadStatus], 
+	[Extent1].[IsDelete] AS [IsDelete], 
+	[Extent1].[MessageStatus] AS [MessageStatus], 
+	[Extent1].[MyMsg] AS [MyMsg], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId], 
+	[Extent2].[CreateDate] AS [CreateDate]
+	FROM  [dbo].[X_UserMessages] AS [Extent1]
+	LEFT OUTER JOIN [dbo].[X_Messages] AS [Extent2] ON [Extent1].[X_Messages_ID] = [Extent2].[ID]
+	WHERE [Extent1].[IsDelete] = @p__linq__0
+)  AS [Project1]
+ORDER BY [Project1].[CreateDate] DESC
+2015-03-13 14:32:51,676 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Bas_UserID] AS [Bas_UserID], 
+[Project1].[X_Messages_ID] AS [X_Messages_ID], 
+[Project1].[ReadStatus] AS [ReadStatus], 
+[Project1].[IsDelete] AS [IsDelete], 
+[Project1].[MessageStatus] AS [MessageStatus], 
+[Project1].[MyMsg] AS [MyMsg], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Bas_UserID] AS [Bas_UserID], 
+	[Extent1].[X_Messages_ID] AS [X_Messages_ID], 
+	[Extent1].[ReadStatus] AS [ReadStatus], 
+	[Extent1].[IsDelete] AS [IsDelete], 
+	[Extent1].[MessageStatus] AS [MessageStatus], 
+	[Extent1].[MyMsg] AS [MyMsg], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId], 
+	[Extent2].[CreateDate] AS [CreateDate]
+	FROM  [dbo].[X_UserMessages] AS [Extent1]
+	LEFT OUTER JOIN [dbo].[X_Messages] AS [Extent2] ON [Extent1].[X_Messages_ID] = [Extent2].[ID]
+	WHERE ([Extent1].[Bas_UserID] = @p__linq__0) AND ([Extent1].[MyMsg] = @p__linq__1) AND ([Extent1].[IsDelete] = @p__linq__2)
+)  AS [Project1]
+ORDER BY [Project1].[CreateDate] DESC
+2015-03-13 16:43:46,691 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2015-03-13 16:43:46,767 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]

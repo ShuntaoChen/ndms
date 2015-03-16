@@ -1,0 +1,2969 @@
+2014-08-28 08:38:55,056 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2014-08-28 08:38:55,274 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2014-08-28 08:39:10,722 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 08:39:21,220 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 08:39:27,940 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 08:39:28,031 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 08:39:37,286 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 08:39:37,744 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[JY_Standard_Name] AS [JY_Standard_Name], 
+[Extent1].[Point_S] AS [Point_S], 
+[Extent1].[Point_R] AS [Point_R], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_ExamineDetail] AS [Extent1]
+WHERE [Extent1].[JY_Examine_ID] = @p__linq__0
+2014-08-28 08:44:23,086 [23] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2014-08-28 08:44:23,172 [23] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2014-08-28 13:36:33,378 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 13:36:42,125 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 13:36:42,287 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 13:53:59,471 [16] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:17:17,764 [7] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2014-08-28 15:17:17,920 [7] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2014-08-28 15:17:35,619 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:17:48,811 [16] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+WHERE N'root' <> [Extent1].[Account]
+ORDER BY [Extent1].[Orders] DESC
+2014-08-28 15:17:49,102 [16] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Memo] AS [Memo], 
+[Extent1].[Code] AS [Code], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Role] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:18:05,419 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+WHERE N'root' <> [Extent1].[Account]
+ORDER BY [Extent1].[Orders] DESC
+2014-08-28 15:18:05,613 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Memo] AS [Memo], 
+[Extent1].[Code] AS [Code], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Role] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:18:29,522 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Memo] AS [Memo], 
+[Extent1].[Code] AS [Code], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Role] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:58:09,692 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Title] AS [Title], 
+[Extent1].[Area] AS [Area], 
+[Extent1].[Controller] AS [Controller], 
+[Extent1].[Action] AS [Action], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Order] AS [Order], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[Img1] AS [Img1], 
+[Extent1].[Img2] AS [Img2], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Permission] AS [Extent1]
+ORDER BY [Extent1].[Order] ASC
+2014-08-28 15:58:09,901 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Account] AS [Account], 
+[Extent1].[Password] AS [Password], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[LastLogon] AS [LastLogon], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[SubordinatesIds] AS [SubordinatesIds], 
+[Extent1].[UserType] AS [UserType], 
+[Extent1].[LoginCount] AS [LoginCount], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[IsSms] AS [IsSms], 
+[Extent1].[Address] AS [Address], 
+[Extent1].[Email] AS [Email], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_User] AS [Extent1]
+2014-08-28 15:58:39,587 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:58:55,319 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:59:25,688 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 15:59:28,592 [4] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:01:45,303 [7] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:03:26,101 [8] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:03:53,566 [11] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:18:02,358 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:18:05,912 [9] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:18:26,440 [24] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:18:32,418 [18] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:19:09,365 [19] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:25:35,434 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:26:08,677 [16] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:26:10,371 [19] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:26:19,225 [16] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:26:25,762 [19] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:26:28,646 [24] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:34:13,103 [23] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:34:36,362 [4] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:38:33,338 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:38:45,238 [28] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:38:48,141 [28] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:38:55,737 [11] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 16:38:57,640 [11] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 16:46:13,145 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:10:24,063 [23] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:13:07,749 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 18:13:36,526 [15] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 18:14:58,845 [24] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 18:15:10,168 [24] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 18:15:22,398 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:15:26,624 [28] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:18:07,620 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 18:18:10,009 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Value] AS [Value], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Master] AS [Extent1]
+2014-08-28 18:18:12,717 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project2].[ID] AS [ID], 
+[Project2].[CName] AS [CName], 
+[Project2].[CDate] AS [CDate], 
+[Project2].[CSummary] AS [CSummary], 
+[Project2].[CDate_S] AS [CDate_S], 
+[Project2].[CDate_E] AS [CDate_E], 
+[Project2].[AttachmentID] AS [AttachmentID], 
+[Project2].[Years] AS [Years], 
+[Project2].[CStatus] AS [CStatus], 
+[Project2].[CResult] AS [CResult], 
+[Project2].[CreateOn] AS [CreateOn], 
+[Project2].[LastUpdateOn] AS [LastUpdateOn], 
+[Project2].[CreatorId] AS [CreatorId], 
+[Project2].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[CName] AS [CName], 
+	[Extent1].[CDate] AS [CDate], 
+	[Extent1].[CSummary] AS [CSummary], 
+	[Extent1].[CDate_S] AS [CDate_S], 
+	[Extent1].[CDate_E] AS [CDate_E], 
+	[Extent1].[AttachmentID] AS [AttachmentID], 
+	[Extent1].[Years] AS [Years], 
+	[Extent1].[CStatus] AS [CStatus], 
+	[Extent1].[CResult] AS [CResult], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId]
+	FROM [dbo].[JY_Case] AS [Extent1]
+	WHERE  EXISTS (SELECT 
+		1 AS [C1]
+		FROM [dbo].[JY_CasePersonal] AS [Extent2]
+		WHERE ([Extent1].[ID] = [Extent2].[JY_Case_ID]) AND ([Extent2].[JY_Personnel_ID] = @p__linq__0)
+	)
+)  AS [Project2]
+ORDER BY [Project2].[ID] DESC
+2014-08-28 18:18:12,818 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:18:14,792 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[TaskTitle] AS [TaskTitle], 
+[Extent1].[TaskInfo] AS [TaskInfo], 
+[Extent1].[TaskDate] AS [TaskDate], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[FinishRemark] AS [FinishRemark], 
+[Extent1].[FinishProcess] AS [FinishProcess], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CaseTask] AS [Extent1]
+2014-08-28 18:20:59,842 [37] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:21:42,635 [30] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:21:58,235 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:21:58,412 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:21:58,413 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:21:58,434 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:21:59,385 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:21:59,385 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:21:59,385 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:22:00,071 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:22:00,071 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:22:00,071 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:22:00,680 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:22:00,680 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:22:00,680 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:22:01,323 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:22:01,323 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:22:01,323 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:22:43,554 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Project1].[ID] AS [ID], 
+[Project1].[Name] AS [Name], 
+[Project1].[Sex] AS [Sex], 
+[Project1].[Identity] AS [Identity], 
+[Project1].[Birthday] AS [Birthday], 
+[Project1].[National] AS [National], 
+[Project1].[Political] AS [Political], 
+[Project1].[Specialty] AS [Specialty], 
+[Project1].[Education] AS [Education], 
+[Project1].[Job] AS [Job], 
+[Project1].[Unit] AS [Unit], 
+[Project1].[Certificate] AS [Certificate], 
+[Project1].[Tel] AS [Tel], 
+[Project1].[Mobile] AS [Mobile], 
+[Project1].[Resume] AS [Resume], 
+[Project1].[FamilyAddress] AS [FamilyAddress], 
+[Project1].[ContractStatus] AS [ContractStatus], 
+[Project1].[FinishDate] AS [FinishDate], 
+[Project1].[Points] AS [Points], 
+[Project1].[UsingTimes] AS [UsingTimes], 
+[Project1].[Photo] AS [Photo], 
+[Project1].[Origo] AS [Origo], 
+[Project1].[S_User_ID] AS [S_User_ID], 
+[Project1].[CreateOn] AS [CreateOn], 
+[Project1].[LastUpdateOn] AS [LastUpdateOn], 
+[Project1].[CreatorId] AS [CreatorId], 
+[Project1].[UpdaterId] AS [UpdaterId]
+FROM ( SELECT 
+	[Extent1].[ID] AS [ID], 
+	[Extent1].[Name] AS [Name], 
+	[Extent1].[Sex] AS [Sex], 
+	[Extent1].[Identity] AS [Identity], 
+	[Extent1].[Birthday] AS [Birthday], 
+	[Extent1].[National] AS [National], 
+	[Extent1].[Political] AS [Political], 
+	[Extent1].[Specialty] AS [Specialty], 
+	[Extent1].[Education] AS [Education], 
+	[Extent1].[Job] AS [Job], 
+	[Extent1].[Unit] AS [Unit], 
+	[Extent1].[Certificate] AS [Certificate], 
+	[Extent1].[Tel] AS [Tel], 
+	[Extent1].[Mobile] AS [Mobile], 
+	[Extent1].[Resume] AS [Resume], 
+	[Extent1].[FamilyAddress] AS [FamilyAddress], 
+	[Extent1].[ContractStatus] AS [ContractStatus], 
+	[Extent1].[FinishDate] AS [FinishDate], 
+	[Extent1].[Points] AS [Points], 
+	[Extent1].[UsingTimes] AS [UsingTimes], 
+	[Extent1].[Photo] AS [Photo], 
+	[Extent1].[Origo] AS [Origo], 
+	[Extent1].[S_User_ID] AS [S_User_ID], 
+	[Extent1].[CreateOn] AS [CreateOn], 
+	[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+	[Extent1].[CreatorId] AS [CreatorId], 
+	[Extent1].[UpdaterId] AS [UpdaterId]
+	FROM [dbo].[JY_Personnel] AS [Extent1]
+	WHERE [Extent1].[Sex] = @p__linq__0
+)  AS [Project1]
+ORDER BY [Project1].[ID] DESC
+2014-08-28 18:22:43,810 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 18:22:43,811 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+2014-08-28 18:22:43,811 [35] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 18:24:59,223 [29] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:27:35,526 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:28:10,150 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:28:36,668 [33] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:43:03,933 [15] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:43:17,706 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 18:43:18,273 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:43:19,697 [27] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:43:28,701 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 18:55:21,208 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 18:55:36,206 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:02:39,442 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:03:43,004 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:03:48,435 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:03:52,197 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:03:59,289 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:04:09,309 [10] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:04:11,219 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:08:25,063 [30] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:08:35,224 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:08:35,322 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:08:37,179 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:08:44,380 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:08:49,281 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:11:54,323 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:12:01,408 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:12:01,530 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:12:03,450 [5] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:12:13,378 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:12:55,663 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:14:10,496 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:14:12,258 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:15:16,867 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:15:33,004 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:15:33,120 [6] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:15:35,586 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:16:31,014 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:16:35,703 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:16:43,083 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:16:43,167 [26] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:16:45,178 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:17:15,511 [30] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:17:22,743 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:17:23,479 [21] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:17:24,521 [30] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:19:06,828 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Value] AS [Value], 
+[Extent1].[Type] AS [Type], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[Parent_ID] AS [Parent_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[S_Master] AS [Extent1]
+2014-08-28 19:19:07,079 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[CName] AS [CName], 
+[Extent1].[CDate] AS [CDate], 
+[Extent1].[CSummary] AS [CSummary], 
+[Extent1].[CDate_S] AS [CDate_S], 
+[Extent1].[CDate_E] AS [CDate_E], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[Years] AS [Years], 
+[Extent1].[CStatus] AS [CStatus], 
+[Extent1].[CResult] AS [CResult], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Case] AS [Extent1]
+ORDER BY [Extent1].[ID] DESC
+2014-08-28 19:19:07,155 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:07,290 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[TaskTitle] AS [TaskTitle], 
+[Extent1].[TaskInfo] AS [TaskInfo], 
+[Extent1].[TaskDate] AS [TaskDate], 
+[Extent1].[Status] AS [Status], 
+[Extent1].[FinishRemark] AS [FinishRemark], 
+[Extent1].[FinishProcess] AS [FinishProcess], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CaseTask] AS [Extent1]
+2014-08-28 19:19:10,640 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,675 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,690 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,827 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:10,898 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,912 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:10,929 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,944 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:10,962 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:10,976 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,072 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,086 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,101 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,120 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,134 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,152 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,167 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,184 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,198 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,263 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,278 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,293 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,311 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,325 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:11,343 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+2014-08-28 19:19:11,357 [20] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:24,239 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+WHERE [Extent1].[JY_Case_ID] = @p__linq__0
+2014-08-28 19:19:25,083 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:26,013 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:26,077 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:26,145 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:26,212 [32] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:33,082 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Record_ID] AS [JY_Record_ID], 
+[Extent1].[Remark] AS [Remark], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_CasePersonal] AS [Extent1]
+WHERE [Extent1].[JY_Case_ID] = @p__linq__0
+2014-08-28 19:19:33,158 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:34,963 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,048 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,114 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:35,185 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,247 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:35,310 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,377 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:35,444 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,504 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:35,568 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Sex] AS [Sex], 
+[Extent1].[Identity] AS [Identity], 
+[Extent1].[Birthday] AS [Birthday], 
+[Extent1].[National] AS [National], 
+[Extent1].[Political] AS [Political], 
+[Extent1].[Specialty] AS [Specialty], 
+[Extent1].[Education] AS [Education], 
+[Extent1].[Job] AS [Job], 
+[Extent1].[Unit] AS [Unit], 
+[Extent1].[Certificate] AS [Certificate], 
+[Extent1].[Tel] AS [Tel], 
+[Extent1].[Mobile] AS [Mobile], 
+[Extent1].[Resume] AS [Resume], 
+[Extent1].[FamilyAddress] AS [FamilyAddress], 
+[Extent1].[ContractStatus] AS [ContractStatus], 
+[Extent1].[FinishDate] AS [FinishDate], 
+[Extent1].[Points] AS [Points], 
+[Extent1].[UsingTimes] AS [UsingTimes], 
+[Extent1].[Photo] AS [Photo], 
+[Extent1].[Origo] AS [Origo], 
+[Extent1].[S_User_ID] AS [S_User_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Personnel] AS [Extent1]
+2014-08-28 19:19:35,634 [17] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Tiltle] AS [Tiltle], 
+[Extent1].[EDate_S] AS [EDate_S], 
+[Extent1].[EDate_E] AS [EDate_E], 
+[Extent1].[Comment] AS [Comment], 
+[Extent1].[Suggest] AS [Suggest], 
+[Extent1].[EDate] AS [EDate], 
+[Extent1].[EPerson] AS [EPerson], 
+[Extent1].[Content] AS [Content], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[AttachmentID] AS [AttachmentID], 
+[Extent1].[JY_Personnel_ID] AS [JY_Personnel_ID], 
+[Extent1].[JY_Case_ID] AS [JY_Case_ID], 
+[Extent1].[JY_Case_Name] AS [JY_Case_Name], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Examine] AS [Extent1]
+2014-08-28 19:19:40,511 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:19:40,589 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:19:48,669 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:19:49,150 [25] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[JY_Standard_Name] AS [JY_Standard_Name], 
+[Extent1].[Point_S] AS [Point_S], 
+[Extent1].[Point_R] AS [Point_R], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_ExamineDetail] AS [Extent1]
+WHERE [Extent1].[JY_Examine_ID] = @p__linq__0
+2014-08-28 19:20:56,731 [29] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:20:58,617 [29] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[SDate_S] AS [SDate_S], 
+[Extent1].[SDate_E] AS [SDate_E], 
+[Extent1].[IsOpen] AS [IsOpen], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_Standard] AS [Extent1]
+2014-08-28 19:21:46,955 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Point] AS [Point], 
+[Extent1].[Orders] AS [Orders], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_StandardDetail] AS [Extent1]
+WHERE [Extent1].[JY_Standard_ID] = @p__linq__0
+2014-08-28 19:21:47,018 [31] DEBUG JiYun.Web.Data.GenericRepository`2 - SELECT 
+[Extent1].[ID] AS [ID], 
+[Extent1].[JY_Examine_ID] AS [JY_Examine_ID], 
+[Extent1].[JY_Standard_ID] AS [JY_Standard_ID], 
+[Extent1].[JY_Standard_Name] AS [JY_Standard_Name], 
+[Extent1].[Point_S] AS [Point_S], 
+[Extent1].[Point_R] AS [Point_R], 
+[Extent1].[CreateOn] AS [CreateOn], 
+[Extent1].[LastUpdateOn] AS [LastUpdateOn], 
+[Extent1].[CreatorId] AS [CreatorId], 
+[Extent1].[UpdaterId] AS [UpdaterId]
+FROM [dbo].[JY_ExamineDetail] AS [Extent1]
+WHERE [Extent1].[JY_Examine_ID] = @p__linq__0

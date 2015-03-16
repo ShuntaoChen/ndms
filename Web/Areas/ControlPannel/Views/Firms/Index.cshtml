@@ -1,0 +1,129 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@ @*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                厂商类型：
+            </th>
+            <td>
+                @Html.DropDownList("CsType", null, "--全部--", new { style = "width:100px" })
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="单位名称/单位地址/联系人" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 500)
+    @Html.DialogWithId("Edit", 800, 500, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+    <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 15%;">
+                    单位名称
+                </th>
+                <th style="width: 20%;">
+                    单位地址
+                </th>
+                <th style="width: 10%">
+                    厂商类型
+                </th>
+                <th style="width: 10%">
+                    联系人
+                </th>
+
+                <th >
+                    描述
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })', 'ControlPannelMotorRoomsDetail','800','500') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="Dell服务器维护商 "  class="TipImp"  href="@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        Dell服务器维护商  </a>
+                </td>
+                <td style="text-align: center">
+                    金山区龙山路555号5楼信息委 
+                </td>
+                <td style="text-align: center">
+                    维护商
+                </td>
+                <td style="text-align: center">
+                    王瑾  
+                </td>
+                <td>
+                    描述
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })', 'ControlPannelMotorRoomsDetail','800','500') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="自行维护  "  class="TipImp"  href="@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        自行维护   </a>
+                </td>
+                <td style="text-align: center">
+                    金山区龙山路555号5楼信息委 
+                </td>
+                <td style="text-align: center">
+                    自行维护
+                </td>
+                <td style="text-align: center">
+                    王瑾  
+                </td>
+                <td>
+                    描述
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })', 'ControlPannelMotorRoomsDetail','800','500') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a  title="联想电脑供应商 "  class="TipImp"  href="@Url.Action("Detail", "Firms", new { area = "ControlPannel", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                       联想电脑供应商 </a>
+                </td>
+                <td style="text-align: center">
+                    金山区龙山路555号5楼信息委 
+                </td>
+                 <td style="text-align: center">
+                    供应商
+                </td>
+                 <td style="text-align: center">
+                    王瑾  
+                </td>
+                 <td>
+                    描述
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

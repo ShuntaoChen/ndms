@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JY_NDMSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="JY_NDMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccidentalMaintenances" EntityType="JY_NDMSModel.AccidentalMaintenances" />
+    <EntitySet Name="AssetInfos" EntityType="JY_NDMSModel.AssetInfos" />
+    <EntitySet Name="AssetOptionalProperties" EntityType="JY_NDMSModel.AssetOptionalProperties" />
+    <EntitySet Name="CabinetInfos" EntityType="JY_NDMSModel.CabinetInfos" />
+    <EntitySet Name="CategoriesAndStatus" EntityType="JY_NDMSModel.CategoriesAndStatus" />
+    <EntitySet Name="EventInfos" EntityType="JY_NDMSModel.EventInfos" />
+    <EntitySet Name="LaborInfos" EntityType="JY_NDMSModel.LaborInfos" />
+    <EntitySet Name="MaintainPlans" EntityType="JY_NDMSModel.MaintainPlans" />
+    <EntitySet Name="MaintainRecords" EntityType="JY_NDMSModel.MaintainRecords" />
+    <EntitySet Name="MaintainRequests" EntityType="JY_NDMSModel.MaintainRequests" />
+    <EntitySet Name="MaintenanceKnowledges" EntityType="JY_NDMSModel.MaintenanceKnowledges" />
+    <EntitySet Name="MerchantInfos" EntityType="JY_NDMSModel.MerchantInfos" />
+    <EntitySet Name="MotorRoomInfos" EntityType="JY_NDMSModel.MotorRoomInfos" />
+    <EntitySet Name="OnDuties" EntityType="JY_NDMSModel.OnDuties" />
+    <EntitySet Name="SharedResources" EntityType="JY_NDMSModel.SharedResources" />
+    <EntitySet Name="TaskDesignateInfos" EntityType="JY_NDMSModel.TaskDesignateInfos" />
+    <EntitySet Name="UserCompanyInfos" EntityType="JY_NDMSModel.UserCompanyInfos" />
+    <EntitySet Name="UserScheduleInfos" EntityType="JY_NDMSModel.UserScheduleInfos" />
+    <AssociationSet Name="FK_ACCIDENT_REFERENCE_ASSETINF" Association="JY_NDMSModel.FK_ACCIDENT_REFERENCE_ASSETINF">
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+      <End Role="AccidentalMaintenances" EntitySet="AccidentalMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACCIDENT_REFERENCE_MERCHANT" Association="JY_NDMSModel.FK_ACCIDENT_REFERENCE_MERCHANT">
+      <End Role="MerchantInfos" EntitySet="MerchantInfos" />
+      <End Role="AccidentalMaintenances" EntitySet="AccidentalMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSETINF_REFERENCE_CABINETI" Association="JY_NDMSModel.FK_ASSETINF_REFERENCE_CABINETI">
+      <End Role="CabinetInfos" EntitySet="CabinetInfos" />
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSETINF_REFERENCE_MERCHANT" Association="JY_NDMSModel.FK_ASSETINF_REFERENCE_MERCHANT">
+      <End Role="MerchantInfos" EntitySet="MerchantInfos" />
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSETINF_REFERENCE_MOTORROO" Association="JY_NDMSModel.FK_ASSETINF_REFERENCE_MOTORROO">
+      <End Role="MotorRoomInfos" EntitySet="MotorRoomInfos" />
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSETINF_REFERENCE_USERCOMP" Association="JY_NDMSModel.FK_ASSETINF_REFERENCE_USERCOMP">
+      <End Role="UserCompanyInfos" EntitySet="UserCompanyInfos" />
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSETOPT_REFERENCE_ASSETINF" Association="JY_NDMSModel.FK_ASSETOPT_REFERENCE_ASSETINF">
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+      <End Role="AssetOptionalProperties" EntitySet="AssetOptionalProperties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAINTAIN_REFERENCE_ASSETINF" Association="JY_NDMSModel.FK_MAINTAIN_REFERENCE_ASSETINF">
+      <End Role="AssetInfos" EntitySet="AssetInfos" />
+      <End Role="MaintainRequests" EntitySet="MaintainRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ONDUTIES_REFERENCE_LABORINF" Association="JY_NDMSModel.FK_ONDUTIES_REFERENCE_LABORINF">
+      <End Role="LaborInfos" EntitySet="LaborInfos" />
+      <End Role="OnDuties" EntitySet="OnDuties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAINTAIN_REFERENCE_MAINTAIN" Association="JY_NDMSModel.FK_MAINTAIN_REFERENCE_MAINTAIN">
+      <End Role="MaintainPlans" EntitySet="MaintainPlans" />
+      <End Role="MaintainRecords" EntitySet="MaintainRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAINTAINa_REFERENCE_MAINTAINp" Association="JY_NDMSModel.FK_MAINTAINa_REFERENCE_MAINTAINp">
+      <End Role="MaintainPlans" EntitySet="MaintainPlans" />
+      <End Role="MaintainRequests" EntitySet="MaintainRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TASKDESI_REFERENCE_USERSCHE" Association="JY_NDMSModel.FK_TASKDESI_REFERENCE_USERSCHE">
+      <End Role="UserScheduleInfos" EntitySet="UserScheduleInfos" />
+      <End Role="TaskDesignateInfos" EntitySet="TaskDesignateInfos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccidentalMaintenances">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="MaintainTime" Type="DateTime" />
+    <Property Name="EventCategory" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="EventProperty" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UserInvolvedList" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MaintenanceContentDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IsConfirmed" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ACCIDENT_REFERENCE_ASSETINF" FromRole="AccidentalMaintenances" ToRole="AssetInfos" />
+    <NavigationProperty Name="MerchantInfos" Relationship="JY_NDMSModel.FK_ACCIDENT_REFERENCE_MERCHANT" FromRole="AccidentalMaintenances" ToRole="MerchantInfos" />
+  </EntityType>
+  <EntityType Name="AssetInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AssetBrand" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AssetCategoryNo" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="AllocatedIp" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LoginName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LoginPassword" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsImportanAsset" Type="Int32" />
+    <Property Name="AssetTypeNo" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="MaxServiceYear" Type="Int32" />
+    <Property Name="BoughtTime" Type="DateTime" />
+    <Property Name="MaintainStarttime" Type="DateTime" />
+    <Property Name="MaintainEndtime" Type="DateTime" />
+    <Property Name="Remark" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <Property Name="IsSelfOwned" Type="Int32" />
+    <Property Name="OS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AccidentalMaintenances" Relationship="JY_NDMSModel.FK_ACCIDENT_REFERENCE_ASSETINF" FromRole="AssetInfos" ToRole="AccidentalMaintenances" />
+    <NavigationProperty Name="CabinetInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_CABINETI" FromRole="AssetInfos" ToRole="CabinetInfos" />
+    <NavigationProperty Name="MerchantInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_MERCHANT" FromRole="AssetInfos" ToRole="MerchantInfos" />
+    <NavigationProperty Name="MotorRoomInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_MOTORROO" FromRole="AssetInfos" ToRole="MotorRoomInfos" />
+    <NavigationProperty Name="UserCompanyInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_USERCOMP" FromRole="AssetInfos" ToRole="UserCompanyInfos" />
+    <NavigationProperty Name="AssetOptionalProperties" Relationship="JY_NDMSModel.FK_ASSETOPT_REFERENCE_ASSETINF" FromRole="AssetInfos" ToRole="AssetOptionalProperties" />
+    <NavigationProperty Name="MaintainRequests" Relationship="JY_NDMSModel.FK_MAINTAIN_REFERENCE_ASSETINF" FromRole="AssetInfos" ToRole="MaintainRequests" />
+  </EntityType>
+  <EntityType Name="AssetOptionalProperties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceCategoryNo" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Unit" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="IsParent" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ASSETOPT_REFERENCE_ASSETINF" FromRole="AssetOptionalProperties" ToRole="AssetInfos" />
+  </EntityType>
+  <EntityType Name="CabinetInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CabinetName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CabinetDes" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_CABINETI" FromRole="CabinetInfos" ToRole="AssetInfos" />
+  </EntityType>
+  <EntityType Name="CategoriesAndStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="IsParent" Type="Int32" />
+    <Property Name="Value" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <Property Name="AssetInfos_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EventInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="EventCategory" Type="Int32" />
+    <Property Name="EventDescription" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="LaborInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LaborType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Starttime" Type="DateTime" />
+    <Property Name="Endtime" Type="DateTime" />
+    <Property Name="LaborContent" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <Property Name="LaborPlace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IsWholeDay" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <NavigationProperty Name="OnDuties" Relationship="JY_NDMSModel.FK_ONDUTIES_REFERENCE_LABORINF" FromRole="LaborInfos" ToRole="OnDuties" />
+  </EntityType>
+  <EntityType Name="MaintainPlans">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Creator" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <Property Name="Title" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ExecuteCycle" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" />
+    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="AssetInfos_ID" Type="Int32" />
+    <Property Name="MerchantInfos_ID" Type="Int32" />
+    <NavigationProperty Name="MaintainRecords" Relationship="JY_NDMSModel.FK_MAINTAIN_REFERENCE_MAINTAIN" FromRole="MaintainPlans" ToRole="MaintainRecords" />
+    <NavigationProperty Name="MaintainRequests" Relationship="JY_NDMSModel.FK_MAINTAINa_REFERENCE_MAINTAINp" FromRole="MaintainPlans" ToRole="MaintainRequests" />
+  </EntityType>
+  <EntityType Name="MaintainRecords">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="OperateTime" Type="DateTime" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="MaintainPlans" Relationship="JY_NDMSModel.FK_MAINTAIN_REFERENCE_MAINTAIN" FromRole="MaintainRecords" ToRole="MaintainPlans" />
+  </EntityType>
+  <EntityType Name="MaintainRequests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="RequestTime" Type="DateTime" />
+    <Property Name="HandleStatus" Type="Int32" />
+    <Property Name="IsPassed" Type="Int32" />
+    <Property Name="IsFinished" Type="Int32" />
+    <Property Name="OfficialComment" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Proposer" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_MAINTAIN_REFERENCE_ASSETINF" FromRole="MaintainRequests" ToRole="AssetInfos" />
+    <NavigationProperty Name="MaintainPlans" Relationship="JY_NDMSModel.FK_MAINTAINa_REFERENCE_MAINTAINp" FromRole="MaintainRequests" ToRole="MaintainPlans" />
+  </EntityType>
+  <EntityType Name="MaintenanceKnowledges">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KnowledgeTitle" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KnowledgeCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KnowledgeDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="AttachmentId" Type="Int32" />
+    <Property Name="IsTopmost" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="MerchantInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MerchantName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MerchantCategory" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Contact" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Linkman" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AccidentalMaintenances" Relationship="JY_NDMSModel.FK_ACCIDENT_REFERENCE_MERCHANT" FromRole="MerchantInfos" ToRole="AccidentalMaintenances" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_MERCHANT" FromRole="MerchantInfos" ToRole="AssetInfos" />
+  </EntityType>
+  <EntityType Name="MotorRoomInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Category" Type="Int32" />
+    <Property Name="Cabinet_IDs" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AddressDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_MOTORROO" FromRole="MotorRoomInfos" ToRole="AssetInfos" />
+  </EntityType>
+  <EntityType Name="OnDuties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserInfos_ID" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="LaborInfos" Relationship="JY_NDMSModel.FK_ONDUTIES_REFERENCE_LABORINF" FromRole="OnDuties" ToRole="LaborInfos" />
+  </EntityType>
+  <EntityType Name="SharedResources">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="FileName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Path" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="FileSize" Type="Int32" />
+    <Property Name="CategoryNo" Type="Int32" />
+    <Property Name="FileDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="TaskDesignateInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TaskSubject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TaskContent" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Remark" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Starttime" Type="DateTime" />
+    <Property Name="Endtime" Type="DateTime" />
+    <Property Name="LoopCategory" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <Property Name="TaskPlace" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Doer_ID" Type="Int32" />
+    <NavigationProperty Name="UserScheduleInfos" Relationship="JY_NDMSModel.FK_TASKDESI_REFERENCE_USERSCHE" FromRole="TaskDesignateInfos" ToRole="UserScheduleInfos" />
+  </EntityType>
+  <EntityType Name="UserCompanyInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CallForShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LoginPassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OrganCategory" Type="Int32" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="Linkman" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LinkmanMobile" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="QQ" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="AssetInfos" Relationship="JY_NDMSModel.FK_ASSETINF_REFERENCE_USERCOMP" FromRole="UserCompanyInfos" ToRole="AssetInfos" />
+  </EntityType>
+  <EntityType Name="UserScheduleInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserInfos_ID" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="TaskDesignateInfos" Relationship="JY_NDMSModel.FK_TASKDESI_REFERENCE_USERSCHE" FromRole="UserScheduleInfos" ToRole="TaskDesignateInfos" />
+  </EntityType>
+  <Association Name="FK_ACCIDENT_REFERENCE_ASSETINF">
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="0..1" />
+    <End Role="AccidentalMaintenances" Type="JY_NDMSModel.AccidentalMaintenances" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ACCIDENT_REFERENCE_MERCHANT">
+    <End Role="MerchantInfos" Type="JY_NDMSModel.MerchantInfos" Multiplicity="0..1" />
+    <End Role="AccidentalMaintenances" Type="JY_NDMSModel.AccidentalMaintenances" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ASSETINF_REFERENCE_CABINETI">
+    <End Role="CabinetInfos" Type="JY_NDMSModel.CabinetInfos" Multiplicity="0..1" />
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ASSETINF_REFERENCE_MERCHANT">
+    <End Role="MerchantInfos" Type="JY_NDMSModel.MerchantInfos" Multiplicity="0..1" />
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ASSETINF_REFERENCE_MOTORROO">
+    <End Role="MotorRoomInfos" Type="JY_NDMSModel.MotorRoomInfos" Multiplicity="0..1" />
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ASSETINF_REFERENCE_USERCOMP">
+    <End Role="UserCompanyInfos" Type="JY_NDMSModel.UserCompanyInfos" Multiplicity="0..1" />
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ASSETOPT_REFERENCE_ASSETINF">
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="0..1" />
+    <End Role="AssetOptionalProperties" Type="JY_NDMSModel.AssetOptionalProperties" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_MAINTAIN_REFERENCE_ASSETINF">
+    <End Role="AssetInfos" Type="JY_NDMSModel.AssetInfos" Multiplicity="0..1" />
+    <End Role="MaintainRequests" Type="JY_NDMSModel.MaintainRequests" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ONDUTIES_REFERENCE_LABORINF">
+    <End Role="LaborInfos" Type="JY_NDMSModel.LaborInfos" Multiplicity="0..1" />
+    <End Role="OnDuties" Type="JY_NDMSModel.OnDuties" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_MAINTAIN_REFERENCE_MAINTAIN">
+    <End Role="MaintainPlans" Type="JY_NDMSModel.MaintainPlans" Multiplicity="0..1" />
+    <End Role="MaintainRecords" Type="JY_NDMSModel.MaintainRecords" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_MAINTAINa_REFERENCE_MAINTAINp">
+    <End Role="MaintainPlans" Type="JY_NDMSModel.MaintainPlans" Multiplicity="0..1" />
+    <End Role="MaintainRequests" Type="JY_NDMSModel.MaintainRequests" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_TASKDESI_REFERENCE_USERSCHE">
+    <End Role="UserScheduleInfos" Type="JY_NDMSModel.UserScheduleInfos" Multiplicity="0..1" />
+    <End Role="TaskDesignateInfos" Type="JY_NDMSModel.TaskDesignateInfos" Multiplicity="*" />
+  </Association>
+</Schema>

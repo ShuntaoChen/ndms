@@ -1,0 +1,192 @@
+﻿<script type="text/javascript">
+    function toSubmitBulletinCreate() {
+        var hiddens = $("#Receive :hidden", navTab.getCurrentPanel());
+        if(hiddens.length < 1) {
+            alertMsg.error("对不起，请在右边列表至少选择一个部门");
+            return false;
+        }
+
+        if ($(".jfile", navTab.getCurrentPanel()).children().size()==0) {
+            $("#AttachmentID", navTab.getCurrentPanel()).val("");
+        }
+
+        var $form = $("#form", navTab.getCurrentPanel());
+        if(!$form.valid()){
+            return false;
+        }
+        $form.submit();
+    }
+
+    function Get(obj) {
+        var val = $(obj).attr("tvalue");
+        var name = $(obj).html();
+        var deptid = $(obj).attr("dvalue");
+        var hiddens = $("#Receive input:hidden", navTab.getCurrentPanel())
+        // 该人员是否已选
+        var flag = false;
+        for (var i = 0; i < hiddens.length; i++) {
+            if (hiddens[i].value == val) {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag) {
+            $("#Receive", navTab.getCurrentPanel()).append("<span class='ledlist' title='" + name + "'><a class='close' href='javascript:;' onclick='RemoveSpan(this)'></a>" + name + "<input type='hidden' name='ledids' value='" + val + "' /><input type='hidden' name='deptids' value='" + deptid + "' /><input type='hidden' name='MessageReceive' value='" + name + "' /></span>");
+        }
+
+        IsTip();
+    }
+    //点击部门获取用户 一级部门/二级部门
+    function GetAll(id) {
+        var ul = $("#" + id, navTab.getCurrentPanel());
+        if ($("ul[id='" + id.replace("userlist", "Children") + "']", navTab.getCurrentPanel()).size() > 0) {
+            id = id.replace("userlist", "Children");
+            ul = $("#" + id, navTab.getCurrentPanel()).find("ul[id^='userlist']");
+        }
+        
+        ul.find("a").each(function () {
+            var val = $(this).attr("tvalue");
+            var name = $(this).html();
+            var deptid = $(this).attr("dvalue");
+            var hiddens = $("#Receive input:hidden", navTab.getCurrentPanel());
+            var flag = false;
+            for (var i = 0; i < hiddens.length; i++) {
+                if (hiddens[i].value == val) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                $("#Receive", navTab.getCurrentPanel()).append("<span class='ledlist' title='" + name + "'><a class='close' href='javascript:;' onclick='RemoveSpan(this)'></a>" + name + "<input type='hidden' name='ledids' value='" + val + "' /><input type='hidden' name='deptids' value='" + deptid + "' /><input type='hidden' name='MessageReceive' value='" + name + "' /></span>");
+            }
+        });
+
+        IsTip();
+    }
+
+    function RemoveSpan(obj) {
+        $(obj).parents("span").remove();
+        IsTip();
+    }
+
+    function IsTip() {
+        if ($("#Receive input:hidden", navTab.getCurrentPanel()).length > 0) {
+            $("#Receive #title").hide();
+        }
+        else {
+            $("#Receive #title").show();
+        }
+    }
+
+    // 兼容各大浏览器的控制
+    $(function() { 
+        if($.browser.msie) { 
+            
+        } 
+        else if($.browser.safari) { 
+            $("#messageWriteLeft", navTab.getCurrentPanel()).animate({marginRight:'5px'},0);
+        } 
+        else if($.browser.mozilla) { 
+        
+        } 
+        else if($.browser.opera) { 
+            
+        } 
+        else { 
+
+        }
+    });
+
+</script>
+<form method="post" id="form" action="@Url.Action("DoCreate", "Bulletin", new { area = "Mes" })" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+    <div class="pageContent">
+        <div style=" margin:5px;" layouth="45">
+        <div class="tabs">
+		    <div class="tabsHeader">
+			    <div class="tabsHeaderContent">
+				    <ul>
+					    <li><a href="javascript:;"><span>信息编辑</span></a></li>
+				    </ul>
+			    </div>
+		    </div>
+		    <div class="tabsContent">
+			    <div>
+                @{
+                    var depts = (List<JiYun.Modules.Core.Models.S_Dept>)ViewData["Depts"] ?? new List<JiYun.Modules.Core.Models.S_Dept>();
+                 }   
+				    <div layoutH="95" style="margin-left:-1px;float:right; display:block; overflow:auto; width:240px; border:solid 1px #CCC; line-height:21px; background:#fff">
+				        <ul class="tree">
+                            
+                            @Html.Partial("~/Views/Shared/DeptUserTree.ascx", depts.Where(t => t.Parent_ID == null).ToList())
+				         </ul>
+				    </div>
+				    <div id="messageWriteLeft" layoutH="95" style="margin-right:246px;border:solid 1px #CCC; background:#fff; height:100%">
+					    
+                        @Html.Hidden("Guid")
+
+                        <div class="pageFormContent">
+                            <div class="unit">
+				                <label style="width:80px; display:inherit;">部&nbsp;&nbsp;&nbsp;门：</label>
+                                <div class="divtxt" id="Receive" style="margin-right:10px; float:left; display:inherit;width:80%;">
+                                    <span class='ledlist' id="title" >请在右边列表选取部门！</span>
+                                    @*<span class="ledlist" title=""><a class="close" href="javascript:;" onclick="RemoveSpan(this)"></a><input type="hidden" name="ledids" value=""></span>*@
+                                </div>
+                            </div>
+                            <div class="divider">divider</div>
+                            <div class="unit">
+                                <label style="width:80px;">主　题：</label>
+                                <input name="Title" type="text" class="required" value="" style="width:80%" />
+                            </div>
+                            <div class="unit">
+                                <label style="width:80px;">有效期：</label>
+                                <input type="text" name="StartDate" readonly class="date dic ld" size="10" style="float:left;"/>
+                                <span style="float: left; line-height: 25px;">&nbsp;至&nbsp;</span>
+                                <input type="text" name="EndDate" readonly class="date dic ld" datefmt="yyyy-MM-dd" size="10" style="float:left;"/>
+                            </div>
+                            <div class="unit">
+                                @{ 
+                                    var TdID = "MesBulletinCreate" + Guid.NewGuid().ToString();
+                                    var attid = Guid.NewGuid().ToString(); 
+                                }
+                                <label style="width:80px;">附　件：</label>
+                                <label id="@(TdID)" style=" width:70%;">
+                                    <input type="hidden" name="AttachmentID" id="AttachmentID" value="@(attid)" />
+                                    <a href="javascript:" onclick="JUpload('@(attid)','@(TdID)');"><img title="点击上传附件" style=" cursor:pointer;" src="/Content/Images/attachment_add.png" /></a>
+                                </label>
+                            </div>
+                            <div class="unit">
+                                <label style="width:80px;">内　容：</label>
+                                <textarea name="Content" tools="simple" class="editor" style="width:80%;height:250px" rows="10"></textarea>
+                            </div>
+                        </div>
+				    </div>
+			    </div>
+		    </div>
+		    <div class="tabsFooter">
+			    <div class="tabsFooterContent"></div>
+		    </div>
+	    </div>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" onclick="toSubmitBulletinCreate();">
+                                保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">
+                                关闭</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>

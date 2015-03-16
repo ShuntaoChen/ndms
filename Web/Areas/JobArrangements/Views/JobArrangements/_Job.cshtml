@@ -1,0 +1,180 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<form method="post" id="pageForm" action="@Url.Action("DoCreate", "JobDailyRecord", new { area = "JobArrangements" })" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 值班日志 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        日程安排
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    主题：
+                </th>
+                <td>
+                    <input type="text" id="_job_mainTitle" name="Tiltle" class="required " size="70"
+                        value="" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    工作地点：
+                </th>
+                <td>
+                    <input type="text" name="address" class="required " size="70" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    执行日期：
+                </th>
+                <td>
+                    <ul>
+                        <li style="float: left;">
+                            <input type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" /></li>
+                        <li style="float: left;">
+                            <label style="width: 13px; !important;">
+                                至</label></li>
+                        <li style="float: left;">
+                            <input type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" /></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    执行时间：
+                </th>
+                <td>
+                    <ul>
+                        <li style="float: left;">
+                            <input id="ckAllDay" type="checkbox" /></li>
+                        <li style="float: left:">
+                            <label style="width: 63px; !important;" for="ckAllDay">
+                                全天</label></li>
+                        <div>
+                            <li style="float: left;">
+                                <input type="time" /></li>
+                            <li style="float: left;">
+                                <label style="width: 13px; !important;">
+                                    至</label></li>
+                            <li style="float: left;">
+                                <input type="time" /></li>
+                        </div>
+                    </ul>
+                </td>
+            </tr>
+        @*    <tr>
+                <th>
+                    执行方式：
+                </th>
+                <td>
+                    <ul>
+                        <li>
+                            <select>
+                                <option>仅一次</option>
+                                <option>每周</option>
+                                <option>每月</option>
+                            </select>
+                        </li>
+                        <li>
+                            <ul>
+                                <li style="float: left;">
+                                    <input id="ck_xq1" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq1">
+                                        星期一</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq2" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq2">
+                                        星期二</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq3" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq3">
+                                        星期三</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq4" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq4">
+                                        星期四</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq5" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq5">
+                                        星期五</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq6" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq6">
+                                        星期六</label></li>
+                                <li style="float: left;">
+                                    <input id="ck_xq7" type="checkbox" /></li>
+                                <li style="float: left;">
+                                    <label style="width: 36px; !important;" for="ck_xq7">
+                                        星期日</label></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>*@
+            <tr>
+                <th>
+                    执行人：
+                </th>
+                <td>
+                     <select>
+                                <option>王大飞（网络科）</option>
+                                <option>高敏（机房）</option>
+                                <option>张丽芳（信息处）</option>
+                            </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    具体内容：
+                </th>
+                <td>
+                    <textarea rows="10" style="width: 98%;" name="Content"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="formBar">
+        <ul>
+            <li style="float: left">
+                <div class="button">
+                    <div class="buttonContent">
+                        <button type="button" class="close">
+                            删除</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="buttonActive">
+                    <div class="buttonContent">
+                        <button type="button" class="close">
+                            保存</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="button">
+                    <div class="buttonContent">
+                        <button type="button" class="close">
+                            关闭</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>

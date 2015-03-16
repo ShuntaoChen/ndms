@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAModel1StoreContainer" CdmEntityContainer="CAEntities">
+    <EntitySetMapping Name="JY_Case">
+      <EntityTypeMapping TypeName="CAModel1.JY_Case">
+        <MappingFragment StoreEntitySet="JY_Case">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CDate" ColumnName="CDate" />
+          <ScalarProperty Name="CSummary" ColumnName="CSummary" />
+          <ScalarProperty Name="CDate_S" ColumnName="CDate_S" />
+          <ScalarProperty Name="CDate_E" ColumnName="CDate_E" />
+          <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+          <ScalarProperty Name="Years" ColumnName="Years" />
+          <ScalarProperty Name="CStatus" ColumnName="CStatus" />
+          <ScalarProperty Name="CResult" ColumnName="CResult" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JY_CasePersonal">
+      <EntityTypeMapping TypeName="CAModel1.JY_CasePersonal">
+        <MappingFragment StoreEntitySet="JY_CasePersonal">
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="JY_Record_ID" ColumnName="JY_Record_ID" />
+          <ScalarProperty Name="JY_Examine_ID" ColumnName="JY_Examine_ID" />
+          <ScalarProperty Name="JY_Personnel_ID" ColumnName="JY_Personnel_ID" />
+          <ScalarProperty Name="JY_Case_ID" ColumnName="JY_Case_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

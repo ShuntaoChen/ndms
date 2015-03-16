@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{506E3575-3C7A-495C-8B25-D5A572C68508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDBService", "WebDBService\WebDBService.csproj", "{34496DF4-23EC-41A2-A41F-8DE5E653ACB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "辅助说明", "辅助说明", "{733C9746-627E-4A17-86AE-36F1D29D643B}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.172.18.221:8080/tfs/%e7%94%b5%e5%ad%90%e6%94%bf%e5%8a%a1%e9%a1%b9%e7%9b%ae
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Web\\Web.csproj
+		SccProjectName1 = Web
+		SccLocalPath1 = Web
+		SccProjectUniqueName2 = WebDBService\\WebDBService.csproj
+		SccProjectName2 = WebDBService
+		SccLocalPath2 = WebDBService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{506E3575-3C7A-495C-8B25-D5A572C68508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506E3575-3C7A-495C-8B25-D5A572C68508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506E3575-3C7A-495C-8B25-D5A572C68508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506E3575-3C7A-495C-8B25-D5A572C68508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34496DF4-23EC-41A2-A41F-8DE5E653ACB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34496DF4-23EC-41A2-A41F-8DE5E653ACB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34496DF4-23EC-41A2-A41F-8DE5E653ACB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34496DF4-23EC-41A2-A41F-8DE5E653ACB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

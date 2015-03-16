@@ -1,0 +1,107 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        
+        <tr>
+            <th width="auto">
+                事件类型：
+            </th>
+            <td>
+                @Html.DropDownList("SjType", null, "--全部--", new { style = "width:100px" })
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="事件名称/事件描述" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 700, 380)
+    @Html.DialogWithId("Edit", 700, 380, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 20%;">
+                    事件名称 
+                </th>
+                <th style="width: 15%;">
+                    事件类型
+                </th>
+                <th >
+                    事件描述
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','380') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="物理链路"  class="TipImp"  href="@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="380" style="color: blue" alt>
+                        物理链路 </a>
+                </td>
+                <td style="text-align: center">
+                    网络问题 
+                </td>
+                <td >
+                    包括光纤链路及其他链路（如ISP方面等） 
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','380') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="防火墙配置"  class="TipImp"  href="@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="380" style="color: blue" alt>
+                        防火墙配置  </a>
+                </td>
+                <td style="text-align: center">
+                    安全问题  
+                </td>
+                <td >
+                    配置错误或更改 
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','380') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a  title="应用 "  class="TipImp"  href="@Url.Action("Detail", "MaintainEvents", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="380" style="color: blue" alt>
+                        应用  </a>
+                </td>
+                 <td style="text-align: center">
+                  服务器  
+                </td>
+                <td >
+                   包括IIS、DNS、WSUS等其他应用系统方面的故障 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}

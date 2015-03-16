@@ -1,0 +1,125 @@
+﻿@{
+    Layout = null;
+}
+<div class="page">
+    <div class="pageHeader">
+        <form onsubmit="return navTabSearch(this)" id="pagerForm" action="@(Url.Action("Index", "Remind"))"
+        method="post">
+        <input type="hidden" name="pageNum" value="@Model.PageNumber" />
+	    <input type="hidden" name="numPerPage" value="@Model.PageSize" />
+	    <input type="hidden" name="orderField" value="@ViewData["orderField"]" />
+        <input type="hidden" name="orderDir" value="@ViewData["orderDir"]" />
+        <div class="searchBar">
+            <ul class="searchContent">
+                <li>
+                    <label style=" width:auto;">
+                        提醒人：</label>
+                    <input type="text" name="Name" value="@ViewBag.Name" />
+                </li>
+                 <li>
+                    <label style=" width:auto;">
+                        时间：</label>
+                    <input type="text" name="startDate" value="@ViewBag.startDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" size="13" readonly/>
+                     至
+                    <input type="text" name="endDate" value="@ViewBag.endDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" size="13" readonly/>
+                </li>
+            </ul>
+            <div class="subBar">
+                <span class="info_clear">符合条件的记录，共有 <strong>@Model.TotalItemCount</strong>条。</span>
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="submit">搜索</button></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="button">
+                            <div class="buttonContent">
+                                <button type="reset">重置</button></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="pageContent">
+        <div class="panelBar">
+            <ul class="toolBar">
+                @Html.Dialog("Create", 750, 500)
+                @Html.DialogWithId("Edit", 750, 500, "selectedRemindID")
+                @Html.Confirm("Delete", "selectedRemindID")
+            </ul>
+        </div>
+        <table class="list" width="100%" layouth="114" targettype="navTab" asc="asc" desc="desc">
+            <thead>
+                <tr>
+                    <th style="width: 4%;text-align:center">
+                        序号
+                    </th>
+                    <th style="width: 15%;text-align:center">
+                        标题
+                    </th>
+                    <th style="width:36%;text-align:center">
+                        内容
+                    </th>
+                    <th style="width:22%;text-align:center">
+                        提醒时间
+                    </th>
+                    <th style="width:6%;text-align:center">
+                        提醒间隔
+                    </th>
+                    <th style="width:5%;text-align:center">
+                        提醒次数
+                    </th>
+                    <th style="width:12%;text-align:center">
+                        最近提醒时间
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var item in ViewData.Model as PagedList.IPagedList<Web.Areas.Mes.Models.X_ScheduleDetails>)
+                    {
+                        i++;
+                    <tr rel="@item.X_Schedules.ID" target="selectedRemindID" ondblclick="OpenDialogWithID('查看', '@Url.Action("Detail", "Inspection", new { area = "WG" })', 'InspectionDetail','800','600','selectedId')">
+                        <td style="text-align: center">
+                            @i
+                        </td>
+                        <td style="text-align: left">
+                            @item.X_Schedules.Title
+                        </td>
+                        <td style="text-align: left">
+                            @MvcHtmlString.Create(item.X_Schedules.Contents)
+                        </td>
+                         <td style="text-align: center">
+                            @item.X_Schedules.StartTime.Value.ToString("yyyy-MM-dd HH:mm")~@item.X_Schedules.EndTime.Value.ToString("yyyy-MM-dd HH:mm")
+                        </td>
+                        <td style="text-align: center">
+                            @{
+                        string zq = "";
+                        switch (item.X_Schedules.RemindRecyle)
+                        {
+                            case 1: zq = "分钟"; break;
+                            case 2: zq = "小时"; break;
+                            case 3: zq = "天"; break;
+                        }
+                                }
+                            @item.X_Schedules.RemindDays @zq
+                        </td>
+                        <td style="text-align: center">
+                            @(item.X_Schedules.RemainBl == 1 ? "重复" : "1 次")
+                        </td>
+                        <td style="text-align: center">
+                            @(item.X_Schedules.LastRemaindTime!=null?item.X_Schedules.LastRemaindTime.Value.ToString("yyyy-MM-dd HH:mm"):"")
+                        </td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        @Html.Partial("~/Views/Shared/_Pager.cshtml")
+    </div>
+</div>

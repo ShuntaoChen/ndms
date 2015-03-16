@@ -1,0 +1,310 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+/*body {
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}*/
+
+div.JUpload a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+div.JUpload a:visited {
+    color: #505abc;
+}
+
+div.JUpload a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+div.JUpload a:active {
+    color: #12eb87;
+}
+
+div.JUpload p, div.JUpload ul {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+div.JUpload header,
+div.JUpload footer,
+div.JUpload nav,
+div.JUpload section {
+    display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+div.JUpload h1, div.JUpload h2, div.JUpload h3, div.JUpload h4, div.JUpload h5, div.JUpload h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+div.JUpload h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+div.JUpload h2 {
+    padding: 0 0 10px 0;
+}
+
+div.JUpload h3 {
+    font-size: 1.2em;
+}
+
+div.JUpload h4 {
+    font-size: 1.1em;
+}
+
+div.JUpload h5, div.JUpload h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+div.JUpload .page {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.JUpload header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+div.JUpload header h1, div.JUpload #header h1 {
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #5c87b2;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+    text-shadow: 1px 1px 2px #111;
+}
+
+div.JUpload #main {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+}
+
+div.JUpload footer, 
+div.JUpload #footer {
+    background-color: #fff;
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    font-size: .9em;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+div.JUpload ul#menu {
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+div.JUpload ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+div.JUpload ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+div.JUpload ul#menu li a {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+div.JUpload ul#menu li a:hover {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+div.JUpload ul#menu li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+div.JUpload ul#menu li.selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+div.JUpload fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+div.JUpload legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div.JUpload textarea {
+    min-height: 75px;
+}
+
+div.JUpload input[type="text"], 
+div.JUpload input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+div.JUpload select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+div.JUpload input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+div.JUpload .clear {
+    clear: both;
+}
+
+div.JUpload .error {
+    color: Red;
+}
+
+div.JUpload nav, 
+div.JUpload #menucontainer {
+    margin-top: 40px;
+}
+
+div.JUpload div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+div.JUpload #logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
+}
+
+div.JUpload #logindisplay a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+div.JUpload #logindisplay a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+div.JUpload #logindisplay a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+div.JUpload .field-validation-error {
+    color: #ff0000;
+}
+
+div.JUpload .field-validation-valid {
+    display: none;
+}
+
+div.JUpload .input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+div.JUpload .validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+div.JUpload .validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+div.JUpload .display-label, 
+div.JUpload .editor-label {
+    margin: 1em 0 0 0;
+}
+
+div.JUpload .display-field, 
+div.JUpload .editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+div.JUpload .text-box {
+    width: 30em;
+}
+
+div.JUpload .text-box.multi-line {
+    height: 6.5em;
+}
+
+div.JUpload .tri-state {
+    width: 6em;
+}
+
+div.JUpload .preview img 
+{
+    max-width: 80px;
+    max-height: 80px;
+}

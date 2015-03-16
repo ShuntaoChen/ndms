@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+
+</script>
+@{var m = ViewData.Model as Web.Areas.Mes.Models.X_Schedules;}
+<div class="page">
+    <div class="pageContent">
+        <form method="post" action="@(Url.Action("DoEdit", "Remind"))" class="pageForm required-validate"
+        onsubmit="return validateCallback(this, dialogAjaxDone);">
+        <input type="hidden" name="ID" value="@m.ID" />
+        <input type="hidden" name="UserID" value="@m.UserID" />
+        <input type="hidden" name="IsRemind" value="@m.IsRemind" />
+        <input type="hidden" name="IsPublic" value="@m.IsPublic" />
+        <input type="hidden" name="ScType" value="@m.ScType" />
+        <input type="hidden" name="CreateDate" value="@m.CreateDate" />
+        <input type="hidden" name="LastRemaindTime" value="@m.LastRemaindTime" />
+        <input type="hidden" name="RemindType" value="@m.RemindType" />
+        
+        <div class="pageFormContent" layouth="60">
+            <table class="formTable">
+                <tr>
+                    <th>
+                        <label>
+                            标题：</label>
+                    </th>
+                    <td colspan="3">
+                        <input name="Title" class="required" type="text" style="width:98%" value="@m.Title" />
+                    </td>
+                </tr>
+                 <tr>
+                    <th>
+                        <label class="right">
+                            时间：</label>
+                    </th>
+                    <td colspan="3">
+                        <input type="text" id="StartTime" name="StartTime" class="Wdate required" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',maxDate:'#F{$dp.$D(\'EndTime\');}'})"
+                            value="@m.StartTime.Value.ToString("yyyy-MM-dd HH:mm")" /><label style="width: 10px">至：</label>
+                        <input type="text" id="EndTime" name="EndTime" class="Wdate required" value="@m.EndTime.Value.ToString("yyyy-MM-dd HH:mm")"
+                            onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',minDate:'#F{$dp.$D(\'StartTime\');}'})" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            内容：</label>
+                    </th>
+                    <td  colspan="3">
+                        <textarea name="Contents" style="width:97%" rows="12"  tools="simple" class="editor">@m.Contents</textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label>
+                            提醒方式：</label>
+                    </th>
+                    <td colspan="3">
+                        <table style="border: 0px;">
+                            <tr>
+                                <td style="border: 0px; display: none;">
+                                    <input type="checkbox" name="RemindType" value="1" checked="checked" />弹出式窗口
+                                </td>
+                                <td style="border: 0px;">
+                                    <input type="text" name="RemindDays" class="number required" size="6" style="margin-top:2px" value="@m.RemindDays"/>
+                                </td>
+                                <td style="border: 0px;">
+                                    <select name="RemindRecyle" class="required">
+                                        <option value="1" @(m.RemindRecyle == 1 ? "selected" : "")>分钟</option>
+                                        <option value="2" @(m.RemindRecyle == 2 ? "selected" : "")>小时</option>
+                                        <option value="3" @(m.RemindRecyle == 3 ? "selected" : "")>天</option>
+                                    </select>
+                                </td>
+                                <td style="border: 0px;">
+                                    <input type="radio" value="2" name="RemainBl" @(@m.RemainBl == 2 ? "checked" : "")/>1次
+                                    <input type="radio" value="1" name="RemainBl" @(@m.RemainBl == 1 ? "checked" : "") />重复
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">
+                                保存</button></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button class="close">
+                                关闭</button></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </form>
+    </div>
+</div>

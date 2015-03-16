@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--type为生成缩略的模式，HW-拉伸，W-指定宽度，H-指定高度，Cut-剪裁-->
+<!--dir用于搜索节点，不可更改-->
+<!--watermark为0则不添加水印；当缩略图过小（小于水印图片大小）时也不会添加水印-->
+<!--watermark为1时添加图片水印，图片路径为/Uploads/watermark/watermark.png-->
+<!--watermark为2时添加文字水印，颜色采用alpha=0.56的白色-->
+<imageSetting>
+  <watermark>
+    <str>GOSHENG.CN</str>
+    <font>Arial</font>
+    <size>12</size>
+  </watermark>
+  <imagetype dir="adver" remark="广告位" >
+    <image remark="首页">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>620</width>
+      <height>220</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="附近优惠">
+      <tail>_app2</tail>
+      <type>Cut</type>
+      <width>620</width>
+      <height>240</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="首页、积分页">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>666</width>
+      <height>311</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="首页、积分页">
+      <tail>_web2</tail>
+      <type>Cut</type>
+      <width>281</width>
+      <height>311</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="注册页">
+      <tail>_web3</tail>
+      <type>Cut</type>
+      <width>529</width>
+      <height>247</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="goodsca" remark="商品分类">
+    <image remark="首页">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>180</width>
+      <height>180</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="首页">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>312</width>
+      <height>234</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="brandlogo" remark="商超logo">
+    <image remark="首页">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>307</width>
+      <height>307</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="首页">
+      <tail>_app2</tail>
+      <type>Cut</type>
+      <width>150</width>
+      <height>150</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="购物车">
+      <tail>_app3</tail>
+      <type>Cut</type>
+      <width>64</width>
+      <height>64</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="首页">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>156</width>
+      <height>117</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="商品详情页">
+      <tail>_web2</tail>
+      <type>Cut</type>
+      <width>131</width>
+      <height>50</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="goods" remark="单张商品图">
+    <image remark="推荐商品">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>305</width>
+      <height>300</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="推荐商品">
+      <tail>_app2</tail>
+      <type>Cut</type>
+      <width>305</width>
+      <height>145</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="省券列表、活动商品、商品列表">
+      <tail>_app3</tail>
+      <type>Cut</type>
+      <width>240</width>
+      <height>180</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="省券详情">
+      <tail>_app4</tail>
+      <type>Cut</type>
+      <width>180</width>
+      <height>140</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="省券详情二维码中部">
+      <tail>_app5</tail>
+      <type>Cut</type>
+      <width>205</width>
+      <height>206</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="推荐商品、特卖列表、猜你喜欢、积分商城">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>207</width>
+      <height>202</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="账户注册页、购物车商品列表">
+      <tail>_web2</tail>
+      <type>Cut</type>
+      <width>128</width>
+      <height>96</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="我的积分商品、已买到的省券">
+      <tail>_web3</tail>
+      <type>Cut</type>
+      <width>64</width>
+      <height>48</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="goodsslide" remark="多张商品幻灯图">
+    <image remark="商品详情页">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>640</width>
+      <height>460</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="商品详情页">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>440</width>
+      <height>330</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="商品详情页小兔">
+      <tail>_web2</tail>
+      <type>Cut</type>
+      <width>64</width>
+      <height>48</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="nearbydeals" remark="附近优惠">
+    <image remark="省券列表页、省券详情页">
+      <tail>_app</tail>
+      <type>Cut</type>
+      <width>640</width>
+      <height>240</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="activitydetails" remark="活动详情">
+    <image remark="顶部图片">
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>640</width>
+      <height>460</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="magicfarm" remark="神奇农场">
+    <image>
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>620</width>
+      <height>235</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="activitycenter" remark="活动中心">
+    <image>
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>300</width>
+      <height>225</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+  <imagetype dir="avatar" remark="头像">
+    <image>
+      <tail>_app1</tail>
+      <type>Cut</type>
+      <width>200</width>
+      <height>200</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="大头像">
+      <tail>_web1</tail>
+      <type>Cut</type>
+      <width>128</width>
+      <height>128</height>
+      <watermark>1</watermark>
+    </image>
+    <image remark="小头像">
+      <tail>_web2</tail>
+      <type>Cut</type>
+      <width>96</width>
+      <height>96</height>
+      <watermark>1</watermark>
+    </image>
+    <image>
+      <tail>_web3</tail>
+      <type>Cut</type>
+      <width>256</width>
+      <height>256</height>
+      <watermark>1</watermark>
+    </image>
+  </imagetype>
+</imageSetting>

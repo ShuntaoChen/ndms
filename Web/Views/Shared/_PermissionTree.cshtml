@@ -1,0 +1,31 @@
+﻿@model List<JiYun.Modules.Core.Models.S_Permission> 
+
+@{ 
+    foreach (var perm in Model)
+    {
+        string ck = "";
+        int[] RolePerms = (int[])TempData["RolePerms"]; //取得角色已选授权。
+
+        if ((RolePerms != null) && RolePerms.Contains(perm.ID))
+        {
+            ck = "checked";
+        }
+        else
+        {
+            ck = "";
+        }   
+        
+        
+
+        <li>
+            <a href="javascript: void(0);" tname="permissions" ck="@ck"  tvalue="@perm.ID" tilte="@perm.Title">@perm.Name</a>      
+             @if (perm.Children != null && perm.Children.Count > 0)
+             { 
+                <ul>
+                    @Html.Partial("~/Views/Shared/_PermissionTree.cshtml", perm.Children.OrderBy(t => t.Order).ToList())
+                </ul>
+             }
+        </li>
+    }
+
+}

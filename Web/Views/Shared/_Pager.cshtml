@@ -1,0 +1,40 @@
+﻿<div class="panelBar">
+    <div class="pages">
+        <span>显示</span>
+        <select name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+            @{
+                int numPerPage = 15;
+                if (Request.Cookies["JIYUN_PAGE_SIZE"] != null)
+                {
+                    int.TryParse(Request.Cookies["JIYUN_PAGE_SIZE"].Value, out numPerPage);
+                }
+                
+                if (ViewData["numPerPage"] != null)
+                {
+                    int.TryParse(ViewData["numPerPage"] as string, out numPerPage);
+
+                    HttpCookie cookie = new HttpCookie("JIYUN_PAGE_SIZE");//初使化并设置Cookie的名称
+                    cookie.Expires = DateTime.MaxValue;//设置过期时间
+                    cookie.Value = numPerPage.ToString(); 
+                    Response.AppendCookie(cookie);
+                }                
+                    
+                int[] a = { 10, 15, 20, 25, 30, 40, 50, 60, 100, 150, 200, 300 };
+                foreach (var item in a)
+                {
+                    if (item == numPerPage)
+                    { 
+                        <option value="@item" selected>@item</option>
+                    }
+                    else
+                    { 
+                        <option value="@item">@item</option>
+                    }
+                }
+            }
+        </select>
+        <span>条，共 @Model.TotalItemCount 条</span>
+    </div>
+    <div class="pagination" targetType="navTab" totalCount="@Model.TotalItemCount" numPerPage="@Model.PageSize" pageNumShown="10" currentPage="@Model.PageNumber">
+    </div>
+</div>

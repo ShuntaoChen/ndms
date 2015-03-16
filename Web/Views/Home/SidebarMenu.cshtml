@@ -1,0 +1,36 @@
+﻿@using JiYun.Common.Utils
+@using JiYun.Modules.Core.Models
+@using JiYun.Web.Models
+@{
+    var permissions = (ViewBag.Permissions as List<Permission>) ?? new List<Permission>();
+}
+<div class="accordion" fillSpace="sideBar">
+	<div class="accordionContent">
+	    <ul class="tree treeFolder">
+	        @foreach (Permission perm in Model)
+	        {
+                string href = "javascript: void(0);", rel = "", target = "";
+
+                string codeStatus = ConfigHelper.GetSystemConfig("menuCode");
+                if (!string.IsNullOrEmpty(perm.Action) && !string.IsNullOrEmpty(perm.Controller))
+                {
+                    href = Url.Action(perm.Action, perm.Controller, new { area = perm.Area });
+                    rel = perm.Area + perm.Controller + perm.Action;
+                    target = "navTab";
+                }
+                var children = permissions.Where(p => p.Parent_ID == perm.ID && (p.Type == "Controller" || p.Type == "Folder")).OrderBy(p => p.Order).ToList();
+
+             
+	            <li><a href="@href" rel="@rel" target="@target" title="@perm.Title">@perm.Name @(codeStatus == "1" ?  ("[" + perm.Area + ">" + perm.Controller  + ">" + perm.Action+"]") : "") </a>
+                @if (children.Any())
+        { 
+            <ul>
+                @Html.Partial("~/Views/Shared/_SideBarTree.cshtml", children)
+            </ul>
+        }</li>
+            }
+	    </ul>
+	</div>
+
+</div>
+

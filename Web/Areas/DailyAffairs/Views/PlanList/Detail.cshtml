@@ -1,0 +1,209 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+           
+            <!-- 新增维护计划 -->
+            <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+                width: 97%;">
+                <thead>
+                    <tr>
+                        <td class="tbtitle" colspan="5" style="text-align: left">
+                            新增维护计划
+                        </td>
+                    </tr>
+                </thead>
+                 <tr>
+                    <th>
+                        计划名称：
+                    </th>
+                    <td colspan="3">
+                        <input type="text" name="Tiltle" class="required " size="70" value="" />
+                    </td>
+                </tr>
+                
+                    
+                <tr>
+                    <th>
+                        单位名称：
+                    </th>
+                    <td colspan="3" >
+                        <input type="text" name="Tiltle" class="required " size="30" value="" />
+                        <div id="divShowSelectCase">
+                                <a class="btnLook" href="javascript:void(0)" onclick="selectCompany()">选择单位</a>
+                            </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        单位电话：
+                    </th>
+                    <td colspan="3">
+                        <input type="text" name="Tiltle" class="required " size="30" value="" />
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        单位地址：
+                    </th>
+                    <td colspan="3">
+                        <input type="text" name="Tiltle" class="required " size="70" value="" />
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        联系人：
+                    </th>
+                    <td >
+                        <input type="text" name="Tiltle" class="required " size="30" value="" />
+                    </td>
+                    <th>
+                        联系人电话：
+                    </th>
+                    <td >
+                        <input type="text" name="Tiltle" class="required " size="30" value="" />
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <th>
+                        维护资产：
+                    </th>
+                    <td colspan="3">
+                        <select>
+                            <option>-请选择-</option>
+                            <option>5-1-第一排机架15-1(Dell)</option>
+                            <option>5-2-第一排机架15-2(IBM)</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <th>
+                        资产类型：
+                    </th>
+                     <td >
+                         <input type="text" name="Tiltle" class="required " size="30" value="" />
+                     </td>
+                     <th>资产编号：</th><td><input type="text" size="30"/></td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        计划类型：
+                    </th>
+                    <td colspan="3">
+                          突发维护计划
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        执行人：
+                    </th>
+                    <td colspan="3">
+                        李四
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        监督：
+                    </th>
+                    <td>
+                         李明思
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        状态：
+                    </th>
+                    <td colspan="3">
+                       已经开始
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        维护地点：
+                    </th>
+                    <td colspan="3">
+                        <input type="text" name="Tiltle" class="required " size="70" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        计划日期：
+                    </th>
+                    <td colspan="3">
+                        <input type="text" class="Wdate required" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" /><label style="width:15px">至</label><input type="text" class="Wdate required" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        循环方式：
+                    </th>
+                    <td colspan="3">
+                        <select><option>不循环</option>
+                            <option selected="selected">按每周日期</option>
+                            <option>按间隔天数</option>
+                        </select>
+                      @*  <select><option>星期一</option>
+                            <option>星期二</option>
+                            <option>星期三</option>
+                            <option>星期四</option>
+                            <option>星期五</option>
+                            <option>星期六</option>
+                            <option>星期日</option>
+                        </select>*@
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        执行时间：
+                    </th>
+                    <td colspan="3">
+                        <input type="text"   value="08:00:00" /><label style="width:15px">至</label><input type="text" value="11:00:00"/>
+                        <input type="checkbox"/> 是否全天
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        本次维护内容：
+                    </th>
+                    <td colspan="3">
+                        <textarea rows="10" style="width: 98%"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    function selectDoer() {
+
+        //        var personId = $("#personID", navTab.getCurrentPanel()).val();
+        $.pdialog.open('@Url.Action("SelectDoer", "PlanList", new {area = "DailyAffairs"})?type=0', 'barcodeDialog', '选择执行人', { width: 640, height: 520, mask: true });
+
+    }
+
+    function selectSupervisor() {
+        $.pdialog.open('@Url.Action("SelectSupervisor", "PlanList", new {area = "DailyAffairs"})?type=0', 'barcodeDialog', '选择监督人', { width: 640, height: 520, mask: true });
+    }
+</script>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>金山区科委网管中心管理平台</title>
+    <link href="@Url.Content("~/Content/themes/css/login.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+
+            //是否启用验证码
+            var validateCode = "@ViewBag.ValidateCode";
+            if (validateCode == "0") {
+                $(".vc").hide();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="login">
+        <div id="login_header">
+            <h1 class="login_logo">
+                <a href="#">
+                    <img src="@Url.Content("~/Content/themes/default/Images/logo-login.png")" /></a>
+            </h1>
+            <div class="login_headerContent">
+                <div class="navList">
+                    <ul>
+                        <li><a href="javascript:void(0);" onclick="shouye(this)">设为首页</a></li>
+                        <li><a href="javascript:shoucang();">收藏本系统</a></li>
+                    </ul>
+                </div>
+                <h2 class="login_title" style="color: #658084; font-size: 14px;">
+                    请在这里登录系统</h2>
+            </div>
+        </div>
+        <div id="login_content">
+            <div class="loginForm">
+                <form action="@Url.Action("DoLogin", "Home")" method="post">
+                @Html.AntiForgeryToken()
+                <p>
+                    <label>
+                        用户名：</label>
+                    <input type="text" size="19" class="login_input" id="username" name="username" />
+                </p>
+                <p>
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;码：</label>
+                    <input type="password" size="19" class="login_input" id="password" name="password" />
+                </p>
+                <p class="vc">
+                    <label style="width: 70px;">
+                        验证码：</label>
+                    <input type="text" size="10" name="validateCode" autocomplete="off" />
+                </p>
+                <p class="vc">
+                    <label style="width: 60px;">
+                        &nbsp;</label>
+                    <img id="ImgValidateCode" title="点击换一张" src="@Url.Action("SecurityCode")" style="vertical-align:middle; width:55px; cursor:pointer;" />
+                    <a id="ValidateCode" href="javascript:;">看不清？</a>
+                </p>
+                <div class="login_bar">
+                    <input  style="margin-left:9px;" class="sub" type="submit" value=" " />
+                </div>
+                </form>
+                <div style="height: 30px; line-height: 30px; margin: 20px 10px; text-align: center;
+                    color: Red; font-weight: bold;">@TempData["msg"]</div>
+            </div>
+            <div class="login_banner">
+                <img src="@Url.Content("~/Content/themes/default/Images/login_banner.jpg")" /></div>
+            <div class="login_main">
+                <ul class="helpList">
+                    <li style="margin-bottom:10px; line-height:18px;">为了更好的使用体验，建议使用谷歌浏览器</li>
+                    <li><a  style=" color:Blue;  text-decoration:underline;" href="@Url.Content("~/chrome.zip")">下载谷歌浏览器</a></li>
+                </ul>
+                <div class="login_inner">
+                    <p id="alert">
+                        &nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div id="login_footer">
+            Copyright &copy; 2014 金山区科委网管中心管理平台 All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>

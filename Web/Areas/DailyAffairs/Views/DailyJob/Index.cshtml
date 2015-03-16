@@ -1,0 +1,166 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@ @*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                维护类型：
+            </th>
+            <td>
+                @Html.DropDownList("RcType", null, "--全部--", new { style = "width:100px" })
+            </td>
+            <th width="auto">
+                维护时间：
+            </th>
+            <td>
+                <input type="text" name="StartDate" class="Wdate" id="StartDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'EndDate\')}'})"
+                    size="17" value="" />~<input type="text" id="EndDate" name="EndDate" class="Wdate"
+                        onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'StartDate\')}'})"
+                        size="17" value="" />
+            </td>
+            <th width="auto">
+                资产类型：
+            </th>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1">交换机</option>
+                    <option value="2">服务器</option>
+                    <option value="3">防火墙</option>
+                </select>
+            </td>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1">2-1-第一排-机架10-1 </option>
+                    <option value="2">FWQ-1-1-1 </option>
+                </select>
+            </td>
+            <th width="auto">
+                是否自备资产：
+            </th>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1">是</option>
+                    <option value="2">否</option>
+                </select>
+            </td>
+        </tr>
+        <th width="auto">
+            关键字：
+        </th>
+        <td colspan="6">
+            <input type="text" size="84" placeholder="维护信息/维护人" name="SearchKey" value="@SearchKey"/>
+        </td>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 610)
+    @Html.DialogWithId("Edit", 800, 610, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+    <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th>
+                    维护信息
+                </th>
+                <th style="width: 15%;">
+                    维护时间
+                </th>
+                <th style="width: 10%;">
+                    维护人员
+                </th>
+                <th style="width: 15%;">
+                    维护设备
+                </th>
+                <th style="width: 10%;">
+                    是否自备设备
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsDailyJobDetail',800,600) ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="维护信息"  class="TipImp"  href="@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="600" style="color: blue" alt>
+                        自有机架维护 </a>
+                </td>
+                <td style="text-align: center">
+                    2014-10-23
+                </td>
+                <td style="text-align: center">
+                    11
+                </td>
+                <td style="text-align: center">
+                    FWQ-1-1-1
+                </td>
+                <td style="text-align: center">
+                    是
+                </td>
+            </tr>
+            
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsDailyJobDetail',800,600) ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="维护信息"  class="TipImp"  href="@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="600" style="color: blue" alt>
+                        对客户1机架进行维护 </a>
+                </td>
+                <td style="text-align: center">
+                    2014-10-24
+                </td>
+                <td style="text-align: center">
+                    11
+                </td>
+                <td style="text-align: center">
+                    FWQ-1-1-1
+                </td>
+                <td style="text-align: center">
+                    是
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsDailyJobDetail',800,600) ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="维护信息"  class="TipImp"  href="@Url.Action("Detail", "DailyJob", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="600" style="color: blue" alt>
+                        自备资产维护 </a>
+                </td>
+                <td style="text-align: center">
+                    2014-10-25
+                </td>
+                <td style="text-align: center">
+                    11
+                </td>
+                <td style="text-align: center">
+                    FWQ-1-1-1
+                </td>
+                <td style="text-align: center">
+                    是
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

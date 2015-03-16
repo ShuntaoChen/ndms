@@ -1,0 +1,67 @@
+﻿@*后台返回参数*@
+@{
+  
+}
+<!--  内容  -->
+<div class="pageContent">
+    <div class="pageFormContent" layouth="36" style="padding: 0; margin: 0 auto;">
+        <!-- 知识库 -->
+        <table class="formTable" style="margin-top: 7px; padding: 0; width: 99% !important;
+            width: 97%;">
+            <thead>
+                <tr>
+                    <td class="tbtitle" colspan="5" style="text-align: left">
+                        知识库
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <th>
+                    知识库标题：
+                </th>
+                <td colspan="3">
+                    <input type="text" name="Tiltle" class="required " size="70" value="中国近代工程历史" />
+                </td>
+            </tr>
+            <tr>
+                 <th>
+                    知识库类型：
+                </th>
+                <td >
+                    工程
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    知识库描述：
+                </th>
+                <td>
+                    <textarea rows="10" style="width: 98%;" name="Content">中国近代建筑所指的时间范围是从1840年鸦片战争开始，到1949年中华人民共和国建立为止。中国在这个时期的建筑处于承上启下、</textarea>
+                </td>
+            </tr>
+             <tr>
+                <th>
+                    上传知识库附件：
+                </th>
+                <td>
+                        @Html.DownLoadFile("1")
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+<div class="formBar">
+    <ul>
+        
+        <li>
+            <div class="button">
+                <div class="buttonContent">
+                    <button type="button" class="close">
+                        关闭</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

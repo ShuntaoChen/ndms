@@ -1,0 +1,22 @@
+﻿<script src="../../Scripts/fancyapps-fancyBox-v2.1.3/source/jquery.fancybox.js"></script>
+<script type="text/javascript">
+    $(".dialog:last").find("a.close").click(function () {
+        var id = '@ViewBag.nid';
+        var controlid = '@ViewBag.controlid';
+        if (id) {
+
+            $.post("/Plugs/Upload/GetAttas", { guid: '@ViewBag.guid', controlid: '@ViewBag.controlid' }, function (json) {
+
+                $("#" + id).find(".jfile").remove().end().append(json);
+                $("#" + id).find(".jfile").find("div").css("marginTop", "5px");
+                if ($("#" + id).find(".jfile").find("div").size() > 0) {
+                    $("#" + controlid).val("@ViewBag.guid");
+                }
+
+            });
+
+        }
+    });
+</script>
+<iframe src="/Plugs/Upload/Index" width="700px" height="460px" style="border:1px solid gray;padding:0;margin:0;"></iframe>
+

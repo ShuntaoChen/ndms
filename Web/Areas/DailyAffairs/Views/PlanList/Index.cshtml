@@ -1,0 +1,165 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@ @*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+              <th width="auto">
+                资产类型：
+            </th>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1">交换机</option>
+                    <option value="2">服务器</option>
+                    <option value="3">防火墙</option>
+                </select>
+            </td>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1">2-1-第一排-机架10-1 </option>
+                    <option value="2">FWQ-1-1-1 </option>
+                </select>
+            </td>
+            <th width="auto">
+                维护期内：
+            </th>
+             <td>
+                <input type="checkbox" checked name="" >
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="维护信息/计划主题" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @* @Html.Dialog("Create", 800, 600)
+    @Html.DialogWithId("Edit", 800, 600, "selectedId")*@
+    @Html.NavTab("Create")
+    @Html.NavTabWithId("Edit")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+    <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th >
+                    计划主题
+                </th>
+                <th style="width: 20%;">
+                    维护资产
+                </th>
+                <th style="width: 15%;">
+                    维护人员
+                </th>
+                <th style="width: 15%;">
+                    监督人员
+                </th>
+                <th style="width: 10%;">
+                    状态
+                </th>
+                <th style="width: 10%;">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenNavTab('详细信息', '@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsPlanListDetail') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td style="text-align: left">
+                    <a  title="计划主题"  class="TipImp"  href="@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" width="800" height="550" style="color: blue" alt>
+                        计划1 </a>
+                </td>
+                <td style="text-align: center">
+                    HP 
+                </td>
+                <td style="text-align: center">
+                    维护员2,枫泾管理员,维护员
+                </td>
+                <td style="text-align: center">
+                    s1, 
+                </td>
+                <td style="text-align: center">
+                    进行中
+                </td>
+                <td style="text-align: center">
+                    <a  title="维护记录"  class="TipImp"  href="@Url.Action("Index", "ExecutePlan", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" style="color: blue" alt>
+                        维护记录
+                      </a>
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenNavTab('详细信息', '@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsPlanListDetail') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td style="text-align: left">
+                    <a  title="计划主题"  class="TipImp"  href="@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" width="800" height="450" style="color: blue" alt>
+                        计划2 
+                      </a>
+                </td>
+                <td style="text-align: center">
+                    HP 
+                </td>
+                <td style="text-align: center">
+                    维护员2,枫泾管理员,维护员
+                </td>
+                <td style="text-align: center">
+                    s1, 
+                </td>
+                <td style="text-align: center">
+                    进行中
+                </td>
+                <td style="text-align: center">
+                    <a  title="维护记录"  class="TipImp"  href="@Url.Action("Index", "ExecutePlan", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" style="color: blue" alt>
+                        维护记录 </a>
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsPlanListDetail') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td style="text-align: left">
+                    <a  title="计划主题"  class="TipImp"  href="@Url.Action("Detail", "PlanList", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" width="800" height="450" style="color: blue" alt>
+                        计划3 </a>
+                </td>
+                <td style="text-align: center">
+                   HP 
+                </td>
+                <td style="text-align: center">
+                    维护员2,枫泾管理员,维护员
+                </td>
+                <td style="text-align: center">
+                    s1, 
+                </td>
+                <td style="text-align: center">
+                   进行中
+                </td>
+                <td style="text-align: center">
+                      <a  title="维护记录"  class="TipImp"  href="@Url.Action("Index", "ExecutePlan", new { area = "DailyAffairs", id = 1 })" mask="true" target="navTab" style="color: blue" alt>
+                        维护记录 </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

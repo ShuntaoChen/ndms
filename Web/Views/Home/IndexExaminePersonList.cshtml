@@ -1,0 +1,46 @@
+﻿
+<!-- 展示内容 -->
+
+<script type="text/javascript">
+
+    $(function () {
+        InitRaty();
+    });
+
+    function InitRaty() {
+
+        $(".divstar", navTab.getCurrentPanel()).each(function (i) {
+
+            var val = $(this).attr("star");
+
+            $(this).raty({
+                start: val,
+                number: 5, //星星数量
+                path: "Scripts/raty/img", //图片路径
+                hintList: ['合格', '基本称职', '称职', '优秀', '出色'],
+                showHalf: true,
+                readOnly: true,
+                onClick: function (score) {
+                    //保存评分
+                    SaveRaty(score); //$this.attr('id')得到加载评分插件的div的id是div_jQueryRaty
+
+                    //单击后设置此评分控件不再可用
+                    ClickRaty(score);
+                }
+            });
+
+        });
+    }
+
+    //保存评分
+    function SaveRaty(selfRaty) {
+        alert(selfRaty);
+    }
+
+    //设置评分插件不可重复评分
+    function ClickRaty(selfRaty) {
+        $.fn.raty.readOnly(true); //用这个方法设置评分插件为只读
+    }
+
+
+</script>

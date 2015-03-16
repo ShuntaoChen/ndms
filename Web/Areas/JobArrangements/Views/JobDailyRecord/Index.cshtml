@@ -1,0 +1,138 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                加班日期：
+            </th>
+            <td>
+                <input type="text" class="Wdate" size="12" name="SDate" onfocus=" WdatePicker({ dateFmt: 'yyyy' }) " style="float: left"
+                                               readonly="readonly" value=""/>
+                <label style="width: auto">
+                    至</label>
+                <input type="text" class="Wdate" size="12" name="EDate" onfocus=" WdatePicker({ dateFmt: 'yyyy' }) " style="float: left" 
+                                               readonly  value=""/>
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="标题/加班人/加班地点" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 800, 380)
+    @Html.DialogWithId("Edit", 800, 380, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th >
+                    标题
+                </th>
+                <th style="width: 10%;">
+                    加班人
+                </th>
+                <th style="width: 20%;">
+                    加班日期
+                </th>
+                <th style="width: 10%;">
+                    加班时间
+                </th>
+                <th style="width: 30%;">
+                    加班地点
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })', 'JobArrangementsJobDailyRecordDetail','800','380') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a title="维修3处服务器维护"  class="TipImp"  href="@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })" mask="true" target="dialog" width="800" height="380" style="color: blue" alt>
+                       维修3处服务器维护</a>
+                </td>
+                <td style="text-align: center">
+                    陆玥
+                </td>
+                <td style="text-align: center">
+                    2014-10-24
+                </td>
+                <td style="text-align: center">
+                    2
+                </td>
+                <td style="text-align: center">
+                    第二机房
+                </td>
+              
+            </tr>
+            <tr target="selectedId"  rel="2"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })', 'JobArrangementsJobDailyRecordDetail','800','380') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="维修2处服务器维护"  class="TipImp"  href="@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })" mask="true" target="dialog" width="800" height="380" style="color: blue" alt>
+                        维修2处服务器维护</a>
+                </td>
+                <td style="text-align: center">
+                       **运营商
+                </td>
+                <td style="text-align: center">
+                    2014-10-24
+                </td>
+                <td style="text-align: center">
+                 2
+
+                </td>
+                <td style="text-align: center">
+                    中心机房
+                </td>
+              
+            </tr>
+            <tr target="selectedId"  rel="3"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })', 'JobArrangementsJobDailyRecordDetail','800','380') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a  title="维修1处服务器维护标题"  class="TipImp"  href="@Url.Action("Detail", "JobDailyRecord", new { area = "JobArrangements", id = 1 })" mask="true" target="dialog" width="800" height="380" style="color: blue" alt>
+                        维修1处服务器维护</a>
+                </td>
+                 <td style="text-align: center">
+                 张烨
+                </td>
+                <td style="text-align: center">
+                    2014-10-24
+                </td>
+                <td style="text-align: center">
+                     2
+                </td>
+                <td style="text-align: center">
+                    第二机房
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}

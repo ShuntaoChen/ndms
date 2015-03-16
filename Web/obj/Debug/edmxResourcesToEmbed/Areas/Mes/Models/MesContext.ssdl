@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MesContext.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MesContextStoreContainer">
+    <EntitySet Name="X_Messages" EntityType="MesContext.Store.X_Messages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_MsgAtts" EntityType="MesContext.Store.X_MsgAtts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_Notice" EntityType="MesContext.Store.X_Notice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_NoticeDetail" EntityType="MesContext.Store.X_NoticeDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_ScheduleDetails" EntityType="MesContext.Store.X_ScheduleDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_Schedules" EntityType="MesContext.Store.X_Schedules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_SMS" EntityType="MesContext.Store.X_SMS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_UserMesCounts" EntityType="MesContext.Store.X_UserMesCounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="X_UserMessages" EntityType="MesContext.Store.X_UserMessages" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_IM_MsgAtts_IM_Messages" Association="MesContext.Store.FK_IM_MsgAtts_IM_Messages">
+      <End Role="X_Messages" EntitySet="X_Messages" />
+      <End Role="X_MsgAtts" EntitySet="X_MsgAtts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IM_UserMessages_IM_Messages" Association="MesContext.Store.FK_IM_UserMessages_IM_Messages">
+      <End Role="X_Messages" EntitySet="X_Messages" />
+      <End Role="X_UserMessages" EntitySet="X_UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_X_Messages_X_Schedules" Association="MesContext.Store.FK_X_Messages_X_Schedules">
+      <End Role="X_Schedules" EntitySet="X_Schedules" />
+      <End Role="X_Messages" EntitySet="X_Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_X_NoticeDetail_X_Notice" Association="MesContext.Store.FK_X_NoticeDetail_X_Notice">
+      <End Role="X_Notice" EntitySet="X_Notice" />
+      <End Role="X_NoticeDetail" EntitySet="X_NoticeDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_X_ScheduleDetails_X_Schedules" Association="MesContext.Store.FK_X_ScheduleDetails_X_Schedules">
+      <End Role="X_Schedules" EntitySet="X_Schedules" />
+      <End Role="X_ScheduleDetails" EntitySet="X_ScheduleDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_X_SMS_X_Schedules" Association="MesContext.Store.FK_X_SMS_X_Schedules">
+      <End Role="X_Schedules" EntitySet="X_Schedules" />
+      <End Role="X_SMS" EntitySet="X_SMS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="X_Messages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MessageTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="MessageContent" Type="nvarchar(max)" />
+    <Property Name="MessageKeyWord" Type="nvarchar" MaxLength="200" />
+    <Property Name="MessageSend" Type="nvarchar" MaxLength="400" />
+    <Property Name="MessageReceive" Type="nvarchar" MaxLength="400" />
+    <Property Name="AttachmentID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreaterUserID" Type="int" />
+    <Property Name="CreateUserReal" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifyUserID" Type="int" />
+    <Property Name="ModifyUserReal" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="X_Schedules_ID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_MsgAtts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="X_Messages_ID" Type="int" />
+    <Property Name="AttID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="20" />
+    <Property Name="AttachmentID" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_NoticeDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeptID" Type="int" />
+    <Property Name="DeptName" Type="nvarchar" MaxLength="20" />
+    <Property Name="X_Notice_ID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="UName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="ReadTime" Type="datetime" />
+    <Property Name="ReadRemark" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="X_ScheduleDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="X_Schedules_ID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+    <Property Name="TaskID" Type="int" />
+    <Property Name="IsExpired" Type="bit" />
+  </EntityType>
+  <EntityType Name="X_Schedules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Contents" Type="varchar(max)" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRemind" Type="int" />
+    <Property Name="RemindDays" Type="int" />
+    <Property Name="RemindType" Type="varchar" MaxLength="20" />
+    <Property Name="RemindRecyle" Type="int" />
+    <Property Name="IsPublic" Type="int" />
+    <Property Name="NviteUsers" Type="nvarchar" MaxLength="500" />
+    <Property Name="ScType" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="RemaindCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemainBl" Type="int" />
+    <Property Name="LastRemaindTime" Type="datetime" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_SMS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="500" />
+    <Property Name="S_User_ID" Type="int" />
+    <Property Name="X_Schedules_ID" Type="int" />
+    <Property Name="T_SC_Task_ID" Type="int" />
+    <Property Name="SendDate" Type="datetime" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_UserMesCounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="OldCount" Type="int" />
+    <Property Name="NewCount" Type="int" />
+    <Property Name="IsMessage" Type="int" />
+    <Property Name="NoReadCount" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <EntityType Name="X_UserMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Bas_UserID" Type="int" />
+    <Property Name="X_Messages_ID" Type="int" />
+    <Property Name="ReadStatus" Type="int" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="MessageStatus" Type="int" />
+    <Property Name="MyMsg" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="UpdaterId" Type="int" />
+  </EntityType>
+  <Association Name="FK_IM_MsgAtts_IM_Messages">
+    <End Role="X_Messages" Type="MesContext.Store.X_Messages" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_MsgAtts" Type="MesContext.Store.X_MsgAtts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Messages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_MsgAtts">
+        <PropertyRef Name="X_Messages_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IM_UserMessages_IM_Messages">
+    <End Role="X_Messages" Type="MesContext.Store.X_Messages" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_UserMessages" Type="MesContext.Store.X_UserMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Messages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_UserMessages">
+        <PropertyRef Name="X_Messages_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_X_Messages_X_Schedules">
+    <End Role="X_Schedules" Type="MesContext.Store.X_Schedules" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_Messages" Type="MesContext.Store.X_Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Schedules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_Messages">
+        <PropertyRef Name="X_Schedules_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_X_NoticeDetail_X_Notice">
+    <End Role="X_Notice" Type="MesContext.Store.X_Notice" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_NoticeDetail" Type="MesContext.Store.X_NoticeDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Notice">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_NoticeDetail">
+        <PropertyRef Name="X_Notice_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_X_ScheduleDetails_X_Schedules">
+    <End Role="X_Schedules" Type="MesContext.Store.X_Schedules" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_ScheduleDetails" Type="MesContext.Store.X_ScheduleDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Schedules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_ScheduleDetails">
+        <PropertyRef Name="X_Schedules_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_X_SMS_X_Schedules">
+    <End Role="X_Schedules" Type="MesContext.Store.X_Schedules" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="X_SMS" Type="MesContext.Store.X_SMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="X_Schedules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="X_SMS">
+        <PropertyRef Name="X_Schedules_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

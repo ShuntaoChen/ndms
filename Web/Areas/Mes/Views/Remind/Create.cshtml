@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+
+</script>
+<div class="page">
+    <div class="pageContent">
+        <form method="post" action="@(Url.Action("DoCreate", "Remind"))" class="pageForm required-validate"
+        onsubmit="return validateCallback(this, dialogAjaxDone);">
+        <div class="pageFormContent" layouth="60">
+            <table class="formTable">
+                <tr>
+                    <th>
+                        <label>
+                            标题：</label>
+                    </th>
+                    <td colspan="3">
+                        <input name="Title" class="required" type="text" style="width:98%" />
+                    </td>
+                </tr>
+                 <tr>
+                    <th>
+                        <label class="right">
+                            时间：</label>
+                    </th>
+                    <td colspan="3">
+                        <input type="text" id="StartTime" name="StartTime" class="Wdate required" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',maxDate:'#F{$dp.$D(\'EndTime\');}'})"
+                            value="" /><label style="width: 10px">至：</label>
+                        <input type="text" id="EndTime" name="EndTime" class="Wdate required" value=""
+                            onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',minDate:'#F{$dp.$D(\'StartTime\');}'})" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            内容：</label>
+                    </th>
+                    <td  colspan="3">
+                        <textarea name="Contents" style="width:97%" rows="12"  tools="simple" class="editor"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            提醒方式：</label>
+                    </th>
+                    <td colspan="3">
+                         <table style="border: 0px;">
+                            <tr>
+                                <td style="border: 0px; display:none;">
+                                    <input type="checkbox" name="RemindType" value="1" checked="checked" />弹出式窗口
+                                </td>
+                                <td style="border: 0px;">
+                                    <input type="text" class="number required" name="RemindDays" size="5" />
+                                </td>
+                                <td style="border: 0px;">
+                                     <select name="RemindRecyle" class="required">
+                                        <option value="1">分钟</option>
+                                        <option value="2">小时</option>
+                                        <option value="3">天</option>
+                                    </select>
+                                </td>
+                                <td style="border: 0px;">
+                                    <input type="radio" name="RemainBl" value="1" title="根据设定的频率重复提醒" checked />重复提醒
+                                    <input type="radio" name="RemainBl" value="2" title="在结束时间到期之前提醒一次" />一次提醒
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                   
+                </tr>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">
+                                保存</button></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button class="close">
+                                关闭</button></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </form>
+    </div>
+</div>

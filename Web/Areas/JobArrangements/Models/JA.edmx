@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="JobArrangements" EntityType="Models.Store.JobArrangements" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="JobArrangements">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Category" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="Content" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="CreatorNo" Type="int" Nullable="true" />
+    <Property Name="DoerNoList" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="SupervisorNo" Type="int" Nullable="true" />
+    <Property Name="AppointStatus" Type="int" Nullable="true" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Starttime" Type="datetime" Nullable="true" />
+    <Property Name="Endtime" Type="datetime" Nullable="true" />
+    <Property Name="LoopCategory" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="CreatorId" Type="int" Nullable="true" />
+    <Property Name="CreateOn" Type="datetime" Nullable="true" />
+    <Property Name="UpdaterId" Type="int" Nullable="true" />
+    <Property Name="LastUpdateOn" Type="datetime" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="JobArrangements" EntityType="Models.JobArrangement" />
+        </EntityContainer>
+        <EntityType Name="JobArrangement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Category" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Content" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CreatorNo" Type="Int32" />
+          <Property Name="DoerNoList" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SupervisorNo" Type="Int32" />
+          <Property Name="AppointStatus" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Starttime" Type="DateTime" />
+          <Property Name="Endtime" Type="DateTime" />
+          <Property Name="LoopCategory" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreatorId" Type="Int32" />
+          <Property Name="CreateOn" Type="DateTime" />
+          <Property Name="UpdaterId" Type="Int32" />
+          <Property Name="LastUpdateOn" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="JobArrangements">
+      <EntityTypeMapping TypeName="IsTypeOf(Models.JobArrangement)">
+        <MappingFragment StoreEntitySet="JobArrangements">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatorNo" ColumnName="CreatorNo" />
+          <ScalarProperty Name="DoerNoList" ColumnName="DoerNoList" />
+          <ScalarProperty Name="SupervisorNo" ColumnName="SupervisorNo" />
+          <ScalarProperty Name="AppointStatus" ColumnName="AppointStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="LoopCategory" ColumnName="LoopCategory" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="JA">
+        <EntityTypeShape EntityType="Models.JobArrangement" Width="1.5" PointX="0.75" PointY="0.75" Height="4.0712491861979156" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

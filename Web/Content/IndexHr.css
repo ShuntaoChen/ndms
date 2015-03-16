@@ -1,0 +1,69 @@
+﻿.main_iconmenu{
+    margin: 15px 15px 15px 35px;
+    color: #606060;
+    width: 100%;
+    overflow: hidden;
+    height: 60px;
+}
+.main_iconmenu img{ 
+    width:48; 
+    height:48;
+}
+.TodaySale label
+{
+     width:20px;
+     margin-right:20px;
+     text-align:center;
+}
+.main_iconmenu span
+{
+    float: left;
+    width: 80px;
+    text-align: left;
+    font-size: 12px;
+}
+ a:link {
+    color: #6d6d6d;
+    text-decoration: none;
+}
+.AccountIntercalate a:link {
+    color: #6d6d6d;
+}
+.AccountIntercalate
+{
+    margin-top:5px;
+}
+.AccountIntercalate a:visited {color:#00FF00;}	/* 已被访问的链接 */
+.AccountIntercalate a:hover {color:#FF00FF;text-decoration: none; font-weight:bold;}	/* 鼠标指针移动到链接上 */
+.AccountIntercalate a:active {color:#0000FF;}	/* 正在被点击的链接 */
+
+/*2个滚动的css*/
+.div1 ul.line,ul.TodayActivity{width:195px; height:80%; overflow:hidden;margin-bottom:20px;}
+.div1 ul.TodayActivity{height:90px}
+.div1 li{height:30px;text-indent:15px; font-size:12px; line-height:30px;list-style:none}
+.div1 a{background:#047; padding:2px 3px; color:#fff; text-decoration:none;}
+.div1 a:hover{background:#a40000; color:#fff; text-decoration:underline}
+
+.div2 ul.line,ul.TodaySale{width:225px; height:80%; overflow:hidden;margin-bottom:20px;}
+.div2 ul.TodaySale{height:90px} 
+
+.TodayActivity li
+{
+    letter-spacing:5px;
+    text-align:left;
+    margin-left:15px;   
+}
+
+.TodayActivity img
+{
+    width:25px;
+    height:25px;
+}
+
+.TodaySale li
+{
+    letter-spacing:5px;
+    text-align:left;
+    margin-left:15px;
+}
+

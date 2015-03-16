@@ -1,0 +1,88 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        
+        <tr>
+          
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="类型名称/类型描述" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 700,360)
+    @Html.DialogWithId("Edit", 700, 360, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 30%;">
+                    类型名称 
+                </th>
+                <th >
+                   类型描述
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','360') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td>
+                    <a  title="安全问题"  class="TipImp"  href="@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="360" style="color: blue" alt>
+                        安全问题  </a>
+                </td>
+                <td style="text-align: center">
+                    安全问题  
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','360') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td>
+                    <a  title="网络问题"  class="TipImp"  href="@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="360" style="color: blue" alt>
+                        网络问题  </a>
+                </td>
+                <td style="text-align: center">
+                    网络问题  
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsEvertAndCategoriesDetail','700','360') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td>
+                    <a  title="病毒问题 "  class="TipImp"  href="@Url.Action("Detail", "MaintainCategories", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="700" height="360" style="color: blue" alt>
+                        病毒问题   </a>
+                </td>
+                 <td style="text-align: center">
+                  病毒问题   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}

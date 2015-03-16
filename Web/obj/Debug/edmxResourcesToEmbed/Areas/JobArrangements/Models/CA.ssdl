@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CAModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CAModel1StoreContainer">
+    <EntitySet Name="JY_Case" EntityType="CAModel1.Store.JY_Case" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JY_CasePersonal" EntityType="CAModel1.Store.JY_CasePersonal" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_JY_CASEP_REFERENCE_JY_CASE" Association="CAModel1.Store.FK_JY_CASEP_REFERENCE_JY_CASE">
+      <End Role="JY_Case" EntitySet="JY_Case" />
+      <End Role="JY_CasePersonal" EntitySet="JY_CasePersonal" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="JY_Case">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CDate" Type="datetime" />
+    <Property Name="CSummary" Type="nvarchar" />
+    <Property Name="CDate_S" Type="datetime" />
+    <Property Name="CDate_E" Type="datetime" />
+    <Property Name="AttachmentID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Years" Type="int" />
+    <Property Name="CStatus" Type="int" />
+    <Property Name="CResult" Type="nvarchar" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="UpdaterId" Type="int" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="JY_CasePersonal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JY_Case_ID" Type="int" />
+    <Property Name="JY_Personnel_ID" Type="int" />
+    <Property Name="JY_Examine_ID" Type="int" />
+    <Property Name="JY_Record_ID" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="UpdaterId" Type="int" />
+    <Property Name="LastUpdateOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_JY_CASEP_REFERENCE_JY_CASE">
+    <End Role="JY_Case" Type="CAModel1.Store.JY_Case" Multiplicity="0..1" />
+    <End Role="JY_CasePersonal" Type="CAModel1.Store.JY_CasePersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JY_Case">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JY_CasePersonal">
+        <PropertyRef Name="JY_Case_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

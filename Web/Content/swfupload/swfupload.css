@@ -1,0 +1,14 @@
+﻿.upload_btn{ display:inline-block; padding:0px 0 3px 5px; *padding:0 0 0 5px; border:1px solid #d7d7d7;background:url(/Content/Images/add_100.png) ; color: #707070; cursor:pointer; overflow:hidden; vertical-align:middle;}
+.show_list,.show_list{margin:0; padding:0;}
+.show_list ul,.show_list ul{ margin:0; list-style:none; }
+.show_list ul li,.show_list ul li{ float:left; text-align:center; *width:111px;}
+.show_list ul li .img_box,.show_list ul li .img_box,.upload_btn{ margin:5px 5px 5px 5px; position:relative; width:100px; height:100px; overflow:hidden; border:2px #B8D0D6 solid; cursor:pointer;padding: 1px 1px;z-index: 1;float: left;}
+.show_list ul li .img_box.current,.show_list ul li .img_box.current{ border:3px #f60 solid }
+.show_list ul li .img_box img,.show_list ul li .img_box img{ width:100px; height:100px; opacity:1;margin: 1px}
+.show_list ul li .img_box .remark,.show_list ul li .img_box .remark{ top:80px; left:0px; margin:0; padding:3px 2px; position:absolute; display:block; width:96px; height:94px; overflow:hidden; background:#000; filter:alpha(opacity=50); opacity:0.5; -moz-opacity:0.5; text-align:left; font-family:"微软雅黑"; }
+.show_list ul li .img_box .remark:hover,.show_list ul li .img_box .remark:hover{ top:0px; }
+.show_list ul li .img_box .remark i,.show_list ul li .img_box .remark i{ color:#fff; font-style:normal; position:relative; line-height:16px; }
+.show_list ul li div a.deletea,.show_list ul li div a.deletea{ position: absolute;left: 80%;top: 2%;display: none;}
+.show_list ul li div a.deletea img,.show_list ul li div a.deletea img{ width: 16px !important;height: 16px !important;z-index: 9;border: 1px solid gray;border-radius: 25px;background-color: white;}
+.show_list ul li .img_box select{ position: absolute;top: 80px;width: 100px;color: gray;}
+

@@ -1,0 +1,59 @@
+﻿<script type="text/javascript">
+    function deleteAttachment() {
+        var id = $("#selectedID", $.pdialog.getCurrent()).val();
+        if (!id) {
+            alertMsg.error("请选择一个附件。");
+            return false;
+        }
+        alertMsg.confirm("确定要删除这个附件吗？", {
+            okCall: function () {
+                $.post("/UploadCommon/DeleteAttachment", { id: id }, function (json) {
+                    jsonMsgDone(json);
+                    if (json.statusCode == 200) {
+                        $("#tr_" + id + "", $.pdialog.getCurrent()).remove();
+                    }
+                }, "json");
+            }
+        });
+    }
+
+    function DownLoadFile(id) {
+        $.post("/UploadCommon/Download", { id: id }, function (json) {
+            //          jsonMsgDone(json);
+            if (json == "0") { alertMsg.error("未找到文件！"); }
+            else {
+                window.location.href = "/UploadCommon/Download2?id=" + id;
+            }
+        }, "json");
+    }
+</script>
+
+<div class="page">
+   
+	<table class="table" style="width:100%;" layouth="27">
+		<thead>
+			<tr>
+				<th width="50px">序号</th>
+				<th width="226px">文件名称</th>
+                <th align="center" width="100px">文件大小</th>
+				<th align="center" width="50px"></th>
+			</tr>
+		</thead>
+		<tbody>
+              @{
+                  int i = 0;
+                  foreach (var item in ViewData.Model as List<JiYun.Modules.Core.Models.S_Attachment>)
+                  {
+                      i++;
+                    <tr id="tr_@(item.ID)" rel="@item.ID" target="selectedID">
+				        <td class="fixedcol" width="40px">@i</td>
+				        <td width="226px">@item.FileName</td>
+				        <td align="center" width="100px">@item.Size B</td>
+                        <td align="center" width="50px"><a href="javascript:void(0)" onclick="DownLoadFile(@item.ID)"><img src="../../Content/images/downdocument.png" alt="点击下载" /></a></td>
+			        </tr>
+                }
+             }
+        </tbody>
+    </table>
+</div>
+

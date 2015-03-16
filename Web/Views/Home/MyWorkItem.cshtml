@@ -1,0 +1,259 @@
+﻿@using System.Drawing
+@using JiYun.Common.Utils
+@using Web.Areas.CA.Models
+@using Web.Areas.EX.Models
+@using Web.Areas.PE.Service
+@using Web.Areas.EX.Service
+@model List<JY_CasePersonal>
+<!--代办任务考核-->
+<table class="list" width="100%">
+    <thead>
+        <tr>
+            @if (ViewBag.type == "detail")
+            {
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 100px;">
+                    办案人员
+                </th>
+                <th style="width: 300px;">
+                    单位地址
+                </th>
+                <th style="width: 100px;">
+                    联系电话
+                </th>
+                <th style="width: 200px;">
+                    考核结果
+                </th>
+                <th style="width: 100px;">
+                    奖惩结果
+                </th>
+                <th style="width: 100px;">
+                    参与情况
+                </th>
+
+
+            }
+            else
+            {
+          
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 200px;">
+                    办案人员
+                </th>
+                <th style="width: 700px;">
+                    单位地址
+                </th>
+                <th style="width: 200px;">
+                    联系电话
+                </th>
+           
+                <th style="width: 80px">
+                    操作
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody id="CasePersonalDetail">
+        @{
+            int i = 0;
+            PersonService _personService = new PersonService();
+            ExamineService _examineService = new ExamineService();
+            RecordService _recordService = new RecordService();
+            SelectList recordList = ViewBag.Record;
+            foreach (var item in Model)
+            {
+                var person = _personService.GetAll().FirstOrDefault(t => t.ID == item.JY_Personnel_ID);
+            <tr>
+                <td class="fixedcol">
+                    @(i + 1)<input type="hidden" name="casePersonDetail[@i].ID" value="@item.ID" /><input type="hidden" name="casePersonDetail[@i].JY_Case_ID" value="@item.JY_Case_ID"/>
+                </td>
+                <td style="text-align: center">
+                    @{
+                                  
+                        <a  class="TipImp" href="@Url.Action("Detail", "Personnel", new { id = item.JY_Personnel_ID, area = "PE" })" target="navTab" width="800" height="600" mask="true" rel="PEPersonnelDetail" style="color: blue;" title="办案人员详细信息">@person.Name</a>
+       
+                        <input type="hidden" value =@item.JY_Personnel_ID name="casePersonDetail[@i].JY_Personnel_ID"/>
+                    }
+                </td>
+                <td style="text-align: center">
+                    @{
+                            
+                        @person.Unit
+                    }
+                    <input type="hidden" name="casePersonDetail[@i].CreatorId" value="@item.CreatorId"/>
+                    <input type="hidden" name="casePersonDetail[@i].CreateOn" value="@item.CreateOn"/>
+                </td>
+                <td style="text-align: center">
+                    @{
+                            
+                        @person.Mobile
+                    }
+                </td>
+                @if (ViewBag.type == "detail")
+                {
+                    <td style="text-align: center">
+                        @{
+                        
+               
+                    var poinst = 0;
+                    var examinemodel = new JY_Examine();
+                    if (item.JY_Examine_ID != null)
+                    {
+                        if (item.JY_Case_ID != 0 || item.JY_Case_ID != null)
+                        {
+                            examinemodel = _examineService.GetAllExamines().Where(t => t.ID == item.JY_Examine_ID && t.JY_Case_ID == item.JY_Case_ID && t.JY_Personnel_ID == item.JY_Personnel_ID).FirstOrDefault();
+
+                        }
+                        else
+                        {
+                            examinemodel = _examineService.GetAllExamines().Where(t => t.ID == item.JY_Examine_ID && t.JY_Personnel_ID == item.JY_Personnel_ID).FirstOrDefault();
+
+                        }
+
+                        examinemodel = _examineService.GetAllExamines().Where(t => t.ID == item.JY_Examine_ID).FirstOrDefault();
+                    }
+
+                    else
+                    {
+                        if (item.JY_Case_ID != null)
+                        {
+                            examinemodel = _examineService.GetAllExamines().Where(t => t.JY_Personnel_ID == item.JY_Personnel_ID && t.JY_Case_ID == item.JY_Case_ID).FirstOrDefault();
+
+                        }
+                        else
+                        {
+                            examinemodel = _examineService.GetAllExamines().Where(t => t.JY_Personnel_ID == item.JY_Personnel_ID && t.JY_Case_ID == null).FirstOrDefault();
+
+                        }
+
+                    }
+
+
+                    if (examinemodel != null)
+                    {
+
+
+
+                        poinst = Utils.StrToInt(examinemodel.Point, 0);
+                    }
+                    if (poinst != 0)
+                    {
+                        double ponintAr = (double)poinst;
+                        poinst = (int)Math.Ceiling(ponintAr);
+                           
+                             <div id="half@(i)" class="divstar" star="@poinst">
+                                 
+                                </div>                                              
+
+                    }
+                    else
+                    {
+                            <a href="@Url.Action("Create", "Examine", new { personid = item.JY_Personnel_ID, area = "EX", caseId = item.JY_Case_ID })" target="navTab" width="800" height="600" mask="true" rel="ExExamineCreate" style="color: blue;" title="考核登记" class="TipImp">
+                                未考核</a> 
+                    }
+
+
+                            <input type="hidden" value =@item.JY_Examine_ID name="casePersonDetail[@i].JY_Examine_ID"/>
+
+
+                        }
+                    </td>
+                    <td style="text-align: center">
+                        @(recordList.Any(c => c.Value == item.JY_Record_ID.ToString()) ? recordList.First(c => c.Value == item.JY_Record_ID.ToString()).Text : "无")
+                        <input type="hidden" value =@item.JY_Record_ID name="casePersonDetail[@i].JY_Record_ID"/>
+                    </td>
+                    <td style="text-align: center">
+                        @{
+                                                                                         if (item.Remark != null)
+                                                                                         {
+                                                                                             if (item.Remark.Length > 20)
+                                                                                             {
+                                                                                                 var remark = item.Remark.Substring(0, 20) + "...";
+                            <label>@remark</label>
+                                                                                             }
+                                                                                             else
+                                                                                             {
+                            @item.Remark
+                                                                                             }
+                                                                                         }
+                                                                                         else
+                                                                                         {
+                            <a href="@Url.Action("CasePersonalRegistration", "Case", new { personid = item.JY_Personnel_ID, area = "CA" })" target="dialog" width="800" height="600" mask="true" rel="PEPersonnelDetail" style="color: blue;" title="参与情况登记" class="TipImp">
+                                未登记</a> 
+
+                                                                                         }
+
+                        }
+                    </td>
+                }
+                @if (ViewBag.type != "detail")
+                {
+                    <td>
+                        <a style="margin-left: 30px" href="javascript:void(0)" class="btnDel" onclick="$(this).parent().parent().remove();ReSetBoxOrder();">
+                            删除</a>
+                    </td>
+                }
+            </tr>
+                i++;
+            }
+                                        
+            
+        }
+    </tbody>
+</table>
+<script type="text/javascript">
+    $(function () {
+        $(function () {
+            InitRatyExamineIndex();
+        });
+
+
+
+    });
+
+
+
+    function InitRatyExamineIndex() {
+
+        $(".divstar", navTab.getCurrentPanel()).each(function (i) {
+
+            var val = $(this).attr("star");
+
+            $(this).raty({
+                start: val,
+                number: 5, //星星数量
+                path: "Scripts/raty/img", //图片路径
+                hintList: ['合格', '基本称职', '称职', '优秀', '出色'],
+                showHalf: true,
+                readOnly: true
+            });
+
+        });
+    }
+    //更新下标
+    function ReSetBoxOrder() {
+
+        var i = 0;
+        $("#CasePersonalDetail").find("tr").each(function (index) {
+
+            $(this).find(".fixedcol").html(index + 1);
+
+            $(this).find("td").each(function () {
+                var isDetail = false;
+
+                $(this).find("input").each(function () {
+                    var name = $(this).attr("name");
+                    var newName = name.substring(0, name.indexOf("[") + 1) + i + name.substring(name.indexOf("]"));
+
+                    $(this).attr("name", newName);
+                });
+            });
+            i++;
+        });
+    }  
+		
+</script>

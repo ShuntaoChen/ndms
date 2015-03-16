@@ -1,0 +1,65 @@
+﻿@using System.Collections
+@using System.Web.UI.WebControls
+<div class="page">
+    <div class="pageContent">
+        <form method="POST" action="@Url.Action("","",new {area=""})">
+            <div  class="pageFormContent" layouth="60">
+                <table class="formTable" class="select_list_set" style="margin-bottom: 10px;">
+                <tbody>
+                    <tr class="tbtitle">
+                        <td colspan="2">添加属性组</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            组名：
+                        </th>
+                        <td>
+                            <input type="text" class="required" size="30"/>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            序列：
+                        </th>
+                        <td>
+                            <input type="text" class="required" size="30"/>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            描述：
+                        </th>
+                        <td>
+                            <textarea rows="10" style="width: 98%"></textarea>
+                        </td>
+                    </tr>
+
+                </tbody>
+                </table>
+            </div>
+            <div class="formBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    保存</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="button">
+                            <div class="buttonContent">
+                                <button type="button" class="close">
+                                    关闭</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+

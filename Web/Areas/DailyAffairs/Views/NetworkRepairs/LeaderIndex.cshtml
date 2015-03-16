@@ -1,0 +1,186 @@
+﻿@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@ @*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                申请时间：
+            </th>
+            <td>
+                <input type="text" name="StartDate" class="Wdate" id="StartDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'EndDate\')}'})"
+                    size="17" value="" />~<input type="text" id="EndDate" name="EndDate" class="Wdate"
+                        onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'StartDate\')}'})"
+                        size="17" value="" />
+            </td>
+            <th width="auto">
+                是否完成：
+            </th>
+            <td>
+                <select name="RemindRecyle" id="RemindRecyle" class="Combo required">
+                    <option value="" selected="selected">--全部--</option>
+                    <option value="1" >已完成</option>
+                    <option value="2">未完成</option>
+                </select>
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="资产编号/客户名称" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*列表区域*@
+@section Body
+{
+    <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th style="width: 8%;">
+                    客户姓名
+                </th>
+                <th style="width: 15%">
+                    资产编号
+                </th>
+                <th style="width: 8%;">
+                    资产品牌
+                </th>
+                <th style="width: 8%;">
+                    维护单位
+                </th>
+                <th style="width: 10%;">
+                    申请时间
+                </th>
+                <th>
+                    维护内容
+                </th>
+                <th style="width: 5%;">
+                    是否通过
+                </th>
+                <th style="width: 5%;">
+                    是否完成
+                </th>
+                <th style="width: 5%;">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsNetworkRepairsDetail','800', '500') ">
+                <td class="fixedcol">
+                    1
+                </td>
+                <td style="text-align: center">
+                    <a  title="刘卫峰"  class="TipImp"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        刘卫峰 </a>
+                </td>
+                <td style="text-align: center">
+                    5-1-第一排-机架15-1
+                </td>
+                <td style="text-align: center">
+                    DELL
+                </td>
+                <td style="text-align: center">
+                    自行维护
+                </td>
+                <td style="text-align: center">
+                    2014-10-27 13:43
+                </td>
+                <td>
+                    这个需要维修，请批复
+                </td>
+                <td style="text-align: center">
+                    X
+                </td>
+                <td style="text-align: center">
+                    √
+                </td>
+                <td style="text-align: center">
+                    <a  class="TipImp" title="点击审核"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        审核 </a>
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsNetworkRepairsDetail','800', '500') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td style="text-align: center">
+                    <a  title="单位-ZY "  class="TipImp"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        单位-ZY  </a>
+                </td>
+                <td style="text-align: center">
+                   2-ZY-JF-0001-ZY-JG-001-1 
+                </td>
+                <td style="text-align: center">
+                    ZY-服务器-001 
+                </td>
+                <td style="text-align: center">
+                    维护商-ZY-0001 
+                </td>
+                <td style="text-align: center">
+                    2014-10-28 15:20 
+                </td>
+                <td>
+                    这个需要维修，请批复
+                </td>
+                <td style="text-align: center">
+                    X
+                </td>
+                <td style="text-align: center">
+                    √
+                </td>
+                <td style="text-align: center">
+                    <a  class="TipImp" title="点击审核"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        审核 </a>
+                </td>
+            </tr>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })', 'DailyAffairsNetworkRepairsDetail','800', '500') ">
+                <td class="fixedcol">
+                    3
+                </td>
+                <td style="text-align: center">
+                    <a  title="王瑾 "  class="TipImp"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                       王瑾  </a>
+                </td>
+                <td style="text-align: center">
+                    2-1-第一排-机架6-1 
+                </td>
+                <td style="text-align: center">
+                    IBM 
+                </td>
+                <td style="text-align: center">
+                    自行维护
+                </td>
+                <td style="text-align: center">
+                   2014-10-24 15:49 
+                </td>
+                <td>
+                    需要调换维修 
+                </td>
+                <td style="text-align: center">
+                    X
+                </td>
+                <td style="text-align: center">
+                    √
+                </td>
+                <td style="text-align: center">
+                    <a  class="TipImp" title="点击审核"  href="@Url.Action("LeaderDetail", "NetworkRepairs", new { area = "DailyAffairs", id = 1 })" mask="true" target="dialog" width="800" height="500" style="color: blue" alt>
+                        审核 </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

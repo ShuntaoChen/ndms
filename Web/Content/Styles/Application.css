@@ -1,0 +1,147 @@
+﻿img{vertical-align:middle;margin-right:5px}
+.gridHeader th{text-align:center!important;line-height:21px;height:21px}
+.grid .gridTbody .selected{background:none repeat scroll 0 0 #7CC5E5!important;color:#fff!important}
+.grid .gridTbody td{cursor:default;line-height:21px;height:21px}
+#header .logo{width:530px!important}
+.fixedcol{text-align:center!important;color:#999!important}
+.table_btn{background-repeat:no-repeat;background-position:center 70%;text-decoration:none!important;display:inline-block;width:21px;height:21px}
+
+.info_search{background:url(../Images/search.png) no-repeat scroll 0 0 transparent;margin-left:5px;padding-left:25px;line-height:25px}
+.highlight{background-color:#000}
+.status_on{background-image:url(../Images/status_on.png)}
+.status_off{background-image:url(../Images/status_off.png)}
+hr{border:1px dotted #eee}
+.formTable.fl tr.hr{background-color:#E1F6FF}
+.formTable.fl tr.fr{background-color:#59bfef}
+.formTable{width:98%;border:1px #B8D0D6 solid;border-collapse:collapse;margin:0 auto;padding:3px}
+.formTable td{height:28px;line-height:28px;border:1px solid #B8D0D6;padding:2px}
+.formTable .title{text-indent: 1em;text-align:left;color:#666;height:30px;line-height:20px;background:#efefef;padding:0; font-weight:bold;}
+.formTable table td{width:auto}
+/* table标题 */
+.formTable .tbtitle{text-align: left; padding-left: 10px; font-weight: bold; background-color: #efefef}
+/*显示和隐藏文件链接*/
+ .labText {color:#cccccc;cursor:pointer;}
+/*显示和隐藏文件链接*/
+.formTable td p{width:99%;float:none;height:auto;line-height:25px}
+.formTable th,.formTable .thcss{color:#183152;width:120px;text-align:right;background-color:#EEF2F6;border:1px solid #B8D0D6;line-height:21px;padding:0}
+.formTable table td{border:0px solid #B8D0D6;border-right: solid 1px #EDEDED;border-bottom: solid 1px #EDEDED;}
+.formTable table th{background-color:transparent; text-align:center; border-left-color:transparent;border-right: solid 1px #D0D0D0;border-top: solid 1px #D0D0D0;border-left: solid 1px #D0D0D0;border-bottom: solid 1px #D0D0D0;}
+a.link{color:Blue;text-decoration:underline;height:20px;line-height:20px;padding:5px 10px}
+.folder{background:url(../Images/folder.gif) left center no-repeat;padding-left:20px;line-height:21px;height:21px;overflow:hidden}
+.module{background:url(../Images/module.png) left center no-repeat;padding-left:20px;line-height:21px;height:21px;overflow:hidden}
+span.number{color:#aaa;margin-left:5px}
+.word{background:url(../Images/word.png) left center no-repeat;padding-left:20px;line-height:21px;height:21px;overflow:hidden}
+.pdf{background:url(../Images/pdf.png) left center no-repeat;padding-left:20px;line-height:21px;height:21px;overflow:hidden}
+ul.indexlist li{border-bottom:1px dotted #999;height:25px;line-height:25px;padding-left:20px;background:url(../Images/listdian_01.jpg) left top no-repeat}
+ul.indexlist li span{float:right;height:25px;line-height:25px;color:#555;margin-left:5px}
+ul.indexlist li a.read{color:#183152}
+ul.indexlist li a.unread{color:red}
+ul.indexlist li span b{margin:0 5px}
+ul.processlist li{font-size:12px;border-bottom:1px dotted #999;height:25px;line-height:25px}
+ul.processlist li span{height:20px;line-height:20px}
+ul.processlist li span.date{float:right;color:#555;margin:5px 5px 0}
+ul.processlist li span.pass{color:#fff;background:green;font-size:10px;margin:0 5px;padding:3px 9px}
+ul.processlist li span.fail{color:#fff;background:red;font-size:10px;margin:0 5px;padding:3px}
+ul.processlist li span.to{color:#000;font-size:18px;margin:0 5px}
+ul.processlist li span.commit{color:#fff;background:#666;font-size:10px;margin:0 5px;padding:3px 9px}
+ul.processlist li span.content{color:#555;margin:5px 5px 0}
+a.diagram{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:10pt;line-height:2.4;text-decoration:none;margin:2px 2px 2px 0;padding:2px 5px}
+a.diagram:hover{background-color:#3E6D8E;color:#fff}
+.pdf_report{float:left;width:120px;height:100px;text-align:center;border:1px solid #ccc;margin:0 6px 5px 4px;padding:5px}
+.pdf_report:hover{background:#f1f1f1}
+.pdf_report a{display:block;margin-top:10px;color:#333;overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis}
+.pdf_report div{margin-top:10px;color:#ccc}
+.pdf_report i{margin-top:2px;margin-left:114px;background:url(../Images/checkbox.gif) no-repeat 0 -12px;display:inline-block;overflow:hidden;width:12px;height:12px}
+label.alt{margin-left:8px;font-style:italic;color:#666}
+
+.largeInput{min-height: 25px;width: 350px;border-top: 1px solid #a6a5a5;border-left: 1px solid #a6a5a5;border-right: 1px #e1e1e1 solid;border-bottom: 1px #e1e1e1 solid;height: 20px;line-height: 20px;margin: 3px 0;padding: 0px;outline: none;}
+
+.divtxt .ledlist{position:relative; width:auto;height:18px;line-height:18px;text-align:center;background:#FFFFE1;float:left;display:inline;margin:5px 3px 0px 2px;padding:0 15px 0 10px;border:1px #ccc solid;overflow:hidden; cursor:hand;}
+.divtxt .close{display:inline; overflow:hidden; width:11px; height:11px; padding:0; text-indent:-1000px; position:absolute; top:0px; right:0px;background:url(../../Scripts/dwz/themes/default/images/tabs/tabspage_icon.png) no-repeat;}
+.divtxt .close:hover { background-position:0 -50px;}
+.long{ width: 400px;}
+.short{ width: 60px;}
+/* 上传控件 */
+.jfile {margin-top: 25px;}
+
+/* 选择用户控件 */
+.SelectUser{position:relative; width:auto;height:21px;line-height:21px;text-align:center;background:#FFFFE1;float:left;display:inline;margin:5px 3px 0px 2px;padding:0 15px 0 10px;border:1px #ccc solid;overflow:hidden; cursor:hand;}
+.SelectUser .close{display:inline; overflow:hidden; width:11px; height:11px; padding:0; text-indent:-1000px; position:absolute; top:0px; right:0px;background:url(/Content/Images/tabspage_icon.png) no-repeat;}
+.SelectUser .close:hover { background-position:0 -50px;}
+
+.rightnone{ border-right: none !important;}
+.leftnone{ border-left: none !important;}
+
+/* 选择控件按钮*/
+a.btnshop{
+background: url(../images/store.png) no-repeat;
+display: block;
+width: 16px;
+height:16px;
+text-indent: -1000px;
+overflow: hidden;
+float: left;
+margin-right: 3px;
+}
+
+a.btnproduct{
+background: url(../images/product.png) no-repeat;
+display: block;
+width: 16px;
+height:16px;
+text-indent: -1000px;
+overflow: hidden;
+float: left;
+margin-right: 3px;
+}
+
+
+.UploadButton
+{
+}
+
+.hiddenTr{display: none;}
+
+
+#MemberListTd{width: 60%;border-left: 0px;}
+#MemberChooseTd{width: 100%;float: left;border-left: 1px solid #99bbe8;}
+.MemberSpan{position:relative; width:auto;height:18px;line-height:18px;text-align:center;background:#FFFFE1;float:left;display:inline;margin:5px 3px 0px 2px;padding:0 15px 0 10px;border:1px #ccc solid;overflow:hidden; cursor:hand;}
+.MemberSpanRemove{display:inline; overflow:hidden; width:11px; height:11px; padding:0; text-indent:-1000px; position:absolute; top:0px; right:0px;background:url(/Content/Images/tabspage_icon.png) no-repeat;}
+.MemberSpanRemove:hover { background-position:0 -50px;}
+
+.imageDiv{ padding-left: 20px;}
+
+
+
+
+ /*file容器样式*/
+    a.files
+    {
+        margin: 0 auto;
+        width: 52px;
+        height: 22px;
+        overflow: hidden;
+        display: block;
+        border: 1px solid #d7d7d7;
+        background: url(../../../../Content/themes/default/images/upfile_bg.gif) left top no-repeat;
+        text-decoration: none;
+    }
+    /*file设为透明，并覆盖整个触发面*/
+    a.files input
+    {
+        margin-left: -270px;
+        font-size: 24px;
+        cursor: pointer;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    /*取消点击时的虚线框*/
+    a.files, a.files input
+    {
+        outline: none; /*ff*/
+        hide-focus: expression(this.hideFocus=true); /*ie*/
+    }
+    
+    /*星星控件样式*/
+    .divstar {margin: 0 auto;}
+  

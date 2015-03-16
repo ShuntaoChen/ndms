@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <menuCode>0</menuCode>
+  <!--菜单编号  1：显示 0：隐藏-->
+  <validateCode>0</validateCode>
+  <!--登录验证码  1：显示 0：隐藏-->
+</root>

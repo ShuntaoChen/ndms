@@ -1,0 +1,96 @@
+﻿@using NPOI.SS.Formula.Functions
+
+@*页面模板引用*@
+@{
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+}
+@*检索区域*@
+@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                资产类型：
+            </th>
+            <td>
+                @Html.DropDownList("AssetCategory", null, "--全部--", new { style = "width:100px" })
+            </td>
+            <td>
+                资产状态:
+            </td>
+            <td>
+                @Html.DropDownList("AssetStatus", null, "--全部--", new { style = "width:100px" })
+            </td>
+            <th width="auto">
+                关键字：
+            </th>
+            <td>
+                <input type="text" size="30" placeholder="资产编号/描述" name="SearchKey" value="@SearchKey"/>
+            </td>
+        </tr>
+    </table>
+}
+@*工具条区域*@
+@section ToolBar{
+    @Html.NavTab("Create",null,null)
+    @Html.NavTabWithId("Edit")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th>资产编号</th>
+                <th>资产品牌</th>
+                <th>IP地址</th>
+                <th>应用系统</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenNavTab('详细信息', '@Url.Action("Detail", "AssetsManagement", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementAssetsManagementDetail') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td style="text-align: left">
+                    <a  title="资产编号"  class="TipImp"  href="@Url.Action("Detail", "AssetsManagement", new { area = "DeviceManagement", id = 1 })" mask="true" target="navTab" width="800" height="450" style="color: blue" alt>
+                        2-1-第一排-机架10-2</a>
+                </td>
+                <td style="text-align: center">IBM</td>
+                <td style="text-align: center">
+                    192.168.3.113
+                </td>
+                <td >
+                    暂无
+                </td>
+            </tr>
+                  <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenNavTab('详细信息', '@Url.Action("Detail", "AssetsManagement", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementAssetsManagementDetail') ">
+                <td class="fixedcol">
+                    2
+                </td>
+                <td style="text-align: left">
+                    <a  title="资产编号"  class="TipImp"  href="@Url.Action("Detail", "AssetsManagement", new { area = "DeviceManagement", id = 1 })" mask="true" target="navTab" width="800" height="450" style="color: blue" alt>
+                        3-1-第一排-机架12-2</a>
+                </td>
+                <td style="text-align: center">IBM</td>
+                <td style="text-align: center">
+                    192.168.3.113
+                </td>
+                <td >
+                    空调环境监控工控机
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}

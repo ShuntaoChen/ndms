@@ -1,0 +1,82 @@
+﻿@*页面模板引用*@
+@{
+ ViewData["Header"] =1;
+    Layout = "~/Views/Shared/_NavTabMaster.cshtml";
+}
+@*列表页列表对象*@
+@*后台返回参数*@
+@{
+    var SearchKey = ViewBag.SearchKey;
+    var SDate = ViewBag.SDate;
+    var EDate = ViewBag.EDate;
+    
+}
+@*检索区域*@
+@*@section SuperSearch{
+    <table class="searchContent">
+        <tr>
+            <th width="auto">
+                您的当前位置：
+            </th>
+            <th>
+                <select>
+                    <option>/</option>
+                </select>
+            </th>
+        </tr>
+    </table>
+}*@
+@*工具条区域*@
+@section ToolBar{
+    @Html.Dialog("Create", 500, 300)
+    @Html.DialogWithId("Edit", 500, 300, "selectedId")
+    @Html.Confirm("Delete", "selectedId")
+}
+@*列表区域*@
+
+@section Body
+{
+        <table class="table" width="100%" layouth="141" targettype="navTab" asc="asc" desc="desc">
+        <thead>
+            <tr>
+                <th style="width: 30px;">
+                    序号
+                </th>
+                <th>属性编号</th>
+                <th>属性名称</th>
+                <th>类型</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var array = new String[]
+                {
+                    "","设备序号", "设备位置", "序列号", "设备名称", "IP地址", "主要用途", "所属单位", "操作系统",
+                    "保修时间", "CPU", "内存", "安全指标", "硬盘"
+                };
+                for (int i = 1; i < array.Length; i++)
+                {
+
+                <tr target="selectedId"  rel="1"  class="click_dialog" ondblclick="OpenDialog('详细信息', '@Url.Action("Detail", "Properties", new { area = "DeviceManagement", id = 1 })', 'DeviceManagementPropertiesDetail',800,300) ">
+                <td class="fixedcol">
+                    @i
+                </td>
+                <td style="text-align: center;width: 10%">
+                    <a  title="002"  class="TipImp"  href="@Url.Action("Detail", "Properties", new { area = "DeviceManagement", id = 1 })" mask="true" target="dialog" width="800" height="300" style="color: blue" alt>
+                    00@{@i
+                    }</a>
+                </td>
+                <td style="text-align: center">
+                    @array[i]
+                </td>
+                <td >
+                    文本
+                </td>
+ 
+            </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+}

@@ -1,0 +1,70 @@
+﻿ <div style="height:600px; margin-top:5px; overflow:scroll !important;" rel="JobArrangementsJobDailyRecordDetail3">
+      <div id='JobcalendarAssigned' />
+ </div>
+
+
+
+
+<script type="text/javascript">
+
+    function openEditDialog2(start, end,state) {
+        $.pdialog.open('@Url.Action("_Job", "JobArrangements", new { area = "JobArrangements" })', "JobcalendarAssigned", "日程安排", { width: 700, height: 500, mask: true });
+        if (state == 1) {
+            var title = "服务器维修";
+            var eventData;
+            if (title) {
+                eventData = {
+                    title: title,
+                    start: start,
+                    end: end,
+                    event_id: '这是我的工作安排的Id，请和数据库中相关信息关联起来'
+                };
+                $('#JobcalendarAssigned').fullCalendar('renderEvent', eventData, true); // stick? = true
+            }
+        }
+        $('#JobcalendarAssigned').fullCalendar('unselect');
+    }
+
+    $(document).ready(function () {
+
+        $('#JobcalendarAssigned').fullCalendar({
+            theme: true,
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            /* defaultDate: '2014-09-12', */
+            selectable: true,
+            selectHelper: true,
+            lang: 'zh-cn',
+             /*select: function (start, end) {
+                openEditDialog2(start, end,1);
+            },*/
+            eventClick: function (event) {
+                openEditDialog2(new Date, new Date,0);
+
+            },
+            editable: false,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+				{
+				    title: '维修1处服务器',
+				    start: '2014-11-01',
+				    event_id: '11200-112-12-1-2-12-2',
+				    className: 'eventColorAssigned'
+				},
+                {
+                    title: '维修2处服务器',
+                    start: '2014-11-01',
+                    event_id: '11200-112-12-1-2-12-2',
+                    className: 'eventColorAssigned'
+                }
+			]
+        });
+
+
+
+
+    });
+</script>

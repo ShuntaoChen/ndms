@@ -1,0 +1,697 @@
+
+div.JUpload .hidden {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width:480px) {
+    div.JUpload .nav-collapse {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    div.JUpload .page-header h1 small {
+        display: block;
+        line-height: 18px;
+    }
+
+    div.JUpload input[class*="span"],div.JUpload select[class*="span"], div.JUpload textarea[class*="span"], div.JUpload .uneditable-input {
+        display: block;
+        width: 100%;
+        height: 28px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    div.JUpload .input-prepend input[class*="span"], div.JUpload .input-append input[class*="span"] {
+        width: auto;
+    }
+
+    div.JUpload input[type="checkbox"], div.JUpload input[type="radio"] {
+        border: 1px solid #ccc;
+    }
+
+    div.JUpload .form-horizontal .control-group > label {
+        float: none;
+        width: auto;
+        padding-top: 0;
+        text-align: left;
+    }
+
+    div.JUpload .form-horizontal .controls {
+        margin-left: 0;
+    }
+
+    div.JUpload .form-horizontal .control-list {
+        padding-top: 0;
+    }
+
+    div.JUpload .form-horizontal .form-actions {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    div.JUpload .modal {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        margin: 0;
+    }
+
+        div.JUpload .modal.fade.in {
+            top: auto;
+        }
+
+    div.JUpload .modal-header .close {
+        padding: 10px;
+        margin: -10px;
+    }
+
+    div.JUpload .carousel-caption {
+        position: static;
+    }
+}
+
+@media (max-width:768px) {
+    div.JUpload .container {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    div.JUpload .row-fluid {
+        width: 100%;
+    }
+
+    div.JUpload .row {
+        margin-left: 0;
+    }
+
+        div.JUpload .row > [class*="span"],div.JUpload  .row-fluid > [class*="span"] {
+            float: none;
+            display: block;
+            width: auto;
+            margin: 0;
+        }
+}
+
+@media (min-width:768px) and (max-width:980px) {
+   div.JUpload  .row {
+        margin-left: -20px;
+        *zoom: 1;
+    }
+
+        div.JUpload .row:before, div.JUpload .row:after {
+            display: table;
+            content: "";
+        }
+
+        div.JUpload .row:after {
+            clear: both;
+        }
+
+    div.JUpload [class*="span"] {
+        float: left;
+        margin-left: 20px;
+    }
+
+   div.JUpload .span1 {
+        width: 42px;
+    }
+
+    div.JUpload .span2 {
+        width: 104px;
+    }
+
+   div.JUpload .span3 {
+        width: 166px;
+    }
+
+   div.JUpload .span4 {
+        width: 228px;
+    }
+
+   div.JUpload .span5 {
+        width: 290px;
+    }
+
+    div.JUpload .span6 {
+        width: 352px;
+    }
+
+    div.JUpload .span7 {
+        width: 414px;
+    }
+
+    div.JUpload .span8 {
+        width: 476px;
+    }
+
+    div.JUpload .span9 {
+        width: 538px;
+    }
+
+    div.JUpload .span10 {
+        width: 600px;
+    }
+
+    div.JUpload .span11 {
+        width: 662px;
+    }
+
+    div.JUpload .span12, div.JUpload .container {
+        width: 724px;
+    }
+
+    div.JUpload .offset1 {
+        margin-left: 82px;
+    }
+
+    div.JUpload .offset2 {
+        margin-left: 144px;
+    }
+
+   div.JUpload .offset3 {
+        margin-left: 206px;
+    }
+
+   div.JUpload .offset4 {
+        margin-left: 268px;
+    }
+
+    div.JUpload .offset5 {
+        margin-left: 330px;
+    }
+
+    div.JUpload .offset6 {
+        margin-left: 392px;
+    }
+
+    div.JUpload .offset7 {
+        margin-left: 454px;
+    }
+
+    div.JUpload .offset8 {
+        margin-left: 516px;
+    }
+
+    div.JUpload .offset9 {
+        margin-left: 578px;
+    }
+
+    div.JUpload .offset10 {
+        margin-left: 640px;
+    }
+
+    div.JUpload .offset11 {
+        margin-left: 702px;
+    }
+
+    div.JUpload .row-fluid {
+        width: 100%;
+        *zoom: 1;
+    }
+
+        div.JUpload .row-fluid:before, .row-fluid:after {
+            display: table;
+            content: "";
+        }
+
+        div.JUpload .row-fluid:after {
+            clear: both;
+        }
+
+        div.JUpload .row-fluid > [class*="span"] {
+            float: left;
+            margin-left: 2.762430939%;
+        }
+
+            div.JUpload .row-fluid > [class*="span"]:first-child {
+                margin-left: 0;
+            }
+
+        div.JUpload .row-fluid .span1 {
+            width: 5.801104972%;
+        }
+
+        div.JUpload .row-fluid .span2 {
+            width: 14.364640883%;
+        }
+
+        div.JUpload .row-fluid .span3 {
+            width: 22.928176794%;
+        }
+
+        div.JUpload .row-fluid .span4 {
+            width: 31.491712705%;
+        }
+
+        div.JUpload .row-fluid .span5 {
+            width: 40.055248616%;
+        }
+
+        div.JUpload .row-fluid .span6 {
+            width: 48.618784527%;
+        }
+
+        div.JUpload .row-fluid .span7 {
+            width: 57.182320438000005%;
+        }
+
+       div.JUpload .row-fluid .span8 {
+            width: 65.74585634900001%;
+        }
+
+        div.JUpload .row-fluid .span9 {
+            width: 74.30939226%;
+        }
+
+        div.JUpload .row-fluid .span10 {
+            width: 82.87292817100001%;
+        }
+
+        div.JUpload .row-fluid .span11 {
+            width: 91.436464082%;
+        }
+
+        div.JUpload .row-fluid .span12 {
+            width: 99.999999993%;
+        }
+
+    div.JUpload input.span1, div.JUpload textarea.span1, div.JUpload .uneditable-input.span1 {
+        width: 32px;
+    }
+
+    div.JUpload input.span2, div.JUpload textarea.span2, div.JUpload .uneditable-input.span2 {
+        width: 94px;
+    }
+
+    div.JUpload input.span3, div.JUpload textarea.span3, div.JUpload .uneditable-input.span3 {
+        width: 156px;
+    }
+
+    div.JUpload input.span4, div.JUpload textarea.span4, div.JUpload .uneditable-input.span4 {
+        width: 218px;
+    }
+
+    div.JUpload input.span5, div.JUpload textarea.span5, div.JUpload .uneditable-input.span5 {
+        width: 280px;
+    }
+
+    div.JUpload input.span6, div.JUpload textarea.span6, div.JUpload .uneditable-input.span6 {
+        width: 342px;
+    }
+
+    div.JUpload input.span7, div.JUpload textarea.span7, div.JUpload .uneditable-input.span7 {
+        width: 404px;
+    }
+
+    div.JUpload input.span8, div.JUpload textarea.span8, div.JUpload .uneditable-input.span8 {
+        width: 466px;
+    }
+
+    div.JUpload input.span9, div.JUpload textarea.span9, div.JUpload .uneditable-input.span9 {
+        width: 528px;
+    }
+
+    div.JUpload input.span10, div.JUpload textarea.span10, div.JUpload .uneditable-input.span10 {
+        width: 590px;
+    }
+
+    div.JUpload input.span11, div.JUpload textarea.span11, div.JUpload .uneditable-input.span11 {
+        width: 652px;
+    }
+
+    div.JUpload input.span12, div.JUpload textarea.span12, div.JUpload .uneditable-input.span12 {
+        width: 714px;
+    }
+}
+
+@media (max-width:980px) {
+    div.JUpload body {
+        padding-top: 0;
+    }
+
+    div.JUpload .navbar-fixed-top {
+        position: static;
+        margin-bottom: 18px;
+    }
+
+       div.JUpload .navbar-fixed-top .navbar-inner {
+            padding: 5px;
+        }
+
+    div.JUpload .navbar .container {
+        width: auto;
+        padding: 0;
+    }
+
+    div.JUpload .navbar .brand {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 0 0 -5px;
+    }
+
+    div.JUpload .navbar .nav-collapse {
+        clear: left;
+    }
+
+    div.JUpload .navbar .nav {
+        float: none;
+        margin: 0 0 9px;
+    }
+
+        div.JUpload .navbar .nav > li {
+            float: none;
+        }
+
+            div.JUpload .navbar .nav > li > a {
+                margin-bottom: 2px;
+            }
+
+        div.JUpload .navbar .nav > .divider-vertical {
+            display: none;
+        }
+
+        div.JUpload .navbar .nav > li > a, div.JUpload .navbar div.JUpload .dropdown-menu a {
+            padding: 6px 15px;
+            font-weight: bold;
+            color: #999999;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+    div.JUpload .navbar .dropdown-menu li + li a {
+        margin-bottom: 2px;
+    }
+
+    div.JUpload .navbar .nav > li > a:hover, div.JUpload .navbar .dropdown-menu a:hover {
+        background-color: #222222;
+    }
+
+    div.JUpload .navbar .dropdown-menu {
+        position: static;
+        top: auto;
+        left: auto;
+        float: none;
+        display: block;
+        max-width: none;
+        margin: 0 15px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+        div.JUpload .navbar .dropdown-menu:before, div.JUpload .navbar .dropdown-menu:after {
+            display: none;
+        }
+
+        div.JUpload .navbar .dropdown-menu .divider {
+            display: none;
+        }
+
+    div.JUpload .navbar-form, div.JUpload .navbar-search {
+        float: none;
+        padding: 9px 15px;
+        margin: 9px 0;
+        border-top: 1px solid #222222;
+        border-bottom: 1px solid #222222;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.1);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    div.JUpload .navbar .nav.pull-right {
+        float: none;
+        margin-left: 0;
+    }
+
+    div.JUpload .navbar-static .navbar-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    div.JUpload .btn-navbar {
+        display: block;
+    }
+
+    div.JUpload .nav-collapse {
+        overflow: hidden;
+        height: 0;
+    }
+}
+
+@media (min-width:980px) {
+    div.JUpload .nav-collapse.collapse {
+        height: auto !important;
+    }
+}
+
+@media (min-width:1200px) {
+    div.JUpload .row {
+        margin-left: -30px;
+        *zoom: 1;
+    }
+
+        div.JUpload .row:before, .row:after {
+            display: table;
+            content: "";
+        }
+
+        div.JUpload .row:after {
+            clear: both;
+        }
+
+    div.JUpload [class*="span"] {
+        float: left;
+        margin-left: 30px;
+    }
+
+    div.JUpload .span1 {
+        width: 70px;
+    }
+
+    div.JUpload .span2 {
+        width: 170px;
+    }
+
+    div.JUpload .span3 {
+        width: 270px;
+    }
+
+    div.JUpload .span4 {
+        width: 370px;
+    }
+
+   div.JUpload .span5 {
+        width: 470px;
+    }
+
+    div.JUpload .span6 {
+        width: 570px;
+    }
+
+    div.JUpload .span7 {
+        width: 670px;
+    }
+
+    div.JUpload .span8 {
+        width: 770px;
+    }
+
+    div.JUpload .span9 {
+        width: 870px;
+    }
+
+    div.JUpload .span10 {
+        width: 970px;
+    }
+
+    div.JUpload .span11 {
+        width: 1070px;
+    }
+
+    div.JUpload .span12, .container {
+        width: 1170px;
+    }
+
+    div.JUpload .offset1 {
+        margin-left: 130px;
+    }
+
+    div.JUpload .offset2 {
+        margin-left: 230px;
+    }
+
+    div.JUpload .offset3 {
+        margin-left: 330px;
+    }
+
+    div.JUpload .offset4 {
+        margin-left: 430px;
+    }
+
+    div.JUpload .offset5 {
+        margin-left: 530px;
+    }
+
+    div.JUpload .offset6 {
+        margin-left: 630px;
+    }
+
+    div.JUpload .offset7 {
+        margin-left: 730px;
+    }
+
+    div.JUpload .offset8 {
+        margin-left: 830px;
+    }
+
+    div.JUpload .offset9 {
+        margin-left: 930px;
+    }
+
+    div.JUpload .offset10 {
+        margin-left: 1030px;
+    }
+
+    div.JUpload .offset11 {
+        margin-left: 1130px;
+    }
+
+    div.JUpload .row-fluid {
+        width: 100%;
+        *zoom: 1;
+    }
+
+        div.JUpload .row-fluid:before, div.JUpload .row-fluid:after {
+            display: table;
+            content: "";
+        }
+
+        div.JUpload .row-fluid:after {
+            clear: both;
+        }
+
+        div.JUpload .row-fluid > [class*="span"] {
+            float: left;
+            margin-left: 2.564102564%;
+        }
+
+            div.JUpload .row-fluid > [class*="span"]:first-child {
+                margin-left: 0;
+            }
+
+        div.JUpload .row-fluid .span1 {
+            width: 5.982905983%;
+        }
+
+        div.JUpload .row-fluid .span2 {
+            width: 14.529914530000001%;
+        }
+
+        div.JUpload .row-fluid .span3 {
+            width: 23.076923077%;
+        }
+
+        div.JUpload .row-fluid .span4 {
+            width: 31.623931624%;
+        }
+
+        div.JUpload .row-fluid .span5 {
+            width: 40.170940171000005%;
+        }
+
+        div.JUpload .row-fluid .span6 {
+            width: 48.717948718%;
+        }
+
+        div.JUpload .row-fluid .span7 {
+            width: 57.264957265%;
+        }
+
+       div.JUpload .row-fluid .span8 {
+            width: 65.81196581200001%;
+        }
+
+        div.JUpload .row-fluid .span9 {
+            width: 74.358974359%;
+        }
+
+        div.JUpload .row-fluid .span10 {
+            width: 82.905982906%;
+        }
+
+        div.JUpload .row-fluid .span11 {
+            width: 91.45299145300001%;
+        }
+
+        div.JUpload .row-fluid .span12 {
+            width: 100%;
+        }
+
+    div.JUpload input.span1, div.JUpload textarea.span1, div.JUpload .uneditable-input.span1 {
+        width: 60px;
+    }
+
+    div.JUpload input.span2, div.JUpload textarea.span2, div.JUpload .uneditable-input.span2 {
+        width: 160px;
+    }
+
+    div.JUpload input.span3, div.JUpload textarea.span3, div.JUpload .uneditable-input.span3 {
+        width: 260px;
+    }
+
+    div.JUpload input.span4, div.JUpload textarea.span4, div.JUpload .uneditable-input.span4 {
+        width: 360px;
+    }
+
+    div.JUpload input.span5, div.JUpload textarea.span5, div.JUpload .uneditable-input.span5 {
+        width: 460px;
+    }
+
+    div.JUpload input.span6, div.JUpload textarea.span6, div.JUpload .uneditable-input.span6 {
+        width: 560px;
+    }
+
+    div.JUpload input.span7, div.JUpload textarea.span7, div.JUpload .uneditable-input.span7 {
+        width: 660px;
+    }
+
+    div.JUpload input.span8, div.JUpload textarea.span8, div.JUpload .uneditable-input.span8 {
+        width: 760px;
+    }
+
+    div.JUpload input.span9, div.JUpload textarea.span9, div.JUpload .uneditable-input.span9 {
+        width: 860px;
+    }
+
+    div.JUpload input.span10, div.JUpload textarea.span10, div.JUpload .uneditable-input.span10 {
+        width: 960px;
+    }
+
+    div.JUpload input.span11, div.JUpload textarea.span11, div.JUpload .uneditable-input.span11 {
+        width: 1060px;
+    }
+
+    div.JUpload input.span12, div.JUpload textarea.span12, div.JUpload .uneditable-input.span12 {
+        width: 1160px;
+    }
+
+    div.JUpload .thumbnails {
+        margin-left: -30px;
+    }
+
+        div.JUpload .thumbnails > li {
+            margin-left: 30px;
+        }
+}

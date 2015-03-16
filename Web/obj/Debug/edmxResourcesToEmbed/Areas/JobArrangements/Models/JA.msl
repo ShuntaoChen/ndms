@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="JobArrangements">
+      <EntityTypeMapping TypeName="IsTypeOf(Models.JobArrangement)">
+        <MappingFragment StoreEntitySet="JobArrangements">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatorNo" ColumnName="CreatorNo" />
+          <ScalarProperty Name="DoerNoList" ColumnName="DoerNoList" />
+          <ScalarProperty Name="SupervisorNo" ColumnName="SupervisorNo" />
+          <ScalarProperty Name="AppointStatus" ColumnName="AppointStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="LoopCategory" ColumnName="LoopCategory" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="UpdaterId" ColumnName="UpdaterId" />
+          <ScalarProperty Name="LastUpdateOn" ColumnName="LastUpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

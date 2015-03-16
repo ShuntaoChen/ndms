@@ -1,0 +1,84 @@
+﻿@RenderSection("Script",false)
+<script type="text/javascript">
+    $(function () {
+        _NavTabMasterInit();
+    });
+</script>
+<style>
+.searchBar ul.searchContent,.searchBar ul.superSearchContent {height:100%;overflow:hidden;}
+.searchBar ul.superSearchContent{display:none;height:auto;}
+.searchBar ul.searchContent li,.searchBar ul.superSearchContent li { float:left;display:inline-block; overflow:hidden; width:300px; height:21px; padding:2px 0;margin-right:5px;margin-top:4px;}
+.searchBar label {float:left; width:auto; padding:0 5px; line-height:23px;}
+</style>
+
+@RenderSection("ScriptArea", false)
+
+<div class="page">
+    @{
+        if (ViewData["Header"] == null)
+        { 
+            @*<div class="superDiv" style="position: absolute; right: 36%; top: -6px; z-index: 35">
+                <a onclick="superSearch()" href="javascript:void(0)">
+                    <img class="superIMG" src="../../Content/Images/superSearch.png" title="点击展开搜索" /></a>
+            </div>*@
+            <div class="pageHeader">
+                <form onsubmit="return navTabSearch(this)" id="pagerForm" action="@(Url.RouteUrl(ViewContext.RouteData.DataTokens["area"]))" method="post">
+                    <input type="hidden" name="pageNum" value="@(Model==null?1:Model.PageNumber)" />
+                    <input type="hidden" name="numPerPage" value="@(Model==null?30:Model.PageSize)" />
+                    <input type="hidden" name="orderField" value="@ViewData["orderField"]" />
+                    <input type="hidden" name="orderDir" value="@(ViewData["orderDir"] ==null?"asc":ViewData["orderDir"])" />
+                    <input type="hidden" class="superImgST" name="superImgST" value="@(ViewData["sps"]==null?"0":ViewData["sps"])"/>
+                    <div class="searchBar">
+                        @RenderSection("SuperSearch", false)
+                        @if (ViewData["SuperSearch"] == null)
+                        {
+                            <div class="subBar">
+                            
+                                <span class="info_clear">@(MvcHtmlString.Create(ViewData["Title"] != null ? ViewData["Title"].ToString() : ""))</span>
+                                <ul>
+                                    <li>
+                                        <div class="buttonActive">
+                                            <div class="buttonContent">
+                                                <button type="submit">
+                                                    搜索</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="button">
+                                            <div class="buttonContent">
+                                                <button type="reset">
+                                                    重置</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </form>
+            </div>
+        }
+    }
+    @RenderSection("Other", false)
+    <div class="pageContent">
+        @if (ViewData["ToolBar"] == null)
+        {
+            <div class="panelBar" style="margin-bottom: 1px">
+                <ul class="toolBar">
+                    @RenderSection("ToolBar", false)
+                </ul>
+            </div>
+        }
+        <div class="ContentList">
+            @RenderSection("Body", false)
+        </div>
+        @if (ViewData["Footer"] == null)
+        {
+            @Html.Paging(PagingType.navTab,PageSize:50)
+        }
+        
+        
+
+    </div>
+</div>

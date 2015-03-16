@@ -1,0 +1,100 @@
+﻿@model IPagedList<JiYun.Modules.Core.Models.S_User>
+@using PagedList
+<script type="text/javascript">
+    function sendMes() {
+        var id = "";
+        $(":checkbox[name='ck']:checked",$.pdialog.getCurrent()).each(function () {
+            id += $(this).val() + ",";
+        });
+        if (!id) {
+            alertMsg.error("请选择发送的人员！");
+            return false;
+        }
+        $.pdialog.closeCurrent();
+        $.pdialog.open("@Url.Action("SendMes", "Home")/"+id, "HomeSendMes", "发送站内信", {width: 600, height: 420, mask: true});
+    }
+    function sendEmail() {
+        var id = "";
+        $(":checkbox[name='ck']:checked", $.pdialog.getCurrent()).each(function () {
+            id += $(this).val() + ",";
+        });
+        if (!id) {
+            alertMsg.error("请选择发送的人员！");
+            return false;
+        }
+        $.pdialog.closeCurrent();
+        $.pdialog.open("@Url.Action("SendEmail", "Home")/"+id, "HomeSendEmail", "发送Email", {width: 600, height: 420, mask: true});
+
+    }
+</script>
+<div class="page">
+    <div class="pageContent">
+        <form method="post" id="pagerForm" onsubmit="return dialogSearch(this);" action="@Url.Action("OnlineList", "Home")" class="pageForm required-validate"
+        >
+      
+        <div class="pageFormContent" style="padding:0">
+            <div class="panelBar" style="margin-top:-1px">
+                <ul class="toolBar">
+                    <li><a class="message" href="javascript:void(0)" onclick="sendMes()"><span>发送站内信</span></a></li>
+                    <li><a class="email" href="javascript:void(0)" onclick="sendEmail()"><span>发送邮件</span></a></li>
+                </ul>
+            </div>
+            <table style="width:100%" class="table" layouth="121" >
+                <thead>
+                    <tr>
+                        <th style="width:5%;text-align:center;"><input type="checkbox" class="checkboxCtrl" group="ck" style="margin:3px" /></th>
+                        <th style="width:8%">序号</th>
+                        <th style="width:15%">姓名</th>
+                        <th style="width:25%">手机</th>
+                        <th style="width:30%">Email</th>
+                        <th style="width:17%">部门</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                      
+                        int i = 0;
+                        foreach (var item in Model)
+                        {
+                            i++;
+                            <tr>
+                                <td style="text-align:center">
+                                    <input type="checkbox" name="ck" style="margin:3px" value="@item.ID"/>
+                                </td>
+                                <td style="text-align:center">
+                                    @i
+                                </td>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        }  
+                      }
+                </tbody>
+            </table>
+            @Html.Paging(PagingType.dialog, "")
+           
+        </div>
+        <div class="formBar" style="margin-top:-1px"> 
+            <ul>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button class="close">
+                                关闭</button></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </form>
+    </div>
+</div>

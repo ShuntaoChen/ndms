@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CAModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="JY_Case" EntityType="CAModel1.JY_Case" />
+    <EntitySet Name="JY_CasePersonal" EntityType="CAModel1.JY_CasePersonal" />
+    <AssociationSet Name="FK_JY_CASEP_REFERENCE_JY_CASE" Association="CAModel1.FK_JY_CASEP_REFERENCE_JY_CASE">
+      <End Role="JY_Case" EntitySet="JY_Case" />
+      <End Role="JY_CasePersonal" EntitySet="JY_CasePersonal" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="JY_Case">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CDate" Type="DateTime" />
+    <Property Name="CSummary" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="CDate_S" Type="DateTime" />
+    <Property Name="CDate_E" Type="DateTime" />
+    <Property Name="AttachmentID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Years" Type="Int32" />
+    <Property Name="CStatus" Type="Int32" />
+    <Property Name="CResult" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" />
+    <Property Name="UpdaterId" Type="Int32" />
+    <Property Name="LastUpdateOn" Type="DateTime" />
+    <NavigationProperty Name="JY_CasePersonal" Relationship="CAModel1.FK_JY_CASEP_REFERENCE_JY_CASE" FromRole="JY_Case" ToRole="JY_CasePersonal" />
+  </EntityType>
+  <EntityType Name="JY_CasePersonal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="JY_Case_ID" />
+    <Property Type="Int32" Name="JY_Personnel_ID" />
+    <Property Type="Int32" Name="JY_Examine_ID" />
+    <Property Type="Int32" Name="JY_Record_ID" />
+    <Property Type="String" Name="Remark" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatorId" />
+    <Property Type="DateTime" Name="CreateOn" />
+    <Property Type="Int32" Name="UpdaterId" />
+    <Property Type="DateTime" Name="LastUpdateOn" />
+    <NavigationProperty Name="JY_Case" Relationship="CAModel1.FK_JY_CASEP_REFERENCE_JY_CASE" FromRole="JY_CasePersonal" ToRole="JY_Case" />
+  </EntityType>
+  <Association Name="FK_JY_CASEP_REFERENCE_JY_CASE">
+    <End Type="CAModel1.JY_Case" Role="JY_Case" Multiplicity="0..1" />
+    <End Type="CAModel1.JY_CasePersonal" Role="JY_CasePersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JY_Case">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JY_CasePersonal">
+        <PropertyRef Name="JY_Case_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
